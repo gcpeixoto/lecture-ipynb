@@ -1,0 +1,9 @@
+Last updated and uploaded: Tue 27 Sep 2016 10:49:52 BST
+ 
+Last commit:
+changeset:   642:a842747a5dd8
+tag:         tip
+user:        Hans Fangohr [bin] <fangohr@soton.ac.uk>
+date:        Tue Sep 27 10:49:47 2016 +0100
+summary:     Update upload targets for Python 3 material
+
