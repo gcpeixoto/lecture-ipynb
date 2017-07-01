@@ -1,0 +1,8 @@
+Last compiled: Sat Jul  1 12:44:42 -03 2017
+ 
+Last commit:
+commit 78dc8450546557e9ae008538def053196a704aac
+Author: Gustavo Peixoto <tavolesliv@gmail.com>
+Date:   Sat Jul 1 01:48:59 2017 -0300
+
+    Submitting reviewed version of notebook 17 and finishing review.
