@@ -11929,7 +11929,7 @@ div#notebook {
 </li>
 </ul>
 <p>Os tipos de dados predefinidos são números inteiros, ponto flutuante e ponto flutuante complexos.</p>
-<h3 id="Inteiros">Inteiros<a class="anchor-link" href="#Inteiros">&#182;</a></h3><p>Já vimos o uso dos números inteiros no <a href="02-calculadora-poderosa.html">Capítulo 2</a>. Se precisarmos converter uma string contendo um número inteiro para um inteiro, podemos usar a função <code>int()</code>:</p>
+<h3 id="Inteiros">Inteiros<a class="anchor-link" href="#Inteiros">&#182;</a></h3><p>Se precisarmos converter uma <em>string</em> contendo um número inteiro para um inteiro, podemos usar a função <code>int()</code>:</p>
 
 </div>
 </div>
@@ -12112,7 +12112,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Em muitas outras linguagens de programação, tais como C e FORTRAN, inteiros ocupam um tamanho fixo de 4 bytes, permitindo $2^{32}$ valores diferentes, mas tipos diferentes estão disponíveis com diferentes tamanhos. Para números que cabem dentro desses limites, os cálculos podem ser mais rápidos, mas você pode ter de verificar que os números não excedam os limites. Calcular um número além dos limites é o mesmo que incorrer em <em>overflow de inteiro</em>, e pode produzir resultados estranhos.</p>
-<p>Mesmo em Python, precisamos estar cientes disto quando usamos o NumPy (veja o <a href="14-python-numerico-numpy.html">Capítulo 14</a>). O NumPy usa inteiros com um tamanho fixo porque ele armazena muitos deles juntos e precisa calculá-los eficientemente. A documentação sobre <a href="http://docs.scipy.org/doc/numpy/user/basics.types.html">tipos de dados do NumPy</a> inclui uma gama de tipos inteiros denominados pelo tamanho deles. Então, <code>int16</code>, por exemplo, é um inteiro de 16 bits, com $2^{16}$ valores possíveis.</p>
+<p>Mesmo em Python, precisamos estar cientes disto quando usamos o NumPy. O NumPy usa inteiros com um tamanho fixo porque ele armazena muitos deles juntos e precisa calculá-los eficientemente. A documentação sobre <a href="http://docs.scipy.org/doc/numpy/user/basics.types.html">tipos de dados do NumPy</a> inclui uma gama de tipos inteiros denominados pelo tamanho deles. Então, <code>int16</code>, por exemplo, é um inteiro de 16 bits, com $2^{16}$ valores possíveis.</p>
 <p>Inteiros podem também ser do tipo <em>signed</em>, quando permitem valores positivos ou negativos, ou do tipo <em>unsigned</em>, quando permitem apenas valores positivos. Por exemplo:</p>
 <ul>
 <li><code>uint16</code> (<em>unsigned</em>) varia de 0 a $2^{16}-1$</li>

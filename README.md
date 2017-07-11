@@ -1,43 +1,38 @@
-
-[![CircleCI](https://circleci.com/gh/fangohr/introduction-to-python-for-computational-science-and-engineering.svg?style=svg)](https://circleci.com/gh/fangohr/introduction-to-python-for-computational-science-and-engineering)
-
-
 # Introdução à Linguagem Python para Ciências Computacionais e Engenharia
 
-Uma introdução à Linguagem Python para Ciências Computacionais e Engenharia, 
-desenvolvida por Hans Fangohr (2003-2017 University of Southampton)
+## Apresentação da edição em Português
 
-Traduzido para o português por Gustavo Peixoto de Oliveira, 
-Departamento de Computação Científica, Universidade Federal da Paraíba.
+O texto _Uma introdução à Linguagem Python para Ciências Computacionais e Engenharia
+(Um guia para o iniciante em Python 3)_, é uma tradução do título original
+_Introduction to Python for Computational Science and Engineering
+(A beginner's guide to Python 3)_, escrito pelo professor Hans Fangohr,
+líder do Grupo de Modelagem Computacional da Universidade de Southampton.
 
-O livro está disponível como
+Este material tem o objetivo de servir como suporte ao aprendizado da linguagem
+Python para estudantes das ciências exatas que desejem adquirir uma melhor
+formação computacional.
 
-- html
-- pdf
-- arquivos ipynb disponíveis para download
+A motivação para traduzir este texto decorreu de dois fatores: i) demanda de alguns
+estudantes que, frequentemente, solicitavam aulas de computação no curso, a fim
+de que aprendessem algum sistema algébrico computacional prático e gratuito; ii)
+a sólida experiência do Prof. Hans Fanghor com a pesquisa do
+ensino-aprendizagem em computação.
 
-O livro é baseado em Python 3.
+O material está disponível em _pdf_, _html_ e na forma de arquivos _ipynb_
+(formato Jupyter Notebook), na versão Python 3.0, pelos quais o estudante pode
+aprender a teoria praticando diretamente nos _notebooks_ no seu navegador de preferência.
 
+A distribuição Python recomendada para iniciantes é a
+[Anaconda](https://www.continuum.io/downloads). Um tutorial acompanhado de algumas razões
+para esta escolha é fornecido [aqui](http://www.southampton.ac.uk/~fangohr/blog/installation-of-python-spyder-numpy-sympy-scipy-pytest-matplotlib-via-anaconda.html).
 
-(Uma versão para Python 2.7 está disponível [online](http://www.southampton.ac.uk/~fangohr/training/python/pdfs/Python2-for-Computational-Science-and-Engineering.pdf))
+Este material estará em constante revisão. Uma vez que os links fornecidos mudam constantemente
+segundo o ritmo da internet, torna-se difícil coibir eventuais falhas com redirecionamento
+e referências. Portanto, o envio de sugestões e correções será muito bem-vindo.
 
+Prof. Gustavo Oliveira, gustavo.oliveira@ci.ufpb.br
+Departamento de Computação Científica
+Centro de Informática
+Universidade Federal da Paraíba
 
-# Translated into Portuguese from original:
-
-## Introduction to Python for Computational Science and Engineering
-
-An introduction to Python for Computational Science an
-Engineering, developed by Hans Fangohr (2003-2017 University of Southampton)
-
-The book is available as
-
-- html
-- pdf
-- downloadable ipynb files
-
-The book is based on Python 3.
-
-
-(A Python 2.7 version
-is
-[available online](http://www.southampton.ac.uk/~fangohr/training/python/pdfs/Python2-for-Computational-Science-and-Engineering.pdf))
+João Pessoa, 11 de julho de 2017.

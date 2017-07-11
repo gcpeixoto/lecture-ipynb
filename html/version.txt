@@ -1,8 +1,8 @@
-Last compiled: Sat Jul  1 02:08:05 -03 2017
+Last compiled: Ter 11 Jul 2017 11:03:39 -03
  
 Last commit:
-commit 78dc8450546557e9ae008538def053196a704aac
+commit ecbeacd0e11bb3ae6e5d264ccc3f96364b8c3183
 Author: Gustavo Peixoto <tavolesliv@gmail.com>
-Date:   Sat Jul 1 01:48:59 2017 -0300
+Date:   Sat Jul 1 12:52:20 2017 -0300
 
-    Submitting reviewed version of notebook 17 and finishing review.
+    Submitting compiled version, ready to use. Requires fine tuning and improvements. Waiting for Hans comments.

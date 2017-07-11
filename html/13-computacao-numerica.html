@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Computa&#231;&#227;o-num&#233;rica">Computa&#231;&#227;o num&#233;rica<a class="anchor-link" href="#Computa&#231;&#227;o-num&#233;rica">&#182;</a></h1><h2 id="N&#250;meros-e-n&#250;meros">N&#250;meros e n&#250;meros<a class="anchor-link" href="#N&#250;meros-e-n&#250;meros">&#182;</a></h2><p>Já vimos que o Python reconhece diferentes <em>tipos</em> de números (veja <a href="03-tipos-estruturas-dados.html">Capítulo 3</a>):</p>
+<h1 id="Computa&#231;&#227;o-num&#233;rica">Computa&#231;&#227;o num&#233;rica<a class="anchor-link" href="#Computa&#231;&#227;o-num&#233;rica">&#182;</a></h1><h2 id="N&#250;meros-e-n&#250;meros">N&#250;meros e n&#250;meros<a class="anchor-link" href="#N&#250;meros-e-n&#250;meros">&#182;</a></h2><p>Já vimos que o Python reconhece diferentes <em>tipos</em> de números:</p>
 <ul>
 <li><p>números em ponto flutuante (<code>float</code>), como 3.14</p>
 </li>
@@ -11784,7 +11784,7 @@ div#notebook {
 <li><p>números complexos (<code>complex</code>), como 3.14 + 1*j</p>
 </li>
 </ul>
-<h3 id="Limita&#231;&#245;es-dos-tipos-de-n&#250;meros">Limita&#231;&#245;es dos tipos de n&#250;meros<a class="anchor-link" href="#Limita&#231;&#245;es-dos-tipos-de-n&#250;meros">&#182;</a></h3><h4 id="Limita&#231;&#245;es-de-ints">Limita&#231;&#245;es de <code>int</code>s<a class="anchor-link" href="#Limita&#231;&#245;es-de-ints">&#182;</a></h4><p>A matemática fornece o conjunto infinito dos números naturais $ \mathbb{ℕ} = \{1, 2, 3,\dots \} $. Como o computador opera de modo <em>finito</em>, é impossível que ele represente todos esses números. Em vez disso, apenas um pequeno subconjunto de números é representado.</p>
+<h3 id="Limita&#231;&#245;es-dos-tipos-de-n&#250;meros">Limita&#231;&#245;es dos tipos de n&#250;meros<a class="anchor-link" href="#Limita&#231;&#245;es-dos-tipos-de-n&#250;meros">&#182;</a></h3><h4 id="Limita&#231;&#245;es-de-ints">Limita&#231;&#245;es de <code>int</code>s<a class="anchor-link" href="#Limita&#231;&#245;es-de-ints">&#182;</a></h4><p>A matemática fornece o conjunto infinito dos números naturais $\mathbb{ℕ} = \{1, 2, 3,\dots \}$. Como o computador opera de modo <em>finito</em>, é impossível que ele represente todos esses números. Em vez disso, apenas um pequeno subconjunto de números é representado.</p>
 <p>O tipo <code>int</code> (geralmente [3]) representa números entre -2147483648 e +2147483647, e corresponde a 4 <em>bytes</em> (isto é 4*8 <em>bits</em> e 2<sup>32</sup> = 4294967296, que é o intervalo de -2147483648 a +2147483647).</p>
 <p>Você pode imaginar que o hardware usa uma tabela como esta para codificar inteiros usando bits (suponha, por simplicidade, que usemos apenas 8 <em>bits</em>):</p>
 <table>
@@ -11837,10 +11837,10 @@ div#notebook {
 <p>Assim é, <em>em princípio</em>, como os números inteiros são representados no computador. Dependendo do número de <em>bytes</em> utilizados, apenas números inteiros entre um valor mínimo e um máximo podem ser representados. Nos hardwares de hoje, é comum usar 4 ou 8 <em>bytes</em> para representar um número inteiro, o que leva exatamente aos valores mínimo e máximo de -2147483648 e +2147483647, como mostrado acima para 4 <em>bytes</em>, e +9223372036854775807 como o inteiro máximo para 8 <em>bytes</em> (isto é ≈ 9.2⋅10<sup>18</sup>).</p>
 <h4 id="Limita&#231;&#245;es-de-floats">Limita&#231;&#245;es de <code>float</code>s<a class="anchor-link" href="#Limita&#231;&#245;es-de-floats">&#182;</a></h4><p>Os números em ponto flutuante em um computador não são os mesmos que os números em ponto flutuante da matemática. (Isto é exatamente o mesmo que dize que os números inteiros (matemáticos) não são os mesmos em um computador: apenas um <em>subconjunto</em> do conjunto infinito dos números inteiros pode ser representado pelo tipo <code>int</code>, como mostrado anteriormente). Então, como os números em ponto flutuante são representados no computador?</p>
 <ul>
-<li>Qualquer número real $ x $ pode ser escrito como
-   $$ x  = a \cdot 10^b, $$</li>
+<li>Qualquer número real $x$ pode ser escrito como
+   $$x  = a \cdot 10^b,$$</li>
 </ul>
-<p>onde $ a $ é a mantissa e $ b $ o expoente.</p>
+<p>onde $a$ é a mantissa e $b$ o expoente.</p>
 <ul>
 <li>Exemplos: </li>
 </ul>
@@ -11881,11 +11881,11 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>Seguindo (aproximadamente) o padrão IEEE-754, usa-se 8 <em>bytes</em> para um <code>float</code> $ x $: estes 64 bits são divididos entre</p>
+<li><p>Seguindo (aproximadamente) o padrão IEEE-754, usa-se 8 <em>bytes</em> para um <code>float</code> $x$: estes 64 bits são divididos entre</p>
 <ul>
-<li><p>10 bits para o expoente $ b $ e</p>
+<li><p>10 bits para o expoente $b$ e</p>
 </li>
-<li><p>54 bits para a mantissa $ a $.</p>
+<li><p>54 bits para a mantissa $a$.</p>
 </li>
 </ul>
 </li>
@@ -11894,9 +11894,9 @@ div#notebook {
 <ul>
 <li><p>maior número em ponto flutuante possível ≈ 10 <sup>308</sup> (medida de qualidade para <em>b</em>)</p>
 </li>
-<li><p>menor número em ponto flutuante possível (positivo) ≈ 10 <sup>-308</sup> (medida de qualidade para $ b $)</p>
+<li><p>menor número em ponto flutuante possível (positivo) ≈ 10 <sup>-308</sup> (medida de qualidade para $b$)</p>
 </li>
-<li><p>distância entre 1.0 e o número imediatamente superior ≈ 10<sup>-16</sup> (medida de qualidade para $ a $)</p>
+<li><p>distância entre 1.0 e o número imediatamente superior ≈ 10<sup>-16</sup> (medida de qualidade para $a$)</p>
 </li>
 </ul>
 <p>Observe que, <em>a priori</em>, é assim como os números em ponto flutuante são armazenados (na realidade, é um pouco mais complicado).</p>
@@ -11908,7 +11908,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Limita&#231;&#245;es-dos-n&#250;meros-&quot;complexos&quot;">Limita&#231;&#245;es dos n&#250;meros "complexos"<a class="anchor-link" href="#Limita&#231;&#245;es-dos-n&#250;meros-&quot;complexos&quot;">&#182;</a></h4><p>O tipo <code>complex</code> tem essencialmente as mesmas limitações que o tipo <code>float</code> porque um número complexo consiste de dois números <code>float</code>: um representa a parte real, o outro a parte imaginária.</p>
+<h4 id="Limita&#231;&#245;es-dos-n&#250;meros-complexos">Limita&#231;&#245;es dos n&#250;meros complexos<a class="anchor-link" href="#Limita&#231;&#245;es-dos-n&#250;meros-complexos">&#182;</a></h4><p>O tipo $ `complex<code>tem essencialmente as mesmas limitações que o tipo</code>float<code>porque um número complexo consiste de dois números</code>float`: um representa a parte real, o outro a parte imaginária.</p>
 <h4 id="...-s&#227;o-esses-tipos-de-n&#250;meros-de-valor-pr&#225;tico?">... s&#227;o esses tipos de n&#250;meros de valor pr&#225;tico?<a class="anchor-link" href="#...-s&#227;o-esses-tipos-de-n&#250;meros-de-valor-pr&#225;tico?">&#182;</a></h4><p>Na prática cotidiana, geralmente não encontramos números que excedam 10<sup>300</sup> (este é um número com 300 zeros!). Portanto, os números em ponto flutuante cobrem o intervalo de números de que geralmente precisamos.</p>
 <p>No entanto, você precisa estar ciente de que, em computação científica, números pequenos e grandes são usados, os quais podem (geralmente em resultados intermediários) exceder o intervalo de números em ponto flutuante.</p>
 <ul>

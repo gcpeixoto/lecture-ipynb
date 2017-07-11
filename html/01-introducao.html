@@ -11786,12 +11786,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modelagem-Computacional">Modelagem Computacional<a class="anchor-link" href="#Modelagem-Computacional">&#182;</a></h3><p>Para estudar um processo com simulação computacional, distinguimos duas etapas: a primeira é desenvolver um <em>modelo</em> do sistema real; a segunda, resolver as equações envolvidas numericamente. Ao estudar o movimento de um pequeno objeto, como uma moeda, digamos, sob a influência da gravidade, podemos ignorar seu atrito com o ar: nosso modelo - que só pode considerar a força gravitacional e a inércia da moeda, ou seja, $ a(t) = F/m = -9.81 \, m/s^2 $ - é uma aproximação do sistema real. O modelo normalmente permitir-nos-á expressar o comportamento do sistema (em alguma forma aproximada) através de equações matemáticas, que geralmente envolvem equações diferenciais ordinárias (EDOs) ou equações diferenciais parciais (EDPs).</p>
+<h3 id="Modelagem-Computacional">Modelagem Computacional<a class="anchor-link" href="#Modelagem-Computacional">&#182;</a></h3><p>Para estudar um processo com simulação computacional, distinguimos duas etapas: a primeira é desenvolver um <em>modelo</em> do sistema real; a segunda, resolver as equações envolvidas numericamente. Ao estudar o movimento de um pequeno objeto, como uma moeda, digamos, sob a influência da gravidade, podemos ignorar seu atrito com o ar: nosso modelo - que só pode considerar a força gravitacional e a inércia da moeda, ou seja, $a(t) = F/m = -9.81 \, m/s^2$ - é uma aproximação do sistema real. O modelo normalmente permitir-nos-á expressar o comportamento do sistema (em alguma forma aproximada) através de equações matemáticas, que geralmente envolvem equações diferenciais ordinárias (EDOs) ou equações diferenciais parciais (EDPs).</p>
 <p>Nas ciências naturais, como física, química e engenharia, muitas vezes não é tão difícil encontrar um modelo adequado, embora as equações resultantes tendam a ser muito difíceis de resolver e, na maioria dos casos, impossíveis de serem resolvidas analiticamente.</p>
 <p>Por outro lado, em assuntos que não são tão bem descritos através de uma estrutura matemática e dependem do comportamento de objetos cujas ações são impossíveis de serem previstas de forma determinística (como os seres humanos), é muito mais difícil encontrar um modelo adequado para descrever a realidade. Como uma regra geral, nestas disciplinas, as equações resultantes são mais fáceis de serem resolvidas, mas difíceis de serem encontradas e a validade de um modelo precisa ser questionada muito mais. Exemplos típicos são as tentativas de simular a economia, o uso de recursos globais, o comportamento de uma multidão em pânico, etc.</p>
 <p>Até agora, apenas discutimos o desenvolvimento de <em>modelos</em> para descrever a realidade. O uso desses modelos não envolve necessariamente computadores ou algum trabalho numérico. Na verdade, se a equação de um modelo puder ser resolvida de forma analítica, então deve-se fazer isso e registrar a solução para a equação.</p>
-<p>Na prática, dificilmente uma equação-modelo de sistemas de interesse pode ser resolvida analiticamente, e é aí que o computador entra: usando métodos numéricos, podemos, pelo menos, estudar o modelo <em>para um determinado conjunto de condições de contorno</em>. Para o exemplo considerado acima, talvez não possamos ver facilmente a partir de uma solução numérica que a velocidade da moeda sob a influência da gravidade mudará linearmente com o tempo (o que podemos constatar facilmente a partir da solução analítica disponível para este sistema simples: $ v(t) = t \cdot 9.81 \, m/s^2 + v_0 $).</p>
-<p>A solução numérica que pode ser calculada usando um computador consistiria de dados que mostram como a velocidade muda ao longo do tempo para uma velocidade inicial particular $ v_0 $ ($ v_0 $ é uma condição de contorno aqui). O programa computacional reportaria uma longa lista de dois números mantendo o valor do tempo $ t_i $ para o qual um determinado valor da velocidade $ v_i $ foi calculado. Ao plotarmos $ v_i $ <em>versus</em> $ t _i $, ou ajustarmos uma curva a partir dos dados, poderemos entender a tendência do comportamento da moeda (que pode ser vista a partir da solução analítica, é claro).</p>
+<p>Na prática, dificilmente uma equação-modelo de sistemas de interesse pode ser resolvida analiticamente, e é aí que o computador entra: usando métodos numéricos, podemos, pelo menos, estudar o modelo <em>para um determinado conjunto de condições de contorno</em>. Para o exemplo considerado acima, talvez não possamos ver facilmente a partir de uma solução numérica que a velocidade da moeda sob a influência da gravidade mudará linearmente com o tempo (o que podemos constatar facilmente a partir da solução analítica disponível para este sistema simples: 
+$v(t) = 9.81t + v_0 \, m/s$).</p>
+<p>A solução numérica que pode ser calculada usando um computador consistiria de dados que mostram como a velocidade muda ao longo do tempo para uma velocidade inicial particular $v_0$ ($v_0$ é uma condição de contorno aqui). O programa computacional reportaria uma longa lista de dois números mantendo o valor do tempo $t_i$ para o qual um determinado valor da velocidade $v_i$ foi calculado. Ao plotarmos $v_i$ <em>versus</em> $t _i$, ou ajustarmos uma curva a partir dos dados, poderemos entender a tendência do comportamento da moeda (que pode ser vista a partir da solução analítica, é claro).</p>
 <p>Claramente, é desejável encontrar soluções analíticas sempre que possível, mas o número de problemas onde isso é possível é pequeno. Geralmente, a obtenção do resultado numérico de uma simulação computacional é bastante útil (apesar das deficiências dos resultados numéricos em comparação com uma expressão analítica), porque é a única maneira possível de estudar o sistema.</p>
 <p>Em suma, o nome <em>modelagem computacional</em> deriva das duas etapas: (i) <em>modelagem</em>, em que se busca um modelo que descreva o sistema real, e (ii) a resolução das equações do modelo usando <em>métodos computacionais</em>.</p>
 
@@ -11815,7 +11816,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Por-que-Python-para-Computa&#231;&#227;o-Cient&#237;fica?">Por que Python para Computa&#231;&#227;o Cient&#237;fica?<a class="anchor-link" href="#Por-que-Python-para-Computa&#231;&#227;o-Cient&#237;fica?">&#182;</a></h1><p>O foco do projeto da linguagem Python está na produtividade e legibilidade de código. Por exemplo, através de:</p>
+<h2 id="Por-que-Python-para-Computa&#231;&#227;o-Cient&#237;fica?">Por que Python para Computa&#231;&#227;o Cient&#237;fica?<a class="anchor-link" href="#Por-que-Python-para-Computa&#231;&#227;o-Cient&#237;fica?">&#182;</a></h2><p>O foco do projeto da linguagem Python está na produtividade e legibilidade de código. Por exemplo, através de:</p>
 <ul>
 <li><p>console Python interativo;</p>
 </li>
@@ -11896,10 +11897,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Prototipagem-em-Python">Prototipagem em Python<a class="anchor-link" href="#Prototipagem-em-Python">&#182;</a></h3><p>Verifica-se que - mesmo se um código específico tiver que ser escrito em, digamos, C++ - é (frequentemente) mais eficiente prototipar o código em Python, e uma vez que um projeto apropriado (estrutura de classes) for encontrado, transferir o código para C++.</p>
-<h1 id="Literatura">Literatura<a class="anchor-link" href="#Literatura">&#182;</a></h1><hr>
-<p>Enquanto este texto inicia-se com uma introdução de alguns aspectos básicos da linguagem de programação Python, você pode achar necessário - dependenddo de sua experiência prévia - buscar fontes secundárias para entender algumas ideias completamante. Nesse caso, os seguintes documentos são indicados:</p>
+<h2 id="Literatura">Literatura<a class="anchor-link" href="#Literatura">&#182;</a></h2><p>Enquanto este texto inicia-se com uma introdução de alguns aspectos básicos da linguagem de programação Python, você pode achar necessário - dependenddo de sua experiência prévia - buscar fontes secundárias para entender algumas ideias completamante. Nesse caso, os seguintes documentos são indicados:</p>
 <ul>
-<li><p>Allen Downey, <em>Think Python</em>. Disponível online em html e pdf em <a href="http://www.greenteapress.com/thinkpython/thinkpython.html">http://www.greenteapress.com/thinkpython/thinkpython.html</a>, ou na Amazon. <sup>[1](#footnote1)</sup></p>
+<li><p>Allen Downey, <em>Pense em Python</em>. Disponível online em html e pdf em <a href="https://penseallen.github.io/PensePython2e/">https://penseallen.github.io/PensePython2e/</a>.</p>
 </li>
 <li><p>A documentação oficial Python: <a href="http://www.python.org/doc/">http://www.python.org/doc/</a> e</p>
 </li>
@@ -11917,7 +11917,6 @@ div#notebook {
 <li><p>Guia de estilos Python (<a href="http://www.python.org/dev/peps/pep-0008/">http://www.python.org/dev/peps/pep-0008/</a></p>
 </li>
 </ul>
-<p><a name="footnote1">1</a>: N.T. Este livro já possui uma versão em Português. Veja: <a href="http://novatec.com.br/livros/pense-em-python/">http://novatec.com.br/livros/pense-em-python/</a></p>
 
 </div>
 </div>
@@ -11936,7 +11935,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Vers&#245;es-do-Python">Vers&#245;es do Python<a class="anchor-link" href="#Vers&#245;es-do-Python">&#182;</a></h1><p>Existem duas versões de Python por aí: Python 2.x and Python 3.x. Elas são levemente diferentes — as mudanças na Python 3.x foram introduzidas para corrigir algumas deficiências no projeto da linguagem identificados desde o seu início. Uma decisão que foi tomada assumiu que alguma incompatibilidade deveria ser aceita para se atingir o objetivo maior de uma linguagem melhor para o futuro.</p>
+<h2 id="Vers&#245;es-do-Python">Vers&#245;es do Python<a class="anchor-link" href="#Vers&#245;es-do-Python">&#182;</a></h2><p>Existem duas versões de Python por aí: Python 2.x and Python 3.x. Elas são levemente diferentes — as mudanças na Python 3.x foram introduzidas para corrigir algumas deficiências no projeto da linguagem identificados desde o seu início. Uma decisão que foi tomada assumiu que alguma incompatibilidade deveria ser aceita para se atingir o objetivo maior de uma linguagem melhor para o futuro.</p>
 <p>Para computação científica, é crucial fazer uso de bibliotecas numéricas tais como <a href="http://numpy.scipy.org/">NumPy</a>, <a href="http://www.scipy.org">SciPy</a> e o pacote de plotagem <a href="http://matplotlib.sourceforge.net/">Matplotlib</a>.</p>
 <p>Todos eles estão disponíveis para Python 3, versão que usaremos aqui. No entanto, há muito código ainda em uso que foi escrito para Python 2. Para tanto, é útil saber das diferenças. O exemplo mais proeminente é que em Python 2.x, o comando <code>print</code> é especial, ao passo que em Python 3 é uma função ordinária. Por exemplo, em Python 2.7, podemos escrever:</p>
 <div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Hello World&quot;</span>
@@ -11990,7 +11989,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Estes-documentos">Estes documentos<a class="anchor-link" href="#Estes-documentos">&#182;</a></h1><p>Este material foi convertido do <code>LaTex</code> para um conjunto de <code>Jupyter Notebooks</code>, tornando os exemplos nele contidos interativos. Você pode executar qualquer bloco de código iniciado por <code>In [ ]:</code> clicando na respectiva célula e pressionando <code>shift-enter</code>, ou clicando no botão <i class="fa fa-step-forward"></i> da barra de ferramentas.</p>
+<h2 id="Estes-documentos">Estes documentos<a class="anchor-link" href="#Estes-documentos">&#182;</a></h2><p>Este material foi convertido do <code>LaTex</code> para um conjunto de <code>Jupyter Notebooks</code>, tornando os exemplos nele contidos interativos. Você pode executar qualquer bloco de código iniciado por <code>In [ ]:</code> clicando na respectiva célula e pressionando <code>shift-enter</code>, ou clicando no botão <i class="fa fa-step-forward"></i> da barra de ferramentas.</p>
 
 </div>
 </div>

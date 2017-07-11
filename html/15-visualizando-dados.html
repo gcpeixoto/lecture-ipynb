@@ -11781,7 +11781,7 @@ div#notebook {
 </ul>
 <!-- Visual Python - que é uma ferramenta muito útil para gerar rapidamente animações de processos dependentes do tempo ocorrendo no espaço 3D -->
 
-<h2 id="Matplotlib-(Pylab):-plotando-$-y-=-f(x)-$-(e-um-pouco-mais)">Matplotlib (Pylab): plotando $ y = f(x) $ (e um pouco mais)<a class="anchor-link" href="#Matplotlib-(Pylab):-plotando-$-y-=-f(x)-$-(e-um-pouco-mais)">&#182;</a></h2><p><em>Matplotlib</em> é uma biblioteca Python para plotagem 2D que produz figuras com qualidade de publicação em uma variedade de formatos impressos e interativos. O Matplotlib tenta fazer as coisas fáceis ainda mais fáceis, e as difíceis, possíveis. Você pode gerar gráficos, histogramas, espectros de energia, gráficos de barras, de erros, de dispersão, etc, com apenas algumas linhas de código.</p>
+<h2 id="Matplotlib-(Pylab):-plotando-$y-=-f(x)$-(e-um-pouco-mais)">Matplotlib (Pylab): plotando $y = f(x)$ (e um pouco mais)<a class="anchor-link" href="#Matplotlib-(Pylab):-plotando-$y-=-f(x)$-(e-um-pouco-mais)">&#182;</a></h2><p><em>Matplotlib</em> é uma biblioteca Python para plotagem 2D que produz figuras com qualidade de publicação em uma variedade de formatos impressos e interativos. O Matplotlib tenta fazer as coisas fáceis ainda mais fáceis, e as difíceis, possíveis. Você pode gerar gráficos, histogramas, espectros de energia, gráficos de barras, de erros, de dispersão, etc, com apenas algumas linhas de código.</p>
 <p>Para informações mais detalhadas, verifique estes links</p>
 <ul>
 <li><p>Uma introdução muito boa sobre Matplotlib orientado a objetos e um resumo de todos os modos relevantes para mudança de estilo, tamanho de figura, largura de linhas, etc. pode ser encontrada nesta útil referência:<a href="http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/scientific-python-lectures/master/Lecture-4-Matplotlib.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/scientific-python-lectures/master/Lecture-4-Matplotlib.ipynb</a></p>
@@ -12106,7 +12106,7 @@ MCillKpBC4NSSqka/h+rmznkN3y53wAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Como sempre, um equilíbrio deve ser encontrado entre preferências pessoais e consistência com a prática comum ao escolher esses nomes. A consistência com o uso comum é, certamente, mais importante se o código estiver propenso a ser usado por outros ou publicado.</p>
-<p>Uma plotagem quase sempre precisa de <em>arrays</em> de dados numéricos e é por esta razão que o módulo NumPy é bastante usado: ele fornece manipulação rápida e eficiente de memória em Python (ver <a href="14-python-numerico-numpy.html">Capítulo 14</a>.</p>
+<p>Uma plotagem quase sempre precisa de <em>arrays</em> de dados numéricos e é por esta razão que o módulo NumPy é bastante usado: ele fornece manipulação rápida e eficiente de memória em Python.</p>
 <p>Poderíamos, portanto, ter escrito o exemplo 1a acima como o exemplo 1b (que é idêntico em funcionalidade ao anterior na criação da mesma plotagem):</p>
 
 </div>
@@ -12945,7 +12945,7 @@ MCillKpBC4NSSqka/h+rmznkN3y53wAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modo-inline-do--IPython">Modo <code>inline</code> do  IPython<a class="anchor-link" href="#Modo-inline-do--IPython">&#182;</a></h3><p>Dentro do Jupyter Notebook ou Qtconsole (veja o <a href="11-shells-python.html">Capítulo 11</a>), podemos usar o comando mágico <code>%matplotlib inline</code> para fazer novas plotagens aparecerem dentro do próprio console ou notebook. Em vez disso, para forçar janelas <em>pop-up</em>,  use <code>%matplotlib qt</code>.</p>
+<h3 id="Modo-inline-do--IPython">Modo <code>inline</code> do  IPython<a class="anchor-link" href="#Modo-inline-do--IPython">&#182;</a></h3><p>Dentro do Jupyter Notebook ou Qtconsole, podemos usar o comando mágico <code>%matplotlib inline</code> para fazer novas plotagens aparecerem dentro do próprio console ou notebook. Em vez disso, para forçar janelas <em>pop-up</em>,  use <code>%matplotlib qt</code>.</p>
 <p>Há também o nome mágico <code>%pylab</code>, o qual não só irá mudar para a plotagem <code>inline</code>, mas também executará automaticamente <code>from pylab import *</code>.</p>
 
 </div>
@@ -16102,7 +16102,7 @@ ZGRkZIzG/wMaZGoqsoeA2QAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Visualizando-dados-em-dimens&#245;es-superiores">Visualizando dados em dimens&#245;es superiores<a class="anchor-link" href="#Visualizando-dados-em-dimens&#245;es-superiores">&#182;</a></h2><p>Muitas vezes, precisamos entender os dados definidos em posições no espaço 3D. Os dados em si são muitas vezes um campo escalar (como uma temperatura) ou um vetor 3D (como velocidade ou campo magnético), ou ocasionalmente um tensor. Por exemplo, para um campo vetorial 3D (definido como $ \vec{f}(\vec{x}) $, onde $ \vec{x} \in \! \mathbb{R}^3 $ e $ \vec{f}(\vec{x}) \in \! \mathbb{R}^3 $), poderíamos desenhar uma seta 3D em cada ponto (grade) no espaço. É comum que esses conjuntos de dados dependam do tempo.</p>
+<h2 id="Visualizando-dados-em-dimens&#245;es-superiores">Visualizando dados em dimens&#245;es superiores<a class="anchor-link" href="#Visualizando-dados-em-dimens&#245;es-superiores">&#182;</a></h2><p>Muitas vezes, precisamos entender os dados definidos em posições no espaço 3D. Os dados em si são muitas vezes um campo escalar (como uma temperatura) ou um vetor 3D (como velocidade ou campo magnético), ou ocasionalmente um tensor. Por exemplo, para um campo vetorial 3D (definido como $\vec{f}(\vec{x})$, onde $\vec{x} \in \! \mathbb{R}^3$ e $\vec{f}(\vec{x}) \in \! \mathbb{R}^3$), poderíamos desenhar uma seta 3D em cada ponto (grade) no espaço. É comum que esses conjuntos de dados dependam do tempo.</p>
 <p>A biblioteca provavelmente mais comumente utilizada nas ciências e engenharia para visualizar tais conjuntos de dados é provavelmente o VTK, <em>Visualization ToolKit</em> (<a href="http://vtk.org">http://vtk.org</a>). Esta é uma importante biblioteca C++ com interfaces para linguagens de alto nível, incluindo o Python.</p>
 <p>Pode-se chamar essas rotinas diretamente do código Python ou escrever os dados no disco em um formato que a biblioteca VTK pode ler (chamados arquivos <em>vtk</em>) e, em seguida, usar um programa como Mayavi, ParaView ou VisIt para ler esses arquivos de dados e manipulá-los (com uma interface gráfica). Todos estes três estão usando a biblioteca VTK internamente e podem ler arquivos <em>vtk</em>.</p>
 <p>Este pacote é muito adequado para visualizar campos estáticos e temporais 2D e 3D (campos escalares, vetoriais e tensoriais).</p>

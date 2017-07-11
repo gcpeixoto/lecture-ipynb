@@ -11786,9 +11786,9 @@ div#notebook {
 </ul>
 <p>Nós enumeramos três desses módulos, em particular:</p>
 <ul>
-<li><p>o módulo NumPy fornece um tipo de dado especializado para operar numericamente com vetores e matrizes (este é o tipo <code>array</code> fornecido pelo NumPy, conforme introduzido no <a href="14-computacao-numerica-numpy.html">Capítulo 14</a>, além de ferramentas de álgebra linear.</p>
+<li><p>o módulo NumPy fornece um tipo de dado especializado para operar numericamente com vetores e matrizes (este é o tipo <code>array</code> fornecido pelo NumPy) além de ferramentas de álgebra linear.</p>
 </li>
-<li><p>o módulo Matplotlib (também conhecido como Pylab) fornece recursos de plotagem e visualização (veja <a href="15-visualizacao-dados.html">Capítulo 15 </a> e</p>
+<li><p>o módulo Matplotlib (também conhecido como Pylab) fornece recursos de plotagem e visualização e</p>
 </li>
 <li><p>o módulo <code>SciPy</code> (<em>SCIentific PYthon</em>), que fornece uma infinidade de algoritmos numéricos (introduzido neste capítulo).</p>
 </li>
@@ -12038,7 +12038,7 @@ $$ I = \int_a^b f(x) \, dx $$<p>é fornecida pela função <code>quad()</code> d
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note que <code>quad()</code> usa os parâmetros opcionais <code>epsabs</code> e <code>epsrel</code> para aumentar ou diminuir a precisão de sua computação. (Use <code>help(quad)</code> para saber mais.) Os valores padrão são <code>epsabs = 1.5e-8</code> e <code>epsrel = 1.5e-8</code>. Para o próximo exercício, os valores padrão são suficientes.</p>
 <h3 id="Exerc&#237;cio:-integrar-uma-fun&#231;&#227;o">Exerc&#237;cio: integrar uma fun&#231;&#227;o<a class="anchor-link" href="#Exerc&#237;cio:-integrar-uma-fun&#231;&#227;o">&#182;</a></h3><ol>
-<li><p>Usando a função <code>quad</code> do SciPy, escreva um programa que resolva numericamente o seguinte: $ I = \int_0^1 \cos(2\pi x) \, dx $.</p>
+<li><p>Usando a função <code>quad</code> do SciPy, escreva um programa que resolva numericamente o seguinte: $I = \int_0^1 \cos(2\pi x) \, dx$.</p>
 </li>
 <li><p>Encontre a integral analítica e compare-a com a solução numérica.</p>
 </li>
@@ -12053,10 +12053,10 @@ $$ I = \int_a^b f(x) \, dx $$<p>é fornecida pela função <code>quad()</code> d
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exerc&#237;cio:-plote-antes-de-integrar">Exerc&#237;cio: plote antes de integrar<a class="anchor-link" href="#Exerc&#237;cio:-plote-antes-de-integrar">&#182;</a></h3><p>É uma boa prática plotar a função integrando para verificar se ela é "bem comportada" antes de tentar integrá-la. Singularidades (ou seja, valores de $ x $ para os quais $ f(x) $ tende para menos ou mais infinito) ou outro comportamento irregular (como $ f(x) = \sin(\frac{1}{x} $) perto de $ x = 0 $) são difíceis de manusear numericamente.</p>
+<h3 id="Exerc&#237;cio:-plote-antes-de-integrar">Exerc&#237;cio: plote antes de integrar<a class="anchor-link" href="#Exerc&#237;cio:-plote-antes-de-integrar">&#182;</a></h3><p>É uma boa prática plotar a função integrando para verificar se ela é "bem comportada" antes de tentar integrá-la. Singularidades (ou seja, valores de $x$ para os quais $f(x)$ tende para menos ou mais infinito) ou outro comportamento irregular (como $f(x) = \sin(\frac{1}{x}$) perto de $x = 0$) são difíceis de manusear numericamente.</p>
 <ol>
-<li>Escreva uma função com o nome <code>plotquad</code> que leva os mesmos argumentos que o comando quad (i.e. $ f $, $ a $ e $ b $) e que</li>
-<li>(i) crie um gráfico do integrando $ f(x) $ e</li>
+<li>Escreva uma função com o nome <code>plotquad</code> que leva os mesmos argumentos que o comando quad (i.e. $f$, $a$ e $b$) e que</li>
+<li>(i) crie um gráfico do integrando $f(x)$ e</li>
 <li>(ii) calcule a integral numérica usando a função <code>quad</code>. Os valores de retorno devem ser como aqueles para a função <code>quad</code>.</li>
 </ol>
 
@@ -12068,10 +12068,10 @@ $$ I = \int_a^b f(x) \, dx $$<p>é fornecida pela função <code>quad()</code> d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Resolvendo-equa&#231;&#245;es-diferenciais-ordin&#225;rias-(EDOs)">Resolvendo equa&#231;&#245;es diferenciais ordin&#225;rias (EDOs)<a class="anchor-link" href="#Resolvendo-equa&#231;&#245;es-diferenciais-ordin&#225;rias-(EDOs)">&#182;</a></h2><p>Para resolver uma EDO do tipo
-$$ \frac{dy}{dt}(t) = f(y,t) $$</p>
-<p>com uma dada condição inicial $ y(t_0) = y_0 $, podemos usar a função <code>odeint</code> do SciPy. Aqui está um programa de exemplo auto-explicativo (<code>useodeint.py</code>) para encontar</p>
-$$ y(t) \quad \mathrm{para} \quad t \in [0,2] $$<p>dada a EDO :
-$$ \frac{dy}{dt}(t) = -2yt \quad \mathrm{com} \quad y(0) = 1. $$</p>
+$$\frac{dy}{dt}(t) = f(y,t)$$</p>
+<p>com uma dada condição inicial $y(t_0) = y_0$, podemos usar a função <code>odeint</code> do SciPy. Aqui está um programa de exemplo auto-explicativo (<code>useodeint.py</code>) para encontar</p>
+$$y(t) \quad \mathrm{para} \quad t \in [0,2]$$<p>dada a EDO :
+$$\frac{dy}{dt}(t) = -2yt \quad \mathrm{com} \quad y(0) = 1.$$</p>
 
 </div>
 </div>
@@ -12523,10 +12523,10 @@ odeint(func, y0, t, args=(), Dfun=None, col_deriv=0, full_output=0, ml=None, mu=
 <li><p>Abra um novo arquivo com o nome <code>testeEDOInt.py</code> em um editor de texto.</p>
 </li>
 <li><p>Escreva um programa que calcule a solução $ y(t) $ da EDO seguinte usando o algoritmo <code>odeint</code>:
-  $$ \frac{dy}{dt} = -\exp(-t)(10 \sin(10t) + \cos (10t)) $$
-   De $ t = 0 $ a $ t = 10 $. O valor inicial é $ y(0) = 1 $.</p>
+  $$\frac{dy}{dt} = -\exp(-t)(10 \sin(10t) + \cos (10t))$$
+   De $t = 0$ a $t = 10$. O valor inicial é $y(0) = 1$.</p>
 </li>
-<li><p>Você deve exibir a solução graficamente nos pontos $ t = 0 $, $ t = 0.01 $, $ t = 0.02 $, ..., $ t = 9.99 $, $ t = 10 $.</p>
+<li><p>Você deve exibir a solução graficamente nos pontos $t = 0$, $t = 0.01$, $t = 0.02$, ..., $t = 9.99$, $t = 10$.</p>
 </li>
 </ol>
 
@@ -12537,11 +12537,11 @@ odeint(func, y0, t, args=(), Dfun=None, col_deriv=0, full_output=0, ml=None, mu=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Localiza&#231;&#227;o-de-ra&#237;zes">Localiza&#231;&#227;o de ra&#237;zes<a class="anchor-link" href="#Localiza&#231;&#227;o-de-ra&#237;zes">&#182;</a></h2><p>Se você tentar encontrar um $ x $ tal que</p>
-$$ f (x) = 0, $$<p>então este é um problema chamado de <em>localização de raízes</em>. Observe que problemas como $ g(x) = h(x) $ caem nesta categoria, pois você pode reescrevê-los como $ f(x) = g(x) - h(x) = 0 $.</p>
+<h2 id="Localiza&#231;&#227;o-de-ra&#237;zes">Localiza&#231;&#227;o de ra&#237;zes<a class="anchor-link" href="#Localiza&#231;&#227;o-de-ra&#237;zes">&#182;</a></h2><p>Se você tentar encontrar um $x$ tal que</p>
+$$f (x) = 0,$$<p>então este é um problema chamado de <em>localização de raízes</em>. Observe que problemas como $g(x) = h(x)$ caem nesta categoria, pois você pode reescrevê-los como $f(x) = g(x) - h(x) = 0$.</p>
 <p>Várias ferramentas para localização de raízes estão disponíveis no módulo <code>optimize</code> do SciPy.</p>
 <h3 id="Localiza&#231;&#227;o-de-raiz-pelo-m&#233;todo-de-bisec&#231;&#227;o">Localiza&#231;&#227;o de raiz pelo m&#233;todo de bisec&#231;&#227;o<a class="anchor-link" href="#Localiza&#231;&#227;o-de-raiz-pelo-m&#233;todo-de-bisec&#231;&#227;o">&#182;</a></h3><p>Primeiro, apresentamos o algoritmo <code>bisect</code>, que é (i) robusto e (ii) lento, mas conceitualmente muito simples.</p>
-<p>Suponhamos que precisemos calcular as raízes de  $ f(x) = x^3 - 2x^2 $. Esta função tem uma raiz dupla em $ x = 0 $ (isto é trivial de ver) e outra raiz localizada entre $ x = 1.5 $ (pois $ f(1.5) = - 1.125 $) e $ x = 3 $ (pois $ f(3) = 9 $). É direto ver que esta outra raiz está localizada em $ x = 2 $. Aqui está um programa que determina esta raiz numericamente:</p>
+<p>Suponhamos que precisemos calcular as raízes de  $f(x) = x^3 - 2x^2$. Esta função tem uma raiz dupla em $x = 0$ (isto é trivial de ver) e outra raiz localizada entre $x = 1.5$ (pois $f(1.5) = - 1.125$) e $x = 3$ (pois $f(3) = 9$). É direto ver que esta outra raiz está localizada em $x = 2$. Aqui está um programa que determina esta raiz numericamente:</p>
 
 </div>
 </div>
@@ -12595,18 +12595,18 @@ O erro exato é -2.38419e-07.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>O método <code>bisect()</code> requer três argumentos obrigatórios: (i) a função $ f(x) $, (ii) um limite inferior $ a $ (para o qual escolhemos 1.5 no nosso exemplo) e (ii) um limite superior $ b $ (para o qual escolhemos 3). O parâmetro opcional <code>xtol</code> determina o erro máximo do método.</p>
-<p>Um dos requisitos do método da bisecção é que o intervalo $ [a,b] $ deve ser escolhido de tal forma que a função seja positiva em $ a $ e negativa em $ b $, ou que a função seja negativa em $ a $ e positiva em $ b $. Em outras palavras, $ a $ e $ b $ devem incluir uma raiz.</p>
+<p>O método <code>bisect()</code> requer três argumentos obrigatórios: (i) a função $f(x)$, (ii) um limite inferior $a$ (para o qual escolhemos 1.5 no nosso exemplo) e (ii) um limite superior $b$ (para o qual escolhemos 3). O parâmetro opcional <code>xtol</code> determina o erro máximo do método.</p>
+<p>Um dos requisitos do método da bisecção é que o intervalo $[a,b]$ deve ser escolhido de tal forma que a função seja positiva em $a$ e negativa em $b$, ou que a função seja negativa em $a$ e positiva em $b$. Em outras palavras, $a$ e $b$ devem incluir uma raiz.</p>
 <h3 id="Exerc&#237;cio:-localiza&#231;&#227;o-de-ra&#237;zes-usando-o-m&#233;todo-bisect">Exerc&#237;cio: localiza&#231;&#227;o de ra&#237;zes usando o m&#233;todo <code>bisect</code><a class="anchor-link" href="#Exerc&#237;cio:-localiza&#231;&#227;o-de-ra&#237;zes-usando-o-m&#233;todo-bisect">&#182;</a></h3><ol>
-<li><p>Escreva um programa com o nome <code>sqrt2.py</code> para determinar uma aproximação para $ \sqrt{2} $ encontrando uma raiz $ x $ da função $ f(x) = 2-x^2 $ usando o algoritmo da bisecção. Escolha uma tolerância para a aproximação da raiz de $ 10^{-8} $.</p>
+<li><p>Escreva um programa com o nome <code>sqrt2.py</code> para determinar uma aproximação para $\sqrt{2}$ encontrando uma raiz $x$ da função $f(x) = 2-x^2$ usando o algoritmo da bisecção. Escolha uma tolerância para a aproximação da raiz de $10^{-8}$.</p>
 </li>
-<li><p>Documente a sua escolha do intervalo inicial $ [a, b] $ para a busca da raiz: quais valores você escolheu para $ a $ e $ b $. Por quê?</p>
+<li><p>Documente a sua escolha do intervalo inicial $[a, b]$ para a busca da raiz: quais valores você escolheu para $a$ e $b$. Por quê?</p>
 </li>
 <li><p>Estude os resultados:</p>
 <ul>
-<li><p>Que valor o algoritmo de bisecção retorna para a raiz $ x $?</p>
+<li><p>Que valor o algoritmo de bisecção retorna para a raiz $x$?</p>
 </li>
-<li><p>Calcule o valor de $ \sqrt{2} $ usando <code>math.sqrt(2)</code> e compare-o com a aproximação da raiz. Quão grande é o erro absoluto de $ x $? Como isso se compara com <code>xtol</code>?</p>
+<li><p>Calcule o valor de $\sqrt{2}$ usando <code>math.sqrt(2)</code> e compare-o com a aproximação da raiz. Quão grande é o erro absoluto de $x$? Como isso se compara com <code>xtol</code>?</p>
 </li>
 </ul>
 </li>
@@ -12669,9 +12669,9 @@ O erro exato é -6.66134e-15.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>O valor de retorno [6] de <code>fsolve</code> é uma matriz numpy de comprimento $ n $ para um problema de localização de raízes com $ n $ variáveis. No exemplo acima, temos $ n = 1 $.</p>
-<h2 id="Interpola&#231;&#227;o">Interpola&#231;&#227;o<a class="anchor-link" href="#Interpola&#231;&#227;o">&#182;</a></h2><p>Dado um conjunto de $ N $ pontos $ (x_i, y_i) $ com $ i = 1, 2, \dots, N $, às vezes precisamos de uma função $ \hat{f}(x) $ que retorne $ y_i = f(x_i) $ e que, além disso, forneça alguma interpolação dos dados $ (x_i, y_i) $ para todo $ x $.</p>
-<p>A função <code>y0 = scipy.interpolate.interp1d (x, y, kind = 'nearest')</code> realiza esta interpolação baseada em <em>splines</em> de ordem variável. Observe que a função <code>interp1d</code> retorna <em>uma função</em> <code>y0</code> que irá então interpolar os dados x-y para qualquer dado $ x $ quando chamado como <code>y0(x)</code>.</p>
+<p>O valor de retorno [6] de <code>fsolve</code> é uma matriz numpy de comprimento $n$ para um problema de localização de raízes com $n$ variáveis. No exemplo acima, temos $n = 1$.</p>
+<h2 id="Interpola&#231;&#227;o">Interpola&#231;&#227;o<a class="anchor-link" href="#Interpola&#231;&#227;o">&#182;</a></h2><p>Dado um conjunto de $N$ pontos $(x_i, y_i)$ com $i = 1, 2, \dots, N$, às vezes precisamos de uma função $\hat{f}(x)$ que retorne $y_i = f(x_i)$ e que, além disso, forneça alguma interpolação dos dados $(x_i, y_i)$ para todo $x$.</p>
+<p>A função <code>y0 = scipy.interpolate.interp1d (x, y, kind = 'nearest')</code> realiza esta interpolação baseada em <em>splines</em> de ordem variável. Observe que a função <code>interp1d</code> retorna <em>uma função</em> <code>y0</code> que irá então interpolar os dados x-y para qualquer dado $x$ quando chamado como <code>y0(x)</code>.</p>
 <p>O código abaixo mostra isso, bem como os diferentes tipos de interpolação.</p>
 
 </div>
@@ -13017,11 +13017,11 @@ QgJfCCEaCAl8IYRoICTwhRCigZDAF0KIBuL/AZpOXk2Fpl0+AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ajuste-de-curva">Ajuste de curva<a class="anchor-link" href="#Ajuste-de-curva">&#182;</a></h2><p>Já vimos no <a href="14-python-numerico-numpy.html">Capítulo 14</a> que podemos ajustar funções polinomiais a um conjunto de dados usando a função <code>numpy.polyfit</code>. Aqui, apresentamos um algoritmo de ajuste de curva mais genérico.</p>
-<p>O SciPy fornece uma função um pouco genérica (baseada no algoritmo de Levenberg-Marquardt) através do <code>scipy.optimize.curve_fit</code> para ajustar uma determinada função (Python) a um conjunto de dados. O pressuposto é que temos um conjunto de dados com pontos $ x_1, x_2, ... x_N $ e com valores de função correspondentes $ y_i $ dependentes de $ x_i $, tal que $ y_i = f(x_i,\textbf{p}) $. Queremos determinar o vetor de parâmetros $ \textbf{p} = (p_1, p_2, \dots, p_k) $ para que $ r $, a soma dos resíduos, seja a menor possível:</p>
-$$ r = \sum \limits_{i = 1}^N \left (y_i - f(x_i,\textbf{p}) \right)^2 $$<p>O ajuste da curva é de uso particular se os dados forem contaminados por ruídos: para um dado $ x_i $ e $ y_i = f(x_i, \textbf{p}) $, temos um termo de erro (desconhecido) $ \epsilon_i $ para que $ y_i = f(x_i,\textbf{p}) + \epsilon_i $.</p>
+<h2 id="Ajuste-de-curva">Ajuste de curva<a class="anchor-link" href="#Ajuste-de-curva">&#182;</a></h2><p>Já vimos que podemos ajustar funções polinomiais a um conjunto de dados usando a função <code>numpy.polyfit</code>. Aqui, apresentamos um algoritmo de ajuste de curva mais genérico.</p>
+<p>O SciPy fornece uma função um pouco genérica (baseada no algoritmo de Levenberg-Marquardt) através do <code>scipy.optimize.curve_fit</code> para ajustar uma determinada função (Python) a um conjunto de dados. O pressuposto é que temos um conjunto de dados com pontos $x_1, x_2, ... x_N$ e com valores de função correspondentes $y_i$ dependentes de $x_i$, tal que $y_i = f(x_i,\textbf{p})$. Queremos determinar o vetor de parâmetros $\textbf{p} = (p_1, p_2, \dots, p_k)$ para que $r$, a soma dos resíduos, seja a menor possível:</p>
+$$r = \sum \limits_{i = 1}^N \left (y_i - f(x_i,\textbf{p}) \right)^2$$<p>O ajuste da curva é de uso particular se os dados forem contaminados por ruídos: para um dado $x_i$ e $y_i = f(x_i, \textbf{p})$, temos um termo de erro (desconhecido) $\epsilon_i$ para que $y_i = f(x_i,\textbf{p}) + \epsilon_i$.</p>
 <p>Utilizamos o seguinte exemplo para esclarecer isso:
-$$ f(x,\textbf{p}) = a \exp(-bx) + c, \quad \mathrm{i.e.} \quad \textbf{p} = (a, b, c) $$</p>
+$$f(x,\textbf{p}) = a \exp(-bx) + c, \quad \mathrm{i.e.} \quad \textbf{p} = (a, b, c)$$</p>
 
 </div>
 </div>
@@ -13316,8 +13316,8 @@ iKSh/w9oxQXGiZyWIQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Observe que no código-fonte acima, definimos a função de ajuste $ y = f(x) $ através do código Python. Podemos, portanto, ajustar funções (quase) arbitrárias usando o método <code>curve_fit</code>.</p>
-<p>A função <code>curve_fit</code> retorna uma tupla <code>popt, pcov</code>. A primeira entrada <code>popt</code> contém uma tupla dos parâmetros ótimos (no sentido de que estes minimizam o valor $ r $). A segunda entrada contém a matriz de covariância para todos os parâmetros. As diagonais fornecem a variância dos parâmetro estimados.</p>
+<p>Observe que no código-fonte acima, definimos a função de ajuste $y = f(x)$ através do código Python. Podemos, portanto, ajustar funções (quase) arbitrárias usando o método <code>curve_fit</code>.</p>
+<p>A função <code>curve_fit</code> retorna uma tupla <code>popt, pcov</code>. A primeira entrada <code>popt</code> contém uma tupla dos parâmetros ótimos (no sentido de que estes minimizam o valor $r$). A segunda entrada contém a matriz de covariância para todos os parâmetros. As diagonais fornecem a variância dos parâmetro estimados.</p>
 <p>Para que o processo de ajuste de curva funcione, o algoritmo de Levenberg-Marquardt precisa iniciar o processo de ajuste com palpites iniciais para os parâmetros finais. Se estes não forem especificados (como no exemplo acima), o valor "1.0" é usado para o palpite inicial.</p>
 <p>Se o algoritmo falhar em obter uma função para os dados (mesmo que a função descreva os dados razoavelmente), precisamos dar ao algoritmo melhores estimativas para os parâmetros iniciais. Para o exemplo mostrado acima, podemos dar as estimativas para a função <code>curve_fit</code> mudando a linha</p>
 <div class="highlight"><pre><span></span><span class="n">Popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span> <span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">yi</span><span class="p">)</span>
@@ -13333,7 +13333,7 @@ iKSh/w9oxQXGiZyWIQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>se nossos palpites iniciais fossem $ a = 2 $, $ b = 1 $ e $ c = 0.6 $. Uma vez que tomamos o algoritmo "aproximadamente na área correta" no espaço de parâmetros, o ajuste geralmente funciona bem.</p>
+<p>se nossos palpites iniciais fossem $a = 2$, $b = 1$ e $c = 0.6$. Uma vez que tomamos o algoritmo "aproximadamente na área correta" no espaço de parâmetros, o ajuste geralmente funciona bem.</p>
 <h2 id="Transformadas-de-Fourier">Transformadas de Fourier<a class="anchor-link" href="#Transformadas-de-Fourier">&#182;</a></h2><p>No exemplo seguinte, criamos um sinal como uma superposição de uma onda senoidal de 50 Hz e 70 Hz (com uma ligeira mudança de fase entre eles). Então, aplicamos a transformada de Fourier no sinal e plotamos o valor absoluto dos coeficientes (complexos) da transformada discreta de Fourier pela freqüência. Esperamos ver picos em 50Hz e 70Hz.</p>
 
 </div>
@@ -13868,8 +13868,8 @@ daYgAW+tfMkAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Otimiza&#231;&#227;o">Otimiza&#231;&#227;o<a class="anchor-link" href="#Otimiza&#231;&#227;o">&#182;</a></h2><p>Muitas vezes precisamos encontrar o máximo ou mínimo de uma função particular $ f(x) $, onde $ f $ é uma função escalar, mas $ x $ poderia ser um vetor. As aplicações típicas são a minimização de algumas variáveis, tais como custo, risco e erro, ou a maximização de produtividade, eficiência e lucro. Rotinas de otimização normalmente fornecem um método para minimizar uma determinada função: se precisamos maximizar $ f(x) $, criamos uma nova função $g(x)$ que inverte o sinal de $f$, ou seja, $ g(x) = - f(x) $ e minimizamos $ g(x) $.</p>
-<p>Abaixo, damos um exemplo mostrando (i) a definição da função de teste e (ii) a chamada da função <code>scipy.optimize.fmin</code>, que toma como argumento a função $ f $ a ser minimizada e um valor inicial $ x_0 $ a partir do qual se inicia a busca pelo mínimo, e retorna o valor de $ x $ para o qual $ f(x) $ é (localmente) minimizado. Normalmente, a busca pelo mínimo é uma busca local, i.e, o algoritmo segue o gradiente local. Nós repetimos a busca pelo mínimo para dois valores ($ x_0 = 1.0 $ e $ x_0 = 2.0 $, respectivamente) para demonstrar que, dependendo do valor de partida, podemos encontrar diferentes mínimos para a função $ f $.</p>
+<h2 id="Otimiza&#231;&#227;o">Otimiza&#231;&#227;o<a class="anchor-link" href="#Otimiza&#231;&#227;o">&#182;</a></h2><p>Muitas vezes precisamos encontrar o máximo ou mínimo de uma função particular $f(x)$, onde $f$ é uma função escalar, mas $x$ poderia ser um vetor. As aplicações típicas são a minimização de algumas variáveis, tais como custo, risco e erro, ou a maximização de produtividade, eficiência e lucro. Rotinas de otimização normalmente fornecem um método para minimizar uma determinada função: se precisamos maximizar $f(x)$, criamos uma nova função $g(x)$ que inverte o sinal de $f$, ou seja, $g(x) = - f(x)$ e minimizamos $g(x)$.</p>
+<p>Abaixo, damos um exemplo mostrando (i) a definição da função de teste e (ii) a chamada da função <code>scipy.optimize.fmin</code>, que toma como argumento a função $f$ a ser minimizada e um valor inicial $x_0$ a partir do qual se inicia a busca pelo mínimo, e retorna o valor de $x$ para o qual $f(x)$ é (localmente) minimizado. Normalmente, a busca pelo mínimo é uma busca local, i.e, o algoritmo segue o gradiente local. Nós repetimos a busca pelo mínimo para dois valores ($x_0 = 1.0$ e $x_0 = 2.0$, respectivamente) para demonstrar que, dependendo do valor de partida, podemos encontrar diferentes mínimos para a função $f$.</p>
 <p>A maioria dos comandos (após as duas chamadas de <code>fmin</code>) no arquivo <code>fmin1.py</code> cria o gráfico da função, os pontos de partida para as buscas e o mínimo obtido:</p>
 
 </div>
@@ -14301,7 +14301,7 @@ AEiKAgCApH4B27tfj/UFKw0AAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A chamada da função <code>fmin</code> produzirá algum diagnóstico de saída, como você pode ver acima.</p>
-<h5 id="Valor-de-retorno-de-fmin">Valor de retorno de <code>fmin</code><a class="anchor-link" href="#Valor-de-retorno-de-fmin">&#182;</a></h5><p>Note que o valor de retorno da função <code>fmin</code> é um <code>array</code> do numpy que - para o exemplo acima - contém apenas um número já que temos um único parâmetro (aqui $ x $) para variar. Em geral, <code>fmin</code> pode ser usada para encontrar o mínimo em um espaço de parâmetros de dimensão superior se houver vários parâmetros. Nesse caso, o <code>array</code> numpy conteria aqueles parâmetros que minimizam a função objetivo. A função objetivo $f(x)$ tem que retornar um escalar mesmo que haja mais parâmetros, ou seja, mesmo se $ x $ for um vetor.</p>
+<h5 id="Valor-de-retorno-de-fmin">Valor de retorno de <code>fmin</code><a class="anchor-link" href="#Valor-de-retorno-de-fmin">&#182;</a></h5><p>Note que o valor de retorno da função <code>fmin</code> é um <code>array</code> do numpy que - para o exemplo acima - contém apenas um número já que temos um único parâmetro (aqui $x$) para variar. Em geral, <code>fmin</code> pode ser usada para encontrar o mínimo em um espaço de parâmetros de dimensão superior se houver vários parâmetros. Nesse caso, o <code>array</code> numpy conteria aqueles parâmetros que minimizam a função objetivo. A função objetivo $f(x)$ tem que retornar um escalar mesmo que haja mais parâmetros, ou seja, mesmo se $x$ for um vetor.</p>
 
 </div>
 </div>

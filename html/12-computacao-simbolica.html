@@ -11777,7 +11777,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Computa&#231;&#227;o-simb&#243;lica">Computa&#231;&#227;o simb&#243;lica<a class="anchor-link" href="#Computa&#231;&#227;o-simb&#243;lica">&#182;</a></h1><h2 id="SymPy">SymPy<a class="anchor-link" href="#SymPy">&#182;</a></h2><p>Nesta seção, apresentamos algumas funcionalidades básicas da biblioteca SymPy (SYMbolic Python). Em contraste com a computação numérica (envolvendo números), no cálculo simbólico estamos processando e transformando variáveis genéricas.</p>
 <p>A página inicial do SymPy (<a href="http://sympy.org/">http://sympy.org/</a>) fornece a documentação completa (e atualizada) para esta biblioteca.</p>
-<p>A computação simbólica é muito lento em comparação com as operações em ponto flutuante (veja, por exemplo, o <a href="13-computacao-numerica.html">Capítulo 13</a>) e, assim, geralmente não muito adequada para simulação direta. No entanto, é uma ferramenta poderosa no suporte à preparação do código e trabalho simbólico. Ocasionalmente, usamos operações simbólicas em simulações para elaborar o código numérico mais eficiente, antes que seja executado.</p>
+<p>A computação simbólica é muito lento em comparação com as operações em ponto flutuante e, assim, geralmente não muito adequada para simulação direta. No entanto, é uma ferramenta poderosa no suporte à preparação do código e trabalho simbólico. Ocasionalmente, usamos operações simbólicas em simulações para elaborar o código numérico mais eficiente, antes que seja executado.</p>
 <h3 id="Sa&#237;da">Sa&#237;da<a class="anchor-link" href="#Sa&#237;da">&#182;</a></h3><p>Antes de começarmos a usar o SymPy, chamaremos <code>init_printing</code>. Isto diz ao SymPy para mostrar as expressões em um formato mais conveniente.</p>
 
 </div>
@@ -13057,7 +13057,7 @@ $$1512 x^{2} y^{5}$$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Às vezes, o SymPy pode retornar um resultado de uma forma pouco familiar. Se, por exemplo, você desejar usar o SymPy para verificar se você diferenciou algo corretamente, uma técnica que pode ser útil é subtrair o resultado do SymPy do seu resultado e verificar se a resposta é zero.</p>
-<p>Tomando o exemplo simples de uma função de base radial multiquádrica, $ \phi(r) = \sqrt{r^2 + \sigma^2} $ com $ r = \sqrt{x^2 + y^2} $ e $ \sigma $ uma constante, podemos verificar se a primeira derivada em $ x $ é $ \frac{\partial \phi}{\partial x} = \frac{x}{\sqrt{r^2 + \sigma^ 2}} $.</p>
+<p>Tomando o exemplo simples de uma função de base radial multiquádrica, $\phi(r) = \sqrt{r^2 + \sigma^2}$ com $r = \sqrt{x^2 + y^2}$ e $\sigma$ uma constante, podemos verificar se a primeira derivada em $x$ é $\frac{\partial \phi}{\partial x} = \frac{x}{\sqrt{r^2 + \sigma^ 2}}$.</p>
 <p>Neste exemplo, primeiro pedimos que o SymPy imprima a derivada. Veja que ela é impressa de forma diferente da nossa derivada de teste, mas a subtração verifica que elas são idênticas:</p>
 
 </div>
@@ -14445,7 +14445,7 @@ $$- 0.479425538604203 x - 1.32116826114474 \cdot 10^{-6} \left(x - 0.5\right)^{9
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>O SymPy fornece duas funções de plotagem, <code>plot()</code>, do módulo <code>sympy.plotting</code>, e <code>plot</code> do módulo <code>sympy.mpmath.visualization</code>. No momento da escrita, essas funções careciam de algumas capacidades de plotagem, o que significa que não são adequadas para a maioria de nossas necessidades. Ainda assim, caso você deseje utilizá-las, a função <code>help()</code> delas é útil.</p>
-<p>Para a maioria dos nossos propósitos, Matplotlib deve ser a ferramenta de plotagem a ser escolhida. Os detalhes estão no <a href="15-visualizando-dados.html">Capítulo 15</a>. Aqui, fornecemos apenas um exemplo de como plotar os resultados de uma computação SymPy.</p>
+<p>Para a maioria dos nossos propósitos, Matplotlib deve ser a ferramenta de plotagem a ser escolhida. Aqui, fornecemos apenas um exemplo de como plotar os resultados de uma computação SymPy.</p>
 
 </div>
 </div>
