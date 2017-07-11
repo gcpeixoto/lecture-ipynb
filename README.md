@@ -31,8 +31,9 @@ segundo o ritmo da internet, torna-se difícil coibir eventuais falhas com redir
 e referências. Portanto, o envio de sugestões e correções será muito bem-vindo.
 
 Prof. Gustavo Oliveira, gustavo.oliveira@ci.ufpb.br
-Departamento de Computação Científica
-Centro de Informática
-Universidade Federal da Paraíba
+
+Departamento de Computação Científica<br>
+Centro de Informática<br>
+Universidade Federal da Paraíba<br>
 
 João Pessoa, 11 de julho de 2017.
