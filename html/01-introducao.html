@@ -11782,6 +11782,39 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">oct</span><span class="p">(</span><span class="mi">234</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;0o352&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11834,32 +11867,22 @@ $v(t) = 9.81t + v_0 \, m/s$).</p>
 <p><em>Como Python é uma linguagem interpretada e, muitas vezes, executada mais lentamente do que código compilado, pode-se perguntar por que alguém deveria considerar essa linguagem "lenta" para simulações computacionais?</em></p>
 <p>Há duas respostas para esta crítica:</p>
 <ol>
-<li><p><em>Tempo de implementação versus tempo de execução</em>: não é apenas o tempo de execução que contribui para o custo de um projeto computacional: também é necessário considerar o custo do trabalho de desenvolvimento e manutenção.</p>
-<p>Nos primórdios da computação científica (digamos, nas decádas de 1960/70/80), o tempo de computação era tão proibitivo que fazia sentido investir muitos meses do tempo de um programador para melhorar o desempenho de um cálculo em qualquer ínfima porcentagem.</p>
-<p>Hoje em dia, no entanto, os ciclos de uma unidade de processamento (CPU) tornaram-se muito mais baratos do que o tempo do programador. Para os códigos de pesquisa, os quais são executados, via de regra, apenas um pequeno número de vezes (antes que os pesquisadores passem para o próximo problema), pode ser econômico aceitar que o código seja executado apenas com 25% da velocidade esperada possível se isto economiza, digamos, um mês do tempo de um pesquisador (ou programador). Por exemplo: se o tempo de execução de parte do código for de 10 horas, com uma previsão de que ele seja executado cerca de 100 vezes, então o tempo total de execução é de aproximadamente 1000 horas. Seria ótimo se  isto pudesse ser reduzido para 25%. Seria uma economia de 750 horas de processamento. Por outro lado, uma espera extra (cerca de um mês) e o custo de 750 horas de CPU valeria o investimento de um mês do tempo de uma pessoa.</p>
-<p><em>Legibilidade e manutenção do código - código curto, menos erros</em>: uma questão relacionada é que um código de pesquisa não é usado apenas para um projeto, mas continua sendo usado repetidas vezes, evolui, cresce, bifurca-se etc. Neste caso, o investimento em mais tempo para tornar o código mais rápido é uma justificativa frequente. Ao mesmo tempo, uma quantidade significativa de tempo do programador concentrar-se-á em (i) introduzir as mudanças necessárias, (ii) testá-las mesmo antes de o trabalho de otimização da velocidade de execução da versão alterada começar. Para manter, estender e modificar um código de modos ainda imprevistos, o uso de uma linguagem que seja fácil de ler e que possua grande poder expressivo é recomendado.</p>
-</li>
-<li><p><em>Código Python bem escrito pode ser muito rápido</em> se partes críticas e demoradas do código forem executadas através de linguagens compiladas: normalmente, menos de 5% do código de um projeto de simulação precisam de mais de 95% do tempo de execução. Desde que esses cálculos sejam feitos de forma muito eficiente, não é necessário se preocupar com todas as outras partes do código, já que o tempo total de sua execução é insignificante.</p>
-<p>A parte do programa onde há intensa computação deve ser ajustada para alcançar o melhor desempenho. Várias opções são oferecidas em Python:</p>
-<ul>
-<li><p>Por exemplo, a extensão NumPy fornece uma interface Python para as eficientes bibliotecas compiladas LAPACK, que são quase o padrão em álgebra linear numérica. Se os problemas em estudo puderem ser formulados de forma que, eventualmente, grandes sistemas de equações algébricas tenham que ser resolvidos, ou autovalores computados, etc., o código compilado na biblioteca LAPACK pode ser usado (através do pacote NumPy). Nesta etapa, os cálculos são realizados com o mesmo desempenho do Fortran/C, haja vista que o código usado é essencialmente escrito em Fortran/C. O Matlab, a propósito, explora exatamente isto: a linguagem de <em>script</em> Matlab é muito lenta (cerca de 10 vezes mais lenta do que Python), mas o Matlab ganha seu poder ao delegar operações matriciais às bibliotecas compiladas LAPACK.</p>
-</li>
-<li><p>As bibliotecas numéricas C/Fortran existentes podem ser "interfaceadas" (para serem chamadas a partir do programa Python) através de, por exemplo, Swig, Boost.Python e Cython.</p>
-</li>
-<li><p>O Python pode ser estendido através de linguagens compiladas se a parte do problema com grande demanda computacional não for algoritmicamente padronizada e não houver biblioteca existente que possa ser usada. As linguagens comumente utilizadas para implementar extensões rápidas são C, C++ e Fortran.</p>
-</li>
-<li><p>Listamos algumas ferramentas que são usadas para usar código compilado a partir do Python:</p>
-<ul>
-<li>A extensão <span>`scipy.weave`</span> é útil se apenas uma expressão curta precisar ser expressa em C.</li>
-<li><p>A interface Cython está crescendo em popularidade para declarar semi-automaticamente os tipos de variáveis no código Python, para traduzir esse código para C (automaticamente) e depois usar o código C compilado a partir do Python. O Cython também é usado para encapsular rapidamente uma biblioteca C existente com uma interface para que a biblioteca C possa ser usada a partir do Python.</p>
-</li>
-<li><p>Boost.Python é especializado para encapsular código C++ no Python.</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><em>Tempo de implementação versus tempo de execução</em>: não é apenas o tempo de execução que contribui para o custo de um projeto computacional: também é necessário considerar o custo do trabalho de desenvolvimento e manutenção.</li>
 </ol>
+<p>   Nos primórdios da computação científica (digamos, nas decádas de 1960/70/80), o tempo de computação era tão proibitivo que fazia sentido investir muitos meses do tempo de um programador para melhorar o desempenho de um cálculo em qualquer ínfima porcentagem.</p>
+<p>   Hoje em dia, no entanto, os ciclos de uma unidade de processamento (CPU) tornaram-se muito mais baratos do que o tempo do programador. Para os códigos de pesquisa, os quais são executados, via de regra, apenas um pequeno número de vezes (antes que os pesquisadores passem para o próximo problema), pode ser econômico aceitar que o código seja executado apenas com 25% da velocidade esperada possível se isto economiza, digamos, um mês do tempo de um pesquisador (ou programador). Por exemplo: se o tempo de execução de parte do código for de 10 horas, com uma previsão de que ele seja executado cerca de 100 vezes, então o tempo total de execução é de aproximadamente 1000 horas. Seria ótimo se  isto pudesse ser reduzido para 25%. Seria uma economia de 750 horas de processamento. Por outro lado, uma espera extra (cerca de um mês) e o custo de 750 horas de CPU valeria o investimento de um mês do tempo de uma pessoa.</p>
+<p>   <em>Legibilidade e manutenção do código - código curto, menos erros</em>: uma questão relacionada é que um código de pesquisa não é usado apenas para um projeto, mas continua sendo usado repetidas vezes, evolui, cresce, bifurca-se etc. Neste caso, o investimento em mais tempo para tornar o código mais rápido é uma justificativa frequente. Ao mesmo tempo, uma quantidade significativa de tempo do programador concentrar-se-á em (i) introduzir as mudanças necessárias, (ii) testá-las mesmo antes de o trabalho de otimização da velocidade de execução da versão alterada começar. Para manter, estender e modificar um código de modos ainda imprevistos, o uso de uma linguagem que seja fácil de ler e que possua grande poder expressivo é recomendado.</p>
+<ol>
+<li><em>Código Python bem escrito pode ser muito rápido</em> se partes críticas e demoradas do código forem executadas através de linguagens compiladas: normalmente, menos de 5% do código de um projeto de simulação precisam de mais de 95% do tempo de execução. Desde que esses cálculos sejam feitos de forma muito eficiente, não é necessário se preocupar com todas as outras partes do código, já que o tempo total de sua execução é insignificante.</li>
+</ol>
+<p>   A parte do programa onde há intensa computação deve ser ajustada para alcançar o melhor desempenho. Várias opções são oferecidas em Python:</p>
+<p>   - Por exemplo, a extensão NumPy fornece uma interface Python para as eficientes bibliotecas compiladas LAPACK, que são quase o padrão em álgebra linear numérica. Se os problemas em estudo puderem ser formulados de forma que, eventualmente, grandes sistemas de equações algébricas tenham que ser resolvidos, ou autovalores computados, etc., o código compilado na biblioteca LAPACK pode ser usado (através do pacote NumPy). Nesta etapa, os cálculos são realizados com o mesmo desempenho do Fortran/C, haja vista que o código usado é essencialmente escrito em Fortran/C. O Matlab, a propósito, explora exatamente isto: a linguagem de <em>script</em> Matlab é muito lenta (cerca de 10 vezes mais lenta do que Python), mas o Matlab ganha seu poder ao delegar operações matriciais às bibliotecas compiladas LAPACK.</p>
+<p>   - As bibliotecas numéricas C/Fortran existentes podem ser "interfaceadas" (para serem chamadas a partir do programa Python) através de, por exemplo, Swig, Boost.Python e Cython.</p>
+<p>   - O Python pode ser estendido através de linguagens compiladas se a parte do problema com grande demanda computacional não for algoritmicamente padronizada e não houver biblioteca existente que possa ser usada. As linguagens comumente utilizadas para implementar extensões rápidas são C, C++ e Fortran.</p>
+<p>   - Listamos algumas ferramentas que são usadas para usar código compilado a partir do Python:</p>
+<p>       - A extensão <span>`scipy.weave`</span> é útil se apenas uma expressão curta precisar ser expressa em C.
+       - A interface Cython está crescendo em popularidade para declarar semi-automaticamente os tipos de variáveis no código Python, para traduzir esse código para C (automaticamente) e depois usar o código C compilado a partir do Python. O Cython também é usado para encapsular rapidamente uma biblioteca C existente com uma interface para que a biblioteca C possa ser usada a partir do Python.</p>
+<p>       - Boost.Python é especializado para encapsular código C++ no Python.</p>
 
 </div>
 </div>

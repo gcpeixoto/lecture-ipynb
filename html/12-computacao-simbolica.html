@@ -14831,13 +14831,14 @@ IU7z/+dIsjdNDUrMAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Equa&#231;&#245;es-lineares-e-invers&#227;o-de-matrizes">Equa&#231;&#245;es lineares e invers&#227;o de matrizes<a class="anchor-link" href="#Equa&#231;&#245;es-lineares-e-invers&#227;o-de-matrizes">&#182;</a></h3><p>O SymPy possui uma classe <code>Matrix</code> e funções associadas que permitem a solução simbólica de sistemas de equações lineares (e, claro, podemos obter respostas numéricas com <code>subs()</code> e <code>evalf()</code>). Considerararemos o exemplo do seguinte par de equações lineares simples:</p>
-$$ 
+<p>$$ 
 \begin{aligned}
 3x + 7y &amp; = 12z \\
 4x - 2y &amp; = 5z 
 \end {aligned} 
-$$<p>Podemos escrever este sistema na forma $ \textbf{A} \textbf{x} = \textbf{b} $ (multiplique $ \textbf{A} $ por $ \textbf{x} $ caso queira verificar se as equações originais são recuperadas), onde</p>
-$$ A = 
+$$</p>
+<p>Podemos escrever este sistema na forma $\textbf{A} \textbf{x} = \textbf{b}$ (multiplique $\textbf{A}$ por $\textbf{x}$ caso queira verificar se as equações originais são recuperadas), onde</p>
+<p>$${\bf A} = 
 \left(
 \begin{array}{cc}
 3 &amp; 7 \\
@@ -14859,8 +14860,9 @@ y
 12z \\
 5z 
 \end{array} 
-\right). $$<p>Aqui, incluímos um símbolo, $ z $, no lado direito para demonstrar que os símbolos serão propagados na solução. Em muitos casos, teríamos $ z = 1 $, mas ainda pode haver benefício ao se usar SymPy como um solucionador numérico, mesmo quando a solução não contenha símbolos, devido à sua capacidade de retornar frações exatas em vez de <code>floats</code> aproximados.</p>
-<p>Uma estratégia para resolver o sistema para $ \textbf{x} $ é inverter a matriz $ \textbf{A} $ e pré-multiplicar a equação pela matriz inversa, i.e. $ \textbf{A}^{-1} \textbf{A} \textbf{x} = \textbf{x} = \textbf{A}^{-1} \textbf{b} $. A classe <code>Matrix</code> do SymPy possui um método <code>inv()</code> que nos permite encontrar a inversa e <code>*</code> realiza a multiplicação da matriz para nós, quando apropriado:</p>
+\right).$$</p>
+<p>Aqui, incluímos um símbolo, $z$, no lado direito para demonstrar que os símbolos serão propagados na solução. Em muitos casos, teríamos $z = 1$, mas ainda pode haver benefício ao se usar SymPy como um solucionador numérico, mesmo quando a solução não contenha símbolos, devido à sua capacidade de retornar frações exatas em vez de <code>floats</code> aproximados.</p>
+<p>Uma estratégia para resolver o sistema para $\textbf{x}$ é inverter a matriz $\textbf{A}$ e pré-multiplicar a equação pela matriz inversa, i.e. $\textbf{A}^{-1} \textbf{A} \textbf{x} = \textbf{x} = \textbf{A}^{-1} \textbf{b}$. A classe <code>Matrix</code> do SymPy possui um método <code>inv()</code> que nos permite encontrar a inversa e <code>*</code> realiza a multiplicação da matriz para nós, quando apropriado:</p>
 
 </div>
 </div>
@@ -15072,8 +15074,8 @@ $$\left[\begin{matrix}5.726\\3.203\end{matrix}\right]$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Um método alternativo para resolver o mesmo problema é construir o sistema como uma matriz aumentada. Essa é a forma obtida dispondo juntas as colunas (no nosso exemplo) de $ \textbf{A} $ e o vetor $ \textbf{b} $. A matriz aumentada é [1]:</p>
-$$ 
+<p>Um método alternativo para resolver o mesmo problema é construir o sistema como uma matriz aumentada. Essa é a forma obtida dispondo juntas as colunas (no nosso exemplo) de $\textbf{A}$ e o vetor $\textbf{b}$. A matriz aumentada é [1]:</p>
+<p>$$ 
 (\textbf{A} \, | \, \textbf{b} ) = 
 \left( 
 \begin{array}{cc|c}
@@ -15081,8 +15083,8 @@ $$
 4 &amp; -2 &amp; 5z 
 \end{array} 
 \right), 
-$$<p></p>
-<p>e, como antes, construímos isto como um objeto SymPy <code>Matrix</code>, mas, neste caso, passamos para a função <code>solve_linear_system()</code>:</p>
+$$ 
+e, como antes, construímos isto como um objeto SymPy <code>Matrix</code>, mas, neste caso, passamos para a função <code>solve_linear_system()</code>:</p>
 
 </div>
 </div>
@@ -15305,7 +15307,7 @@ $$\left \{ x : \frac{59 z}{34}, \quad y : \frac{33 z}{34}\right \}$$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Para obter mais informações, consulte <code>help(solve)</code> e <code>help(solve_linear_system)</code>.</p>
-<h3 id="Equa&#231;&#245;es-n&#227;o-lineares">Equa&#231;&#245;es n&#227;o-lineares<a class="anchor-link" href="#Equa&#231;&#245;es-n&#227;o-lineares">&#182;</a></h3><p>Vamos resolver uma equação simples como $ x = x^2 $. Existem duas soluções óbvias: $ x = 0 $ e $ x = 1 $. Como podemos pedir ao SymPy para calcular isso para nós?</p>
+<h3 id="Equa&#231;&#245;es-n&#227;o-lineares">Equa&#231;&#245;es n&#227;o-lineares<a class="anchor-link" href="#Equa&#231;&#245;es-n&#227;o-lineares">&#182;</a></h3><p>Vamos resolver uma equação simples como $x = x^2$. Existem duas soluções óbvias: $x = 0$ e $x = 1$. Como podemos pedir ao SymPy para calcular isso para nós?</p>
 
 </div>
 </div>
@@ -15362,8 +15364,8 @@ $$\left [ 0, \quad 1\right ]$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A função <code>solve()</code> espera uma expressão que deve ser resolvida com o zero isolado. Para o nosso exemplo, reescrevemos $ x = x^2 $ como $ x - x^2 = $ e, em seguida, a passamos para a função <code>solve()</code>.</p>
-<p>Vamos repetir o mesmo para a equação $ x = x^3 $ e resolver</p>
+<p>A função <code>solve()</code> espera uma expressão que deve ser resolvida com o zero isolado. Para o nosso exemplo, reescrevemos $x = x^2$ como $x - x^2 = 0$ e, em seguida, a passamos para a função <code>solve()</code>.</p>
+<p>Vamos repetir o mesmo para a equação $x = x^3$ e resolver</p>
 
 </div>
 </div>
@@ -15513,8 +15515,8 @@ $$\left [ -1, \quad 0, \quad 1\right ]$$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Esteja ciente de que em seu modo padrão, o código de saída produzido por <code>latex()</code> requer o pacote <code>amsmath</code>, a ser carregado através do comando <code>\usepackage amsmath}</code> no preâmbulo do documento.</p>
-<p>O SymPy também suporta uma rotina de saída "pretty print" (<code>pprint()</code>), que produz saída de texto com melhor formatação do que a rotina de impressão padrão. Observe os recursos de notação, tais como subíndices para elementos de um <code>array</code> cujos nomes são da forma <code>T_n</code>, a constante italicizada $ e $, pontos centralizados verticalmente para a multiplicação, bordas de matrizes e frações.</p>
-<p>Finalmente, o SymPy oferece <code>preview()</code>, que exibe a saída renderizada na tela (verifique <code>help(preview)</code> para obter detalhes).</p>
+<p>O SymPy também suporta uma rotina de "impressão elegante" com a função <code>pprint()</code> (abreviatura de "pretty print"), que produz saída de texto com melhor formatação do que a rotina de impressão padrão. Observe os recursos de notação, tais como subíndices para elementos de um <code>array</code> cujos nomes são da forma <code>T_n</code>, a constante italicizada $e$, pontos centralizados verticalmente para a multiplicação, bordas de matrizes e frações.</p>
+<p>Finalmente, o SymPy oferece a função <code>preview()</code>, que exibe a saída renderizada na tela (verifique <code>help(preview)</code> para obter detalhes).</p>
 
 </div>
 </div>
@@ -15616,7 +15618,7 @@ double taylor_sine(double x) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ferramentas-relacionadas">Ferramentas relacionadas<a class="anchor-link" href="#Ferramentas-relacionadas">&#182;</a></h2><p>Vale a pena conferir a iniciativa SAGE (<a href="http://www.sagemath.org/">http://www.sagemath.org/</a>), que está tentando "criar uma alternativa de fonte aberta livre e viável para Magma, Maple, Mathematica e Matlab" e inclui a biblioteca SymPy e muitas outras. Suas capacidades simbólicas são mais poderosas do que as do SymPy e o SAGE, à exceção dos recursos do SymPy, já cobrirá muitas das necessidades emergentes nos campos das ciências e engenharias. O SAGE inclui o sistema algébrico computacionarl Maxima, que também está disponível de forma autônoma em <a href="http://maxima.sourceforge.net/">http://maxima.sourceforge.net/</a>.</p>
+<h2 id="Ferramentas-relacionadas">Ferramentas relacionadas<a class="anchor-link" href="#Ferramentas-relacionadas">&#182;</a></h2><p>Vale a pena conferir a iniciativa SAGE (<a href="http://www.sagemath.org/">http://www.sagemath.org/</a>), que está tentando "criar uma alternativa de fonte aberta livre e viável para Magma, Maple, Mathematica e Matlab" e inclui a biblioteca SymPy e muitas outras. Suas capacidades simbólicas são mais poderosas do que as do SymPy e o SAGE, à exceção dos recursos do SymPy, já cobrirá muitas das necessidades emergentes nos campos das ciências e engenharias. O SAGE inclui o sistema algébrico computacional Maxima, que também está disponível de forma autônoma em <a href="http://maxima.sourceforge.net/">http://maxima.sourceforge.net/</a>.</p>
 
 </div>
 </div>

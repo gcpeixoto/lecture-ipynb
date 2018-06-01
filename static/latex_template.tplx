@@ -36,13 +36,13 @@
 \lstdefinestyle{defaultstyle}{}
 \lstset{language=Python}
 \lstset{basicstyle=\ttfamily}
-\lstset{showstringspaces=fales}
+\lstset{showstringspaces=false}
 \lstset{keywordstyle=\color{blue}}
 \lstset{frame=single}
-\lstset{backgroundcolor=\color{white},emph={EMPTY},emphstyle=\color{white}}
+\lstset{backgroundcolor=\color{apricot},emph={EMPTY},emphstyle=\color{black}}
 \definecolor{lightgrey}{cmyk}{0.05,0.05,0.05,0}
 
-\lstset{backgroundcolor=\color{lightgrey}}
+\lstset{backgroundcolor=\color{apricot}}
 \newcommand{\py}[1]{\texttt{\color{blue}#1}}
 \newcommand{\myhtmlniceskip}{\vspace{1pt}}
 \newcommand{\furtherinfosep}{\medskip}

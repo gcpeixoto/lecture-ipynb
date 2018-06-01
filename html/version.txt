@@ -1,8 +1,8 @@
-Last compiled: Ter 11 Jul 2017 11:03:39 -03
+Last compiled: Fri Jun  1 00:25:50 -03 2018
  
 Last commit:
-commit ecbeacd0e11bb3ae6e5d264ccc3f96364b8c3183
-Author: Gustavo Peixoto <tavolesliv@gmail.com>
-Date:   Sat Jul 1 12:52:20 2017 -0300
+commit f46bb7bfea811b91080420b16d21193b0e790db1
+Author: Gustavo PEIXOTO DE OLIVEIRA <tavolesliv@gmail.com>
+Date:   Thu Jul 20 20:15:33 2017 -0300
 
-    Submitting compiled version, ready to use. Requires fine tuning and improvements. Waiting for Hans comments.
+    Adding Anaconda tutorial.

@@ -11983,9 +11983,10 @@ Integrators of ODE systems
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As seções seguintes mostram exemplos que demonstram como empregar os algoritmos fornecidos pelo SciPy.</p>
-<h2 id="Integra&#231;&#227;o-num&#233;rica">Integra&#231;&#227;o num&#233;rica<a class="anchor-link" href="#Integra&#231;&#227;o-num&#233;rica">&#182;</a></h2><p>O SciPy fornece uma série de rotinas de integração. Uma ferramenta com a finalidade de resolver integrais <em>I</em> do tipo</p>
-$$ I = \int_a^b f(x) \, dx $$<p>é fornecida pela função <code>quad()</code> do módulo <code>scipy.integrate</code>.</p>
-<p>Ela usa como argumento de entrada, a função a ser integrada $ f(x) $ ("integrando") e os limites inferior $ a $ e superior $ b $. Ela retorna dois valores (em uma tupla): o primeiro é o resultado calculado e o segundo é uma estimativa do erro numérico desse resultado.</p>
+<h2 id="Integra&#231;&#227;o-num&#233;rica">Integra&#231;&#227;o num&#233;rica<a class="anchor-link" href="#Integra&#231;&#227;o-num&#233;rica">&#182;</a></h2><p>O SciPy fornece uma série de rotinas de integração. Uma ferramenta com a finalidade de resolver integrais $I$ do tipo
+$$I = \int_a^b f(x) \, dx$$
+é fornecida pela função <code>quad()</code> do módulo <code>scipy.integrate</code>.</p>
+<p>Ela usa como argumento de entrada, a função a ser integrada $f(x)$ ("integrando") e os limites inferior $a$ e superior $b$. Ela retorna dois valores (em uma tupla): o primeiro é o resultado calculado e o segundo é uma estimativa do erro numérico desse resultado.</p>
 <p>Aqui está um exemplo que produz esta saída:</p>
 
 </div>
@@ -12070,7 +12071,8 @@ $$ I = \int_a^b f(x) \, dx $$<p>é fornecida pela função <code>quad()</code> d
 <h2 id="Resolvendo-equa&#231;&#245;es-diferenciais-ordin&#225;rias-(EDOs)">Resolvendo equa&#231;&#245;es diferenciais ordin&#225;rias (EDOs)<a class="anchor-link" href="#Resolvendo-equa&#231;&#245;es-diferenciais-ordin&#225;rias-(EDOs)">&#182;</a></h2><p>Para resolver uma EDO do tipo
 $$\frac{dy}{dt}(t) = f(y,t)$$</p>
 <p>com uma dada condição inicial $y(t_0) = y_0$, podemos usar a função <code>odeint</code> do SciPy. Aqui está um programa de exemplo auto-explicativo (<code>useodeint.py</code>) para encontar</p>
-$$y(t) \quad \mathrm{para} \quad t \in [0,2]$$<p>dada a EDO :
+<p>$$y(t) \quad \mathrm{para} \quad t \in [0,2]$$
+dada a EDO :
 $$\frac{dy}{dt}(t) = -2yt \quad \mathrm{com} \quad y(0) = 1.$$</p>
 
 </div>
@@ -12522,9 +12524,9 @@ odeint(func, y0, t, args=(), Dfun=None, col_deriv=0, full_output=0, ml=None, mu=
 <h3 id="Exerc&#237;cio:-usando-odeint">Exerc&#237;cio: usando <code>odeint</code><a class="anchor-link" href="#Exerc&#237;cio:-usando-odeint">&#182;</a></h3><ol>
 <li><p>Abra um novo arquivo com o nome <code>testeEDOInt.py</code> em um editor de texto.</p>
 </li>
-<li><p>Escreva um programa que calcule a solução $ y(t) $ da EDO seguinte usando o algoritmo <code>odeint</code>:
-  $$\frac{dy}{dt} = -\exp(-t)(10 \sin(10t) + \cos (10t))$$
-   De $t = 0$ a $t = 10$. O valor inicial é $y(0) = 1$.</p>
+<li><p>Escreva um programa que calcule a solução $y(t)$ da EDO seguinte usando o algoritmo <code>odeint</code>:
+     $$\frac{dy}{dt} = -\exp(-t)(10 \sin(10t) + \cos (10t))$$
+      De $t = 0$ a $t = 10$. O valor inicial é $y(0) = 1$.</p>
 </li>
 <li><p>Você deve exibir a solução graficamente nos pontos $t = 0$, $t = 0.01$, $t = 0.02$, ..., $t = 9.99$, $t = 10$.</p>
 </li>
@@ -12537,11 +12539,12 @@ odeint(func, y0, t, args=(), Dfun=None, col_deriv=0, full_output=0, ml=None, mu=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Localiza&#231;&#227;o-de-ra&#237;zes">Localiza&#231;&#227;o de ra&#237;zes<a class="anchor-link" href="#Localiza&#231;&#227;o-de-ra&#237;zes">&#182;</a></h2><p>Se você tentar encontrar um $x$ tal que</p>
-$$f (x) = 0,$$<p>então este é um problema chamado de <em>localização de raízes</em>. Observe que problemas como $g(x) = h(x)$ caem nesta categoria, pois você pode reescrevê-los como $f(x) = g(x) - h(x) = 0$.</p>
+<h2 id="Localiza&#231;&#227;o-de-ra&#237;zes">Localiza&#231;&#227;o de ra&#237;zes<a class="anchor-link" href="#Localiza&#231;&#227;o-de-ra&#237;zes">&#182;</a></h2><p>Se você tentar encontrar um $x$ tal que
+$$f (x) = 0,$$
+então este é um problema chamado de <em>localização de raízes</em>. Observe que problemas como $g(x) = h(x)$ caem nesta categoria, pois você pode reescrevê-los como $f(x) = g(x) - h(x) = 0$.</p>
 <p>Várias ferramentas para localização de raízes estão disponíveis no módulo <code>optimize</code> do SciPy.</p>
 <h3 id="Localiza&#231;&#227;o-de-raiz-pelo-m&#233;todo-de-bisec&#231;&#227;o">Localiza&#231;&#227;o de raiz pelo m&#233;todo de bisec&#231;&#227;o<a class="anchor-link" href="#Localiza&#231;&#227;o-de-raiz-pelo-m&#233;todo-de-bisec&#231;&#227;o">&#182;</a></h3><p>Primeiro, apresentamos o algoritmo <code>bisect</code>, que é (i) robusto e (ii) lento, mas conceitualmente muito simples.</p>
-<p>Suponhamos que precisemos calcular as raízes de  $f(x) = x^3 - 2x^2$. Esta função tem uma raiz dupla em $x = 0$ (isto é trivial de ver) e outra raiz localizada entre $x = 1.5$ (pois $f(1.5) = - 1.125$) e $x = 3$ (pois $f(3) = 9$). É direto ver que esta outra raiz está localizada em $x = 2$. Aqui está um programa que determina esta raiz numericamente:</p>
+<p>Suponhamos que precisemos calcular as raízes de $f(x) = x^3 - 2x^2$. Esta função tem uma raiz dupla em $x = 0$ (isto é trivial de ver) e outra raiz localizada entre $x = 1.5$ (pois $f(1.5) = - 1.125$) e $x = 3$ (pois $f(3) = 9$). É direto ver que esta outra raiz está localizada em $x = 2$. Aqui está um programa que determina esta raiz numericamente:</p>
 
 </div>
 </div>
@@ -12603,14 +12606,10 @@ O erro exato é -2.38419e-07.
 <li><p>Documente a sua escolha do intervalo inicial $[a, b]$ para a busca da raiz: quais valores você escolheu para $a$ e $b$. Por quê?</p>
 </li>
 <li><p>Estude os resultados:</p>
-<ul>
-<li><p>Que valor o algoritmo de bisecção retorna para a raiz $x$?</p>
-</li>
-<li><p>Calcule o valor de $\sqrt{2}$ usando <code>math.sqrt(2)</code> e compare-o com a aproximação da raiz. Quão grande é o erro absoluto de $x$? Como isso se compara com <code>xtol</code>?</p>
-</li>
-</ul>
 </li>
 </ol>
+<p>    - Que valor o algoritmo de bisecção retorna para a raiz $x$?</p>
+<p>    - Calcule o valor de $\sqrt{2}$ usando <code>math.sqrt(2)</code> e compare-o com a aproximação da raiz. Quão grande é o erro absoluto de $x$? Como isso se compara com <code>xtol</code>?</p>
 
 </div>
 </div>
@@ -13019,7 +13018,8 @@ QgJfCCEaCAl8IYRoICTwhRCigZDAF0KIBuL/AZpOXk2Fpl0+AAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ajuste-de-curva">Ajuste de curva<a class="anchor-link" href="#Ajuste-de-curva">&#182;</a></h2><p>Já vimos que podemos ajustar funções polinomiais a um conjunto de dados usando a função <code>numpy.polyfit</code>. Aqui, apresentamos um algoritmo de ajuste de curva mais genérico.</p>
 <p>O SciPy fornece uma função um pouco genérica (baseada no algoritmo de Levenberg-Marquardt) através do <code>scipy.optimize.curve_fit</code> para ajustar uma determinada função (Python) a um conjunto de dados. O pressuposto é que temos um conjunto de dados com pontos $x_1, x_2, ... x_N$ e com valores de função correspondentes $y_i$ dependentes de $x_i$, tal que $y_i = f(x_i,\textbf{p})$. Queremos determinar o vetor de parâmetros $\textbf{p} = (p_1, p_2, \dots, p_k)$ para que $r$, a soma dos resíduos, seja a menor possível:</p>
-$$r = \sum \limits_{i = 1}^N \left (y_i - f(x_i,\textbf{p}) \right)^2$$<p>O ajuste da curva é de uso particular se os dados forem contaminados por ruídos: para um dado $x_i$ e $y_i = f(x_i, \textbf{p})$, temos um termo de erro (desconhecido) $\epsilon_i$ para que $y_i = f(x_i,\textbf{p}) + \epsilon_i$.</p>
+<p>$$r = \sum \limits_{i = 1}^N \left (y_i - f(x_i,\textbf{p}) \right)^2$$</p>
+<p>O ajuste da curva é de uso particular se os dados forem contaminados por ruídos: para um dado $x_i$ e $y_i = f(x_i, \textbf{p})$, temos um termo de erro (desconhecido) $\epsilon_i$ para que $y_i = f(x_i,\textbf{p}) + \epsilon_i$.</p>
 <p>Utilizamos o seguinte exemplo para esclarecer isso:
 $$f(x,\textbf{p}) = a \exp(-bx) + c, \quad \mathrm{i.e.} \quad \textbf{p} = (a, b, c)$$</p>
 
@@ -14319,7 +14319,7 @@ AEiKAgCApH4B27tfj/UFKw0AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="scipy.io:-entrada-sa&#237;da-no-SciPy">scipy.io: entrada-sa&#237;da no SciPy<a class="anchor-link" href="#scipy.io:-entrada-sa&#237;da-no-SciPy">&#182;</a></h2><p>O SciPy fornecem rotinas para ler e escrever arquivos <code>.mat</code> do Matlab. Aqui está um exemplo de criação de um arquivo compatível com Matlab armazenando uma matriz (1x11), e posterior leitura desses dados em uma matriz numpy do Python usando a biblioteca de entrada-saída do SciPy:</p>
+<h2 id="scipy.io:-entrada-e-sa&#237;da-no-SciPy">scipy.io: entrada e sa&#237;da no SciPy<a class="anchor-link" href="#scipy.io:-entrada-e-sa&#237;da-no-SciPy">&#182;</a></h2><p>O SciPy fornece rotinas para ler e escrever arquivos <code>.mat</code> do Matlab. Aqui está um exemplo de criação de um arquivo compatível com Matlab armazenando uma matriz (1x11), e posterior leitura desses dados em uma matriz numpy do Python usando a biblioteca de entrada e saída do SciPy:</p>
 <p>Primeiro criamos um arquivo <code>.mat</code> no Octave (Octave é, na maioria dos casos, compatível com Matlab):</p>
 <div class="highlight"><pre><span></span><span class="n">octave</span><span class="p">:</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="n">a</span> <span class="p">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span> <span class="mi">4</span>
 <span class="n">a</span> <span class="p">=</span>
@@ -14337,7 +14337,7 @@ AEiKAgCApH4B27tfj/UFKw0AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Então, carregamos este array no python:</p>
+<p>Então, carregamos este <em>array</em> no Python:</p>
 
 </div>
 </div>
@@ -14431,7 +14431,7 @@ AEiKAgCApH4B27tfj/UFKw0AAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A função <code>loadmat</code> retorna um dicionário: a chave (<em>key</em>) para cada item no dicionário é uma <em>string</em> cujo nome é o mesmo da matriz que foi salva no Matlab.</p>
 <p>Um arquivo Matlab pode conter vários <em>arrays</em>. Cada um deles é apresentado por um par chave-valor (<em>key:value</em>) no dicionário.</p>
-<p>Vamos salvar dois arrays a partir do Python para demonstrar isso:</p>
+<p>Vamos salvar dois <em>arrays</em> a partir do Python para demonstrar isso:</p>
 
 </div>
 </div>

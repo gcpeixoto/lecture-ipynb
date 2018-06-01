@@ -11838,7 +11838,7 @@ div#notebook {
 <h4 id="Limita&#231;&#245;es-de-floats">Limita&#231;&#245;es de <code>float</code>s<a class="anchor-link" href="#Limita&#231;&#245;es-de-floats">&#182;</a></h4><p>Os números em ponto flutuante em um computador não são os mesmos que os números em ponto flutuante da matemática. (Isto é exatamente o mesmo que dize que os números inteiros (matemáticos) não são os mesmos em um computador: apenas um <em>subconjunto</em> do conjunto infinito dos números inteiros pode ser representado pelo tipo <code>int</code>, como mostrado anteriormente). Então, como os números em ponto flutuante são representados no computador?</p>
 <ul>
 <li>Qualquer número real $x$ pode ser escrito como
-   $$x  = a \cdot 10^b,$$</li>
+     $$x  = a \cdot 10^b,$$</li>
 </ul>
 <p>onde $a$ é a mantissa e $b$ o expoente.</p>
 <ul>
@@ -11881,15 +11881,10 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>Seguindo (aproximadamente) o padrão IEEE-754, usa-se 8 <em>bytes</em> para um <code>float</code> $x$: estes 64 bits são divididos entre</p>
-<ul>
-<li><p>10 bits para o expoente $b$ e</p>
-</li>
-<li><p>54 bits para a mantissa $a$.</p>
-</li>
+<li>Seguindo (aproximadamente) o padrão IEEE-754, usa-se 8 <em>bytes</em> para um <code>float</code> $x$: estes 64 bits são divididos entre</li>
 </ul>
-</li>
-</ul>
+<p>     - 10 bits para o expoente $b$ e</p>
+<p>     - 54 bits para a mantissa $a$.</p>
 <p>Isto resulta em</p>
 <ul>
 <li><p>maior número em ponto flutuante possível ≈ 10 <sup>308</sup> (medida de qualidade para <em>b</em>)</p>
@@ -11908,7 +11903,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Limita&#231;&#245;es-dos-n&#250;meros-complexos">Limita&#231;&#245;es dos n&#250;meros complexos<a class="anchor-link" href="#Limita&#231;&#245;es-dos-n&#250;meros-complexos">&#182;</a></h4><p>O tipo $ `complex<code>tem essencialmente as mesmas limitações que o tipo</code>float<code>porque um número complexo consiste de dois números</code>float`: um representa a parte real, o outro a parte imaginária.</p>
+<h4 id="Limita&#231;&#245;es-dos-n&#250;meros-complexos">Limita&#231;&#245;es dos n&#250;meros complexos<a class="anchor-link" href="#Limita&#231;&#245;es-dos-n&#250;meros-complexos">&#182;</a></h4><p>O tipo <code>complex</code> tem essencialmente as mesmas limitações que o tipo <code>float</code> porque um número complexo consiste de dois números <code>float</code>: um representa a parte real, o outro a parte imaginária.</p>
 <h4 id="...-s&#227;o-esses-tipos-de-n&#250;meros-de-valor-pr&#225;tico?">... s&#227;o esses tipos de n&#250;meros de valor pr&#225;tico?<a class="anchor-link" href="#...-s&#227;o-esses-tipos-de-n&#250;meros-de-valor-pr&#225;tico?">&#182;</a></h4><p>Na prática cotidiana, geralmente não encontramos números que excedam 10<sup>300</sup> (este é um número com 300 zeros!). Portanto, os números em ponto flutuante cobrem o intervalo de números de que geralmente precisamos.</p>
 <p>No entanto, você precisa estar ciente de que, em computação científica, números pequenos e grandes são usados, os quais podem (geralmente em resultados intermediários) exceder o intervalo de números em ponto flutuante.</p>
 <ul>
@@ -12392,24 +12387,17 @@ laco simbolico eh um fator 191.1 mais lento.
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Resumo">Resumo<a class="anchor-link" href="#Resumo">&#182;</a></h3><p>Em resumo, aprendemos que</p>
 <ul>
-<li><p>números em ponto flutuante e inteiros utilizados em computação numérica geralmente são bastante diferentes dos "números matemáticos" (os cálculos simbólicos são exatos e usam os "números matemáticos"):</p>
-<ul>
-<li><p>há um número máximo e um número mínimo que podem  ser representados (tanto para números inteiros como para ponto flutuante)</p>
-</li>
-<li><p>dentro desse intervalo, nem todo número em ponto flutuante pode ser representado no computador.</p>
-</li>
+<li>números em ponto flutuante e inteiros utilizados em computação numérica geralmente são bastante diferentes dos "números matemáticos" (os cálculos simbólicos são exatos e usam os "números matemáticos"):</li>
 </ul>
-</li>
-<li><p>lidamos com essa limitação:</p>
+<p>    - há um número máximo e um número mínimo que podem  ser representados (tanto para números inteiros como para ponto flutuante)</p>
+<p>    - dentro desse intervalo, nem todo número em ponto flutuante pode ser representado no computador.</p>
 <ul>
-<li><p>nunca comparando dois números em ponto flutuante por igualdade (em vez disso, calculamos o valor absoluto da diferença)</p>
-</li>
-<li><p>uso de algoritmos que são <em>estáveis</em> (isto significa que pequenos desvios de números corretos podem ser corrigidos pelo algoritmo. Ainda não mostramos nenhum exemplo desse tipo neste documento.)</p>
-</li>
+<li>lidamos com essa limitação:</li>
 </ul>
-</li>
-<li><p>Observe que há muito mais a dizer sobre métodos numéricos e técnicas algorítmicas para tornar a computação numérica tão precisa quanto possível, mas isto está fora do escopo desta seção.</p>
-</li>
+<p>    - nunca comparando dois números em ponto flutuante por igualdade (em vez disso, calculamos o valor absoluto da diferença)</p>
+<p>    - uso de algoritmos que são <em>estáveis</em> (isto significa que pequenos desvios de números corretos podem ser corrigidos pelo algoritmo. Ainda não mostramos nenhum exemplo desse tipo neste documento.)</p>
+<ul>
+<li>Observe que há muito mais a dizer sobre métodos numéricos e técnicas algorítmicas para tornar a computação numérica tão precisa quanto possível, mas isto está fora do escopo desta seção.</li>
 </ul>
 
 </div>
