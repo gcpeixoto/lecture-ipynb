@@ -1,8 +1,8 @@
-Last compiled: Fri Jun  1 00:25:50 -03 2018
+Last compiled: Fri Jun  1 00:29:46 -03 2018
  
 Last commit:
-commit f46bb7bfea811b91080420b16d21193b0e790db1
-Author: Gustavo PEIXOTO DE OLIVEIRA <tavolesliv@gmail.com>
-Date:   Thu Jul 20 20:15:33 2017 -0300
+commit 4d4858fc77a9ea6b75a2bc1857bd58bf1b82cc12
+Author: Gustavo Peixoto <gustavo.oliveira@ci.ufpb.br>
+Date:   Fri Jun 1 00:27:18 2018 -0300
 
-    Adding Anaconda tutorial.
+    Correcting typos and mispellings.
