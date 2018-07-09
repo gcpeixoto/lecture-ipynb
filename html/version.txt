@@ -1,8 +1,8 @@
-Last compiled: Fri Jun  1 00:29:46 -03 2018
+Last compiled: Mon Jul  9 10:27:08 -03 2018
  
 Last commit:
-commit 4d4858fc77a9ea6b75a2bc1857bd58bf1b82cc12
+commit f5fcb068188cbf13d39a8468fbaa6ab04b2590ac
 Author: Gustavo Peixoto <gustavo.oliveira@ci.ufpb.br>
-Date:   Fri Jun 1 00:27:18 2018 -0300
+Date:   Fri Jun 1 00:55:58 2018 -0300
 
-    Correcting typos and mispellings.
+    Minors.
