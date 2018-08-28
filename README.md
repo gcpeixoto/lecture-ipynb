@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/Online on mybinder?filepath=https%3A%2F%2Fgithub.com%2Fgcpeixoto%2Flecture-ipynb%2Fblob%2Fmaster%2Findice.ipynb)
+
 # Introdução à Linguagem Python para Ciências Computacionais e Engenharia
 
 ## Apresentação da edição em Português
@@ -30,4 +32,7 @@ Departamento de Computação Científica<br>
 Centro de Informática<br>
 Universidade Federal da Paraíba<br>
 
-João Pessoa, 31 de julho de 2017.
+## Atualização 
+
+Acesse a versão online no [_mybinder_](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=https%3A%2F%2Fgithub.com%2Fgcpeixoto%2Flecture-ipynb%2Fblob%2Fmaster%2Findice.ipynb
+).
