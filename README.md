@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/Online on mybinder?filepath=https%3A%2F%2Fgithub.com%2Fgcpeixoto%2Flecture-ipynb%2Fblob%2Fmaster%2Findice.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=https%3A%2F%2Fgithub.com%2Fgcpeixoto%2Flecture-ipynb%2Fblob%2Fmaster%2Findice.ipynb)
 
 # Introdução à Linguagem Python para Ciências Computacionais e Engenharia
 
@@ -34,5 +34,4 @@ Universidade Federal da Paraíba<br>
 
 ## Atualização 
 
-Acesse a versão online no [_mybinder_](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=https%3A%2F%2Fgithub.com%2Fgcpeixoto%2Flecture-ipynb%2Fblob%2Fmaster%2Findice.ipynb
-).
+Acesse a versão interativa online no [_mybinder_](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=https%3A%2F%2Fgithub.com%2Fgcpeixoto%2Flecture-ipynb%2Fblob%2Fmaster%2Findice.ipynb)
