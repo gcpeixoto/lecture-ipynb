@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=https%3A%2F%2Fgithub.com%2Fgcpeixoto%2Flecture-ipynb%2Fblob%2Fmaster%2Findice.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=indice.ipynb)
 
 # Introdução à Linguagem Python para Ciências Computacionais e Engenharia
 
