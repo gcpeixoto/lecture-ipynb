@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9. Tarefas comuns &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. Do Matlab para Python" href="10-matlab-para-python.html" />
+    <link rel="prev" title="8. Ferramentas funcionais" href="08-ferramentas-funcionais.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-entrada-saida.html">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-ferramentas-funcionais.html">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-shells-python.html">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-computacao-simbolica.html">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-proximos-passos.html">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/09-tarefas-comuns.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?urlpath=lab/tree/09-tarefas-comuns.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/lecture-ipynb/blob/master/09-tarefas-comuns.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#muitas-maneiras-de-computar-uma-serie">
+   9.1. Muitas maneiras de computar uma série
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classificacao-sorting">
+   9.2. Classificação (
+   <em>
+    Sorting
+   </em>
+   )
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eficiencia">
+     9.2.1. Eficiência
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tarefas-comuns">
+<h1><span class="section-number">9. </span>Tarefas comuns<a class="headerlink" href="#tarefas-comuns" title="Permalink to this headline">¶</a></h1>
+<p>Aqui fornecemos uma seleção de pequenos exemplos de programas que abordam algumas tarefas e um pouco mais de códigos em Python aos quais podemos recorrer enquanto buscamos inspiração para atacar um determinado problema.</p>
+<div class="section" id="muitas-maneiras-de-computar-uma-serie">
+<h2><span class="section-number">9.1. </span>Muitas maneiras de computar uma série<a class="headerlink" href="#muitas-maneiras-de-computar-uma-serie" title="Permalink to this headline">¶</a></h2>
+<p>As an example, we compute the sum of odd numbers in different ways.</p>
+<p>Como um exemplo, computamos a soma de números ímpares de diferentes maneiras.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcula_soma1</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;computa e retorna a soma de 2,4,6,...,m, onde m </span>
+<span class="sd">    é o maior número par menor do que n.</span>
+<span class="sd">    </span>
+<span class="sd">    Por exemplo, com n = 7, computamos 0+2+4+6 = 12.</span>
+<span class="sd">    </span>
+<span class="sd">    Esta implementação usa a variável &#39;soma&#39; que é </span>
+<span class="sd">    incrementada a cada iteração do laço `for`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+    <span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">soma</span> <span class="o">=</span> <span class="n">soma</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">soma</span>
+
+
+<span class="k">def</span> <span class="nf">calcula_soma2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Idem...</span>
+
+<span class="sd">    Esta implementação usa um loop `while`:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">contador</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">soma</span> <span class="o">=</span> <span class="n">soma</span> <span class="o">+</span> <span class="n">contador</span>
+        <span class="n">contador</span> <span class="o">=</span> <span class="n">contador</span> <span class="o">+</span> <span class="mi">2</span>
+
+    <span class="k">return</span> <span class="n">soma</span>
+
+
+<span class="k">def</span> <span class="nf">calcula_soma3</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">inicio</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Idem... Esta é uma implementação recursiva:&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">inicio</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">inicio</span> <span class="o">+</span> <span class="n">calcula_soma3</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">inicio</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">calcula_soma4a</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Uma abordagem funcional... Este parece ser </span>
+<span class="sd">    o código mais curto e conciso.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="k">def</span> <span class="nf">calcula_soma4b</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Uma abordagem funcional... não faz uso de </span>
+<span class="sd">    &#39;sum&#39; mas conveniente aqui.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">calcula_soma4c</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Uma abordagem funcional... um pouco mais rápida do </span>
+<span class="sd">    que `calcula_soma4b` uma vez que evitamos o uso de `lambda`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">operator</span>
+    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">calcula_soma4d</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Usando compreensão de lista.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+
+
+<span class="k">def</span> <span class="nf">calcula_soma4e</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Usando outra variação de compreensão de lista.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">calcula_soma5</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Usando python numérico (numpy). Esta é muito rápida</span>
+<span class="sd">    (mas não tem o mesmo efeito para n muito maior do que 10).&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">numpy</span>
+    <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">teste_consistencia</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Verifica todas as funções `calcula_soma`. As funções neste arquivo</span>
+<span class="sd">    produzem a mesma resposta para todo n &gt;= 2 and &lt; N.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">verificacao_1_n</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Compara a saida de `compute_sum1` com todas as outras funções </span>
+<span class="sd">        para um dado n&gt;=2. Lança exceção do tipo `AssertionError` se houver discordância na saída.&quot;&quot;&quot;</span>
+        <span class="n">funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">calcula_soma1</span><span class="p">,</span> <span class="n">calcula_soma2</span><span class="p">,</span> <span class="n">calcula_soma3</span><span class="p">,</span>
+                 <span class="n">calcula_soma4a</span><span class="p">,</span> <span class="n">calcula_soma4b</span><span class="p">,</span> <span class="n">calcula_soma4c</span><span class="p">,</span>
+                 <span class="n">calcula_soma4d</span><span class="p">,</span> <span class="n">calcula_soma4e</span><span class="p">,</span> <span class="n">calcula_soma5</span><span class="p">]</span>
+        <span class="n">resp1</span> <span class="o">=</span> <span class="n">calcula_soma1</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="k">assert</span> <span class="n">resp1</span> <span class="o">==</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">(n)=</span><span class="si">%d</span><span class="s2"> diferente de </span><span class="si">%s</span><span class="s2">(n)=</span><span class="si">%d</span><span class="s2"> &quot;</span> \
+                                  <span class="o">%</span> <span class="p">(</span><span class="n">funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">n</span><span class="p">),</span> <span class="n">f</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+    <span class="c1"># laço principal de teste na funcao teste_consistencia</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+        <span class="n">verificacao_1_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span> 
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">resultado_correto</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">resultado_atual</span> <span class="o">=</span> <span class="n">calcula_soma1</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;este resultado eh </span><span class="si">{}</span><span class="s2">, esperado </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">resultado_atual</span><span class="p">,</span> <span class="n">resultado_correto</span><span class="p">))</span>
+    <span class="c1"># compara com resultado correto</span>
+    <span class="k">assert</span> <span class="n">resultado_atual</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="c1"># verifica todos os outros metodos </span>
+    <span class="k">assert</span> <span class="n">calcula_soma2</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="k">assert</span> <span class="n">calcula_soma3</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="k">assert</span> <span class="n">calcula_soma4a</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="k">assert</span> <span class="n">calcula_soma4b</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="k">assert</span> <span class="n">calcula_soma4c</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="k">assert</span> <span class="n">calcula_soma4d</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="k">assert</span> <span class="n">calcula_soma4e</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+    <span class="k">assert</span> <span class="n">calcula_soma5</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado_correto</span>
+
+    <span class="c1"># verificação mais sistemática para muitos valores</span>
+    <span class="n">teste_consistencia</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>este resultado eh 12, esperado 12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Todas as implementações diferentes mostradas acima calculam o mesmo resultado. Há algumas coisas a serem aprendidas com isso:</p>
+<ul class="simple">
+<li><p>Há um número grande (provavelmente infinito) de soluções para um determinado problema. (Isso significa que escrever programas é uma tarefa que exige criatividade!)</p></li>
+<li><p>Estes podem atingir o mesmo “resultado” (neste caso, o cálculo de um número).</p></li>
+<li><p>Diferentes soluções podem ter características diferentes. Elas podem:</p>
+<ul>
+<li><p>ser mais rápidas ou mais lentas</p></li>
+<li><p>usar menos ou mais memória</p></li>
+<li><p>ser mais fáceis ou mais difíceis de entender (quando se lê o código-fonte)</p></li>
+<li><p>podem ser consideradas mais ou menos elegantes.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="classificacao-sorting">
+<h2><span class="section-number">9.2. </span>Classificação (<em>Sorting</em>)<a class="headerlink" href="#classificacao-sorting" title="Permalink to this headline">¶</a></h2>
+<p>Suponha que precisamos classificar uma lista de tuplas com pares de identificadores de usuário e nomes, i.e.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minha_lista</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;tarso&quot;</span><span class="p">,</span> <span class="s2">&quot;Paulo de Tarso&quot;</span><span class="p">,),</span>
+          <span class="p">(</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span> <span class="s2">&quot;O Administrador&quot;</span><span class="p">),</span>
+          <span class="p">(</span><span class="s2">&quot;visitante&quot;</span><span class="p">,</span> <span class="s2">&quot;O Visitante&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>a qual queremos classificar em ordem crescente de identificadores de usuário. Se houverem dois ou mais identificadores de usuários idênticos, eles devem ser classificados pela ordem dos nomes associados com esses identificadores. Este comportamento é apenas o comportamento padrão de <code class="docutils literal notranslate"><span class="pre">sort</span></code> (que volta ao assunto de como sequencias são comparadas).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coisas</span> <span class="o">=</span> <span class="n">minha_lista</span> <span class="c1"># colete seus dados</span>
+<span class="n">coisas</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>        <span class="c1"># classifique</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coisas</span><span class="p">)</span>        <span class="c1"># inspecione os dados classificados</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;admin&#39;, &#39;O Administrador&#39;), (&#39;tarso&#39;, &#39;Paulo de Tarso&#39;), (&#39;visitante&#39;, &#39;O Visitante&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As sequências são inicialmente comparadas pelos primeiros elementos apenas. Se eles diferirem, então uma decisão é tomada com base apenas nesses elementos. Se os elementos forem iguais, somente então os próximos elementos na seqüência são comparados… e assim por diante, até que uma diferença for encontrada, ou ficarmos sem elementos. Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>É também possível fazer:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coisas</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">coisas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Quando a lista não é particularmente grande, geralmente é aconselhável usar a função <code class="docutils literal notranslate"><span class="pre">sorted</span></code> (que <em>retorna uma cópia ordenada</em> da lista) sobre o método <code class="docutils literal notranslate"><span class="pre">sort</span></code> de uma lista (que altera a lista para uma classificação ordenada de elementos, e retorna <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p>
+<p>No entanto, e se os dados que temos forem armazenados de tal forma que, em cada uma das tuplas da lista, o nome venha primeiro, seguido do identificador, isto é,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minha_lista2</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Paulo de Tarso&quot;</span><span class="p">,</span> <span class="s2">&quot;tarso&quot;</span><span class="p">),</span>
+           <span class="p">(</span><span class="s2">&quot;O Administrador&quot;</span><span class="p">,</span> <span class="s2">&quot;admin&quot;</span><span class="p">),</span>
+           <span class="p">(</span><span class="s2">&quot;O Visitante&quot;</span><span class="p">,</span> <span class="s2">&quot;visitante&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We want to sort with the id as the primary key. The first approach to do this is to change the order of <code class="docutils literal notranslate"><span class="pre">mylist2</span></code> to that of <code class="docutils literal notranslate"><span class="pre">mylist</span></code>, and use <code class="docutils literal notranslate"><span class="pre">sort</span></code> as shown above.</p>
+<p>The second, neater approach relies on being able to decypher the cryptic help for the sorted function. <code class="docutils literal notranslate"><span class="pre">list.sort()</span></code> has the same options, but its help is less helpful.</p>
+<p>Queremos ordenar tomando o identificador como chave primária. A primeira abordagem para fazer isto é mudar a ordem de <code class="docutils literal notranslate"><span class="pre">minha_lista2</span></code> para aquela de <code class="docutils literal notranslate"><span class="pre">minha_lista</span></code>, e usar <code class="docutils literal notranslate"><span class="pre">sort</span></code> como mostrado acima.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">sorted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function sorted in module builtins:
+
+sorted(iterable, /, *, key=None, reverse=False)
+    Return a new list containing all items from the iterable in ascending order.
+    
+    A custom key function can be supplied to customize the sort order, and the
+    reverse flag can be set to request the result in descending order.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Você deve notar que <code class="docutils literal notranslate"><span class="pre">sorted</span></code> e <code class="docutils literal notranslate"><span class="pre">list.sort</span></code> têm dois parâmetros. O primeiro deles é chamado <code class="docutils literal notranslate"><span class="pre">key</span></code> (palavra-chave, ou simplesmente chave). Você pode usar isso para fornecer uma <em>função-chave</em>, que será usada para transformar os itens para ser comparados via <code class="docutils literal notranslate"><span class="pre">sort</span></code>.</p>
+<p>Vamos ilustrar isso no contexto do nosso exercício, assumindo que nós armazenamos uma lista de pares como este</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>par = nome, id
+</pre></div>
+</div>
+<p>(i.e. como em <code class="docutils literal notranslate"><span class="pre">minha_lista_2</span></code>) e que queiramos classificar de acordo com <code class="docutils literal notranslate"><span class="pre">id</span></code>, ignorando <code class="docutils literal notranslate"><span class="pre">nome</span></code>. Podemos atingir isto escrevendo uma função que recupere apenas o segundo elemento do par que ela recebe:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minha_chave</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">par</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minha_lista2</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">minha_chave</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Isto também funciona com uma função anônima:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minha_lista2</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="eficiencia">
+<h3><span class="section-number">9.2.1. </span>Eficiência<a class="headerlink" href="#eficiencia" title="Permalink to this headline">¶</a></h3>
+<p>A função <code class="docutils literal notranslate"><span class="pre">key</span></code> será chamada exatamente uma vez para cada elemento da lista. Isso é muito mais eficiente do que chamar uma função em cada <em>comparação</em> (que era como você personalizava a classificação em versões antigas do Python). Mas se você tiver uma grande lista para ordenar, a sobrecarga de chamada de uma função Python (que é relativamente grande em comparação com a sobrecarga de uma função em C) pode ser notável.</p>
+<p>Se a eficiência for realmente importante (e você provou que uma proporção significativa de tempo é gasta nessas funções), você tem a opção de recodificá-las em C (ou em outra linguagem de baixo nível).</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="08-ferramentas-funcionais.html" title="previous page"><span class="section-number">8. </span>Ferramentas funcionais</a>
+    <a class='right-next' id="next-link" href="10-matlab-para-python.html" title="next page"><span class="section-number">10. </span>Do Matlab para Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

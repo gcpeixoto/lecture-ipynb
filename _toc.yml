@@ -1,0 +1,33 @@
+# The introduction file is mandatory
+- file: indice
+- part: Conteúdo
+  numbered: true
+  chapters:
+  - file: 01-introducao
+  - file: 02-calculadora-poderosa
+  - file: 03-tipos-estruturas-dados
+  - file: 04-introspeccao
+  - file: 05-entrada-saida
+  - file: 06-fluxo-controle
+  - file: 07-funcoes-modulos
+  - file: 08-ferramentas-funcionais
+  - file: 09-tarefas-comuns
+  - file: 10-matlab-para-python
+  - file: 11-shells-python
+  - file: 12-computacao-simbolica
+  - file: 13-computacao-numerica
+  - file: 14-python-numerico-numpy
+  - file: 15-visualizando-dados
+  - file: 16-metodos-numericos-scipy
+  - file: 17-proximos-passos
+
+# MODEL: 
+# - file: intro
+#- part: Get started
+#  chapters:
+#  - file: start/overview
+#  - file: start/build
+#  - file: start/publish
+#    sections:
+#      - file: publish/gh-pages
+#      - file: publish/netlify

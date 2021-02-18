@@ -1,0 +1,1670 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12. Computação simbólica &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13. Computação numérica" href="13-computacao-numerica.html" />
+    <link rel="prev" title="11. Shells para Python" href="11-shells-python.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-entrada-saida.html">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-ferramentas-funcionais.html">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-tarefas-comuns.html">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-shells-python.html">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-proximos-passos.html">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/12-computacao-simbolica.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?urlpath=lab/tree/12-computacao-simbolica.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/lecture-ipynb/blob/master/12-computacao-simbolica.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sympy">
+   12.1. SymPy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saida">
+     12.1.1. Saída
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simbolos">
+     12.1.2. Símbolos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#isympy">
+     12.1.3. isympy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-numericos">
+     12.1.4. Tipos numéricos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diferenciacao-e-integracao">
+     12.1.5. Diferenciação e Integração
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equacoes-diferenciais-ordinarias">
+     12.1.6. Equações diferenciais ordinárias
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#expansoes-em-serie-e-plotagens">
+     12.1.7. Expansões em série e plotagens
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equacoes-lineares-e-inversao-de-matrizes">
+     12.1.8. Equações lineares e inversão de matrizes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equacoes-nao-lineares">
+     12.1.9. Equações não-lineares
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saida-interface-com-latex-e-impressao-elegante">
+     12.1.10. Saída: interface com LaTeX e impressão elegante
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geracao-automatica-de-codigo-em-c">
+     12.1.11. Geração automática de código em C
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ferramentas-relacionadas">
+   12.2. Ferramentas relacionadas
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="computacao-simbolica">
+<h1><span class="section-number">12. </span>Computação simbólica<a class="headerlink" href="#computacao-simbolica" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sympy">
+<h2><span class="section-number">12.1. </span>SymPy<a class="headerlink" href="#sympy" title="Permalink to this headline">¶</a></h2>
+<p>Nesta seção, apresentamos algumas funcionalidades básicas da biblioteca SymPy (SYMbolic Python). Em contraste com a computação numérica (envolvendo números), no cálculo simbólico estamos processando e transformando variáveis genéricas.</p>
+<p>A página inicial do SymPy (<a class="reference external" href="http://sympy.org/">http://sympy.org/</a>) fornece a documentação completa (e atualizada) para esta biblioteca.</p>
+<p>A computação simbólica é muito lento em comparação com as operações em ponto flutuante e, assim, geralmente não muito adequada para simulação direta. No entanto, é uma ferramenta poderosa no suporte à preparação do código e trabalho simbólico. Ocasionalmente, usamos operações simbólicas em simulações para elaborar o código numérico mais eficiente, antes que seja executado.</p>
+<div class="section" id="saida">
+<h3><span class="section-number">12.1.1. </span>Saída<a class="headerlink" href="#saida" title="Permalink to this headline">¶</a></h3>
+<p>Antes de começarmos a usar o SymPy, chamaremos <code class="docutils literal notranslate"><span class="pre">init_printing</span></code>. Isto diz ao SymPy para mostrar as expressões em um formato mais conveniente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="simbolos">
+<h3><span class="section-number">12.1.2. </span>Símbolos<a class="headerlink" href="#simbolos" title="Permalink to this headline">¶</a></h3>
+<p>Antes de começarmos a executar qualquer operação simbólica, precisamos criar variáveis simbólicas usando a função <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> do SymPy:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sympy.core.symbol.Symbol
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_4_0.png" src="_images/12-computacao-simbolica_4_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_5_0.png" src="_images/12-computacao-simbolica_5_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_6_0.png" src="_images/12-computacao-simbolica_6_0.png" />
+</div>
+</div>
+<p>Podemos abreviar a criação de múltiplas variáveis simbólicas usando a função <code class="docutils literal notranslate"><span class="pre">symbols</span></code>. Por exemplo, para criar as variáveis simbólicas <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> e <code class="docutils literal notranslate"><span class="pre">z</span></code>, podemos usar</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,y,z&#39;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_8_0.png" src="_images/12-computacao-simbolica_8_0.png" />
+</div>
+</div>
+<p>Uma vez que terminarmos a manipulação dos termos, às vezes desejamos inserir números para as variáveis. Isso pode ser feito usando o método <code class="docutils literal notranslate"><span class="pre">subs</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,y&#39;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_10_0.png" src="_images/12-computacao-simbolica_10_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_11_0.png" src="_images/12-computacao-simbolica_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_12_0.png" src="_images/12-computacao-simbolica_12_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_13_0.png" src="_images/12-computacao-simbolica_13_0.png" />
+</div>
+</div>
+<p>Também podemos substituir uma variável simbólica por outra, como neste exemplo, em que <code class="docutils literal notranslate"><span class="pre">y</span></code> é substituído por <code class="docutils literal notranslate"><span class="pre">x</span></code> antes de substituirmos <code class="docutils literal notranslate"><span class="pre">x</span></code> pelo número <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">termo</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">termo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_15_0.png" src="_images/12-computacao-simbolica_15_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">termo</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_16_0.png" src="_images/12-computacao-simbolica_16_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">termo</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_17_0.png" src="_images/12-computacao-simbolica_17_0.png" />
+</div>
+</div>
+<p>A partir deste ponto, alguns fragmentos de código e exemplos que apresentamos assumirão que os símbolos necessários já foram definidos. Se você tentar um exemplo e o SymPy der uma mensagem como <code class="docutils literal notranslate"><span class="pre">NameError:</span> <span class="pre">name</span> <span class="pre">'x'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined</span></code>, é porque você precisa definir o símbolo usando um dos métodos acima.</p>
+</div>
+<div class="section" id="isympy">
+<h3><span class="section-number">12.1.3. </span>isympy<a class="headerlink" href="#isympy" title="Permalink to this headline">¶</a></h3>
+<p>O executável <code class="docutils literal notranslate"><span class="pre">isympy</span></code> é um <em>wrapper</em> em torno do ipython que cria as variáveis simbólicas (reais) <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> e <code class="docutils literal notranslate"><span class="pre">z</span></code>, as variáveis inteiras simbólicas <code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code> e <code class="docutils literal notranslate"><span class="pre">n</span></code>, e as variáveis de função simbólica <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code> e <code class="docutils literal notranslate"><span class="pre">h</span></code>, e importa todos os objetos do SymPy.</p>
+<p>Isto é conveniente para descobrir novos recursos ou fazer experimentos de forma interativa</p>
+<p>$&gt; isympy
+Python 2.6.5 console for SymPy 0.6.7</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>These commands were executed:
+&gt;&gt;&gt; from __future__ import division
+&gt;&gt;&gt; from sympy import *
+&gt;&gt;&gt; x, y, z = symbols(&#39;xyz&#39;)
+&gt;&gt;&gt; k, m, n = symbols(&#39;kmn&#39;, integer=True)
+&gt;&gt;&gt; f, g, h = map(Function, &#39;fgh&#39;)
+
+Documentation can be found at http://sympy.org/
+
+In [1]: 
+</pre></div>
+</div>
+</div>
+<div class="section" id="tipos-numericos">
+<h3><span class="section-number">12.1.4. </span>Tipos numéricos<a class="headerlink" href="#tipos-numericos" title="Permalink to this headline">¶</a></h3>
+<p>O SymPy tem os tipos numéricos <code class="docutils literal notranslate"><span class="pre">Rational</span></code> e <code class="docutils literal notranslate"><span class="pre">RealNumber</span></code>. A classe <code class="docutils literal notranslate"><span class="pre">Rational</span></code> representa um número racional como um par de dois inteiros: o numerador e o denominador, então <code class="docutils literal notranslate"><span class="pre">Rational(1,2)</span></code> representa <code class="docutils literal notranslate"><span class="pre">1/2</span></code>, <code class="docutils literal notranslate"><span class="pre">Rational(5,2)</span></code> representa <code class="docutils literal notranslate"><span class="pre">5/2</span></code>, e assim por diante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Rational</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_22_0.png" src="_images/12-computacao-simbolica_22_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">Rational</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">67</span><span class="p">)</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_23_0.png" src="_images/12-computacao-simbolica_23_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_24_0.png" src="_images/12-computacao-simbolica_24_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_25_0.png" src="_images/12-computacao-simbolica_25_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_26_0.png" src="_images/12-computacao-simbolica_26_0.png" />
+</div>
+</div>
+<p>Note que a classe <code class="docutils literal notranslate"><span class="pre">Rational</span></code> funciona com expressões racionais <em>exatas</em>. Isto contrasta com o tipo de dado <code class="docutils literal notranslate"><span class="pre">float</span></code>, padrão do Python, que usa a representação em ponto flutuante para
+<em>aproximar</em> números racionais.</p>
+<p>Podemos converter o tipo <code class="docutils literal notranslate"><span class="pre">sympy.Rational</span></code> em uma variável de ponto flutuante no Python usando <code class="docutils literal notranslate"><span class="pre">float</span></code> ou o método <code class="docutils literal notranslate"><span class="pre">evalf</span></code> do objeto <code class="docutils literal notranslate"><span class="pre">Rational</span></code>. O método <code class="docutils literal notranslate"><span class="pre">evalf</span></code> pode levar um argumento que especifica quantos dígitos devem ser calculados para a aproximação de ponto flutuante (nem todos podem ser usados pelo tipo de ponto flutuante do Python, evidentemente).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Rational</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_28_0.png" src="_images/12-computacao-simbolica_28_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_29_0.png" src="_images/12-computacao-simbolica_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_30_0.png" src="_images/12-computacao-simbolica_30_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_31_0.png" src="_images/12-computacao-simbolica_31_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="diferenciacao-e-integracao">
+<h3><span class="section-number">12.1.5. </span>Diferenciação e Integração<a class="headerlink" href="#diferenciacao-e-integracao" title="Permalink to this headline">¶</a></h3>
+<p>O SymPy é capaz de executar a diferenciação e integração de muitas funções:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">diff</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_33_0.png" src="_images/12-computacao-simbolica_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_34_0.png" src="_images/12-computacao-simbolica_34_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_35_0.png" src="_images/12-computacao-simbolica_35_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_36_0.png" src="_images/12-computacao-simbolica_36_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_37_0.png" src="_images/12-computacao-simbolica_37_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_38_0.png" src="_images/12-computacao-simbolica_38_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_39_0.png" src="_images/12-computacao-simbolica_39_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_40_0.png" src="_images/12-computacao-simbolica_40_0.png" />
+</div>
+</div>
+<p>A função SymPy <code class="docutils literal notranslate"><span class="pre">diff()</span></code> usa no mínimo dois argumentos: a função a ser diferenciada e a variável em relação à qual a diferenciação é realizada. Derivadas de ordem superior podem ser calculadas pela especificação de variáveis adicionais, ou pela adição de um argumento inteiro opcional:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_42_0.png" src="_images/12-computacao-simbolica_42_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_43_0.png" src="_images/12-computacao-simbolica_43_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_44_0.png" src="_images/12-computacao-simbolica_44_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">7</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_45_0.png" src="_images/12-computacao-simbolica_45_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">7</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_46_0.png" src="_images/12-computacao-simbolica_46_0.png" />
+</div>
+</div>
+<p>Às vezes, o SymPy pode retornar um resultado de uma forma pouco familiar. Se, por exemplo, você desejar usar o SymPy para verificar se você diferenciou algo corretamente, uma técnica que pode ser útil é subtrair o resultado do SymPy do seu resultado e verificar se a resposta é zero.</p>
+<p>Tomando o exemplo simples de uma função de base radial multiquádrica, <span class="math notranslate nohighlight">\(\phi(r) = \sqrt{r^2 + \sigma^2}\)</span> com <span class="math notranslate nohighlight">\(r = \sqrt{x^2 + y^2}\)</span> e <span class="math notranslate nohighlight">\(\sigma\)</span> uma constante, podemos verificar se a primeira derivada em <span class="math notranslate nohighlight">\(x\)</span> é <span class="math notranslate nohighlight">\(\frac{\partial \phi}{\partial x} = \frac{x}{\sqrt{r^2 + \sigma^ 2}}\)</span>.</p>
+<p>Neste exemplo, primeiro pedimos que o SymPy imprima a derivada. Veja que ela é impressa de forma diferente da nossa derivada de teste, mas a subtração verifica que elas são idênticas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;σ&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">phi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">minha_dfdx</span><span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">phi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sigma</span><span class="p">),</span> <span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x/sqrt(x**2 + y**2 + σ**2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">minha_dfdx</span> <span class="o">-</span> <span class="n">diff</span><span class="p">(</span><span class="n">phi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sigma</span><span class="p">),</span> <span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aqui é trivial dizer que as expressões são idênticas sem a ajuda do SymPy, mas, em exemplos mais complicados, pode haver muitos outros termos, tornando-se cada vez mais difícil, demorado e propenso a erros tentar reorganizar nossa derivada de teste e a resposta do SymPy na mesma forma. São nesses casos que esta técnica de subtração é de maior utilidade. A integração usa uma sintaxe semelhante. Para o caso indefinido, especifique a função e a variável em relação à qual a integração é realizada:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">integrate</span>
+<span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_51_0.png" src="_images/12-computacao-simbolica_51_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_52_0.png" src="_images/12-computacao-simbolica_52_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_53_0.png" src="_images/12-computacao-simbolica_53_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_54_0.png" src="_images/12-computacao-simbolica_54_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_55_0.png" src="_images/12-computacao-simbolica_55_0.png" />
+</div>
+</div>
+<p>Podemos calcular integrais definidas fornecendo <code class="docutils literal notranslate"><span class="pre">integrate()</span></code> com uma tupla contendo a variável de interesse, os limites inferior e superior. Se várias variáveis forem especificadas, a integração múltipla é realizada. Quando o SymPy retorna um resultado na classe <code class="docutils literal notranslate"><span class="pre">Rational</span></code>, é possível avaliá-lo em uma representação de ponto flutuante com qualquer precisão desejada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_57_0.png" src="_images/12-computacao-simbolica_57_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_58_0.png" src="_images/12-computacao-simbolica_58_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_59_0.png" src="_images/12-computacao-simbolica_59_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_60_0.png" src="_images/12-computacao-simbolica_60_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_61_0.png" src="_images/12-computacao-simbolica_61_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_62_0.png" src="_images/12-computacao-simbolica_62_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_63_0.png" src="_images/12-computacao-simbolica_63_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sympy.core.numbers.Rational
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resultado_racional</span><span class="o">=</span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">resultado_racional</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_65_0.png" src="_images/12-computacao-simbolica_65_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resultado_racional</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_66_0.png" src="_images/12-computacao-simbolica_66_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="equacoes-diferenciais-ordinarias">
+<h3><span class="section-number">12.1.6. </span>Equações diferenciais ordinárias<a class="headerlink" href="#equacoes-diferenciais-ordinarias" title="Permalink to this headline">¶</a></h3>
+<p>O SymPy tem suporte incorporado para resolver vários tipos de equações diferenciais ordinárias através do comando <code class="docutils literal notranslate"><span class="pre">dsolve</span></code>. Precisamos configurar a EDO e passá-la como o primeiro argumento, <code class="docutils literal notranslate"><span class="pre">eq</span></code>. O segundo argumento é a função <code class="docutils literal notranslate"><span class="pre">f(x)</span></code> a resolver. Um terceiro argumento opcional, <code class="docutils literal notranslate"><span class="pre">hint</span></code>, influencia o método que <code class="docutils literal notranslate"><span class="pre">dsolve</span></code> usa: alguns métodos são mais adequados a certas classes de EDOs ou expressarão a solução de forma mais simples do que outros.</p>
+<p>Para configurar o solucionador de EDO, precisamos de alguma maneira, fazer referencia à função incógnita que estamos resolvendo, bem como às suas derivadas. As classes <code class="docutils literal notranslate"><span class="pre">Function</span></code> e <code class="docutils literal notranslate"> <span class="pre">Derivative</span></code> facilitam isso:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">dsolve</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">Derivative</span><span class="p">,</span> <span class="n">Eq</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">y_</span> <span class="o">=</span> <span class="n">Derivative</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">dsolve</span><span class="p">(</span><span class="n">y_</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_68_0.png" src="_images/12-computacao-simbolica_68_0.png" />
+</div>
+</div>
+<p>Observe como <code class="docutils literal notranslate"><span class="pre">dsolve</span></code> introduziu uma constante de integração, <code class="docutils literal notranslate"><span class="pre">C1</span></code>. Esta função introduzirá tantas constantes quantas forem necessárias, e todas serão chamadas <code class="docutils literal notranslate"><span class="pre">Cn</span></code>, onde <code class="docutils literal notranslate"><span class="pre">n</span></code> é um número inteiro. Observe também que o primeiro argumento para <code class="docutils literal notranslate"><span class="pre">dsolve</span></code> é considerado igual a zero, a menos que usemos a função <code class="docutils literal notranslate"><span class="pre">Eq()</span></code> para especificar o contrário:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsolve</span><span class="p">(</span><span class="n">y_</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_70_0.png" src="_images/12-computacao-simbolica_70_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsolve</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">y_</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_71_0.png" src="_images/12-computacao-simbolica_71_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsolve</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">y_</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">12</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_72_0.png" src="_images/12-computacao-simbolica_72_0.png" />
+</div>
+</div>
+<p>Os resultados de <code class="docutils literal notranslate"><span class="pre">dsolve</span></code> são uma instância da classe <code class="docutils literal notranslate"><span class="pre">Equality</span></code>. Isto tem consequências quando desejamos avaliar numericamente a função e usar o resultado em outro lugar (e.g. se quisermos plotar <em>y</em>(<em>x</em>) por <em>x</em>), porque mesmo depois de usar <code class="docutils literal notranslate"><span class="pre">subs()</span></code> e <code class="docutils literal notranslate"><span class="pre">evalf()</span></code>, ainda temos uma <code class="docutils literal notranslate"><span class="pre">Equality</span></code>, e não um escalar. A maneira de avaliar a função para um número é através do atributo <code class="docutils literal notranslate"><span class="pre">rhs</span></code> da <code class="docutils literal notranslate"><span class="pre">Equality</span></code>. Note que, aqui, usamos <code class="docutils literal notranslate"><span class="pre">z</span></code> para armazenar a <code class="docutils literal notranslate"><span class="pre">Equality</span></code> retornada por <code class="docutils literal notranslate"><span class="pre">dsolve</span></code>, ainda que seja uma expressão para uma função chamada <code class="docutils literal notranslate"><span class="pre">y(x)</span></code>, enfatizando a distinção entre <code class="docutils literal notranslate"><span class="pre">Equality</span></code> e os dados que ela contém.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">dsolve</span><span class="p">(</span><span class="n">y_</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_74_0.png" src="_images/12-computacao-simbolica_74_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sympy.core.relational.Equality
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">rhs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_76_0.png" src="_images/12-computacao-simbolica_76_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C1</span><span class="o">=</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+<span class="n">y3</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">C1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
+<span class="n">y3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_77_0.png" src="_images/12-computacao-simbolica_77_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y3</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_78_0.png" src="_images/12-computacao-simbolica_78_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y3</span><span class="o">.</span><span class="n">rhs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_79_0.png" src="_images/12-computacao-simbolica_79_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y3</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_80_0.png" src="_images/12-computacao-simbolica_80_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y3</span><span class="o">.</span><span class="n">rhs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_81_0.png" src="_images/12-computacao-simbolica_81_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y3</span><span class="o">.</span><span class="n">rhs</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_82_0.png" src="_images/12-computacao-simbolica_82_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">rhs</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">C1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_83_0.png" src="_images/12-computacao-simbolica_83_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">rhs</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">C1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="mi">5</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_84_0.png" src="_images/12-computacao-simbolica_84_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">rhs</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">C1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="mi">5</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sympy.core.numbers.Float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Às vezes, <code class="docutils literal notranslate"><span class="pre">dsolve</span></code> pode retornar uma solução muito geral. Um exemplo é quando existe a possibilidade de que alguns coeficientes sejam complexos. Se soubermos que, por exemplo, eles são sempre reais e positivos, podemos passar esta informação para <code class="docutils literal notranslate"><span class="pre">dsolve</span></code> e evitar que a solução se torne desnecessariamente complicada:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a,x&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="n">dsolve</span><span class="p">(</span><span class="n">Derivative</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span><span class="o">**</span><span class="mi">4</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_87_0.png" src="_images/12-computacao-simbolica_87_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dsolve</span><span class="p">(</span><span class="n">Derivative</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="o">**</span><span class="mi">4</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_88_0.png" src="_images/12-computacao-simbolica_88_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="expansoes-em-serie-e-plotagens">
+<h3><span class="section-number">12.1.7. </span>Expansões em série e plotagens<a class="headerlink" href="#expansoes-em-serie-e-plotagens" title="Permalink to this headline">¶</a></h3>
+<p>É possível expandir muitas expressões do SymPy em série de Taylor. O método <code class="docutils literal notranslate"><span class="pre">series</span></code> torna isso direto. No mínimo, devemos especificar a expressão e a variável a ser expandida. Opcionalmente, também podemos especificar o ponto em torno do qual expandir, o número máximo de termos e a direção da expansão (tente <code class="docutils literal notranslate"><span class="pre">help(Basic.series)</span></code> para mais informações).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_90_0.png" src="_images/12-computacao-simbolica_90_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_91_0.png" src="_images/12-computacao-simbolica_91_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_92_0.png" src="_images/12-computacao-simbolica_92_0.png" />
+</div>
+</div>
+<p>Em alguns casos, especialmente para avaliação numérica e  plotagem dos resultados, é necessário remover o termo final <code class="docutils literal notranslate"><span class="pre">O</span> <span class="pre">(n)</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_94_0.png" src="_images/12-computacao-simbolica_94_0.png" />
+</div>
+</div>
+<p>O SymPy fornece duas funções de plotagem, <code class="docutils literal notranslate"><span class="pre">plot()</span></code>, do módulo <code class="docutils literal notranslate"><span class="pre">sympy.plotting</span></code>, e <code class="docutils literal notranslate"><span class="pre">plot</span></code> do módulo <code class="docutils literal notranslate"><span class="pre">sympy.mpmath.visualization</span></code>. No momento da escrita, essas funções careciam de algumas capacidades de plotagem, o que significa que não são adequadas para a maioria de nossas necessidades. Ainda assim, caso você deseje utilizá-las, a função <code class="docutils literal notranslate"><span class="pre">help()</span></code> delas é útil.</p>
+<p>Para a maioria dos nossos propósitos, Matplotlib deve ser a ferramenta de plotagem a ser escolhida. Aqui, fornecemos apenas um exemplo de como plotar os resultados de uma computação SymPy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span><span class="n">series</span><span class="p">,</span><span class="n">Symbol</span>
+<span class="kn">import</span> <span class="nn">pylab</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">s10</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span>
+<span class="n">s20</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">removeO</span><span class="p">()</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">xx</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y10</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y20</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+  <span class="n">xx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">)</span>
+  <span class="n">y10</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">s10</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span><span class="n">i</span><span class="o">/</span><span class="mf">100.0</span><span class="p">})))</span>
+  <span class="n">y20</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">s20</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span><span class="n">i</span><span class="o">/</span><span class="mf">100.0</span><span class="p">})))</span>
+  <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span><span class="n">i</span><span class="o">/</span><span class="mf">100.0</span><span class="p">})))</span>
+
+<span class="n">pylab</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.figure.Figure at 0x1140d6c50&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.figure.Figure at 0x1140d6c50&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">y10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;O(10)&#39;</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">y20</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;O(20)&#39;</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">)</span>
+
+<span class="n">pylab</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+
+<span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1143f4a58&gt;
+</pre></div>
+</div>
+<img alt="_images/12-computacao-simbolica_98_1.png" src="_images/12-computacao-simbolica_98_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="equacoes-lineares-e-inversao-de-matrizes">
+<h3><span class="section-number">12.1.8. </span>Equações lineares e inversão de matrizes<a class="headerlink" href="#equacoes-lineares-e-inversao-de-matrizes" title="Permalink to this headline">¶</a></h3>
+<p>O SymPy possui uma classe <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> e funções associadas que permitem a solução simbólica de sistemas de equações lineares (e, claro, podemos obter respostas numéricas com <code class="docutils literal notranslate"><span class="pre">subs()</span></code> e <code class="docutils literal notranslate"><span class="pre">evalf()</span></code>). Considerararemos o exemplo do seguinte par de equações lineares simples:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\begin{aligned}
+3x + 7y &amp; = 12z \\
+4x - 2y &amp; = 5z 
+\end {aligned} 
+\end{split}\]</div>
+<p>Podemos escrever este sistema na forma <span class="math notranslate nohighlight">\(\textbf{A} \textbf{x} = \textbf{b}\)</span> (multiplique <span class="math notranslate nohighlight">\(\textbf{A}\)</span> por <span class="math notranslate nohighlight">\(\textbf{x}\)</span> caso queira verificar se as equações originais são recuperadas), onde</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf A} = 
+\left(
+\begin{array}{cc}
+3 &amp; 7 \\
+4 &amp; -2 
+\end{array} 
+\right), 
+\qquad
+\textbf{x} = 
+\left(
+\begin{array}{c}
+x \\
+y 
+\end{array} 
+\right), 
+\qquad
+\textbf{b} = 
+\left(
+\begin{array}{c}
+12z \\
+5z 
+\end{array} 
+\right).\end{split}\]</div>
+<p>Aqui, incluímos um símbolo, <span class="math notranslate nohighlight">\(z\)</span>, no lado direito para demonstrar que os símbolos serão propagados na solução. Em muitos casos, teríamos <span class="math notranslate nohighlight">\(z = 1\)</span>, mas ainda pode haver benefício ao se usar SymPy como um solucionador numérico, mesmo quando a solução não contenha símbolos, devido à sua capacidade de retornar frações exatas em vez de <code class="docutils literal notranslate"><span class="pre">floats</span></code> aproximados.</p>
+<p>Uma estratégia para resolver o sistema para <span class="math notranslate nohighlight">\(\textbf{x}\)</span> é inverter a matriz <span class="math notranslate nohighlight">\(\textbf{A}\)</span> e pré-multiplicar a equação pela matriz inversa, i.e. <span class="math notranslate nohighlight">\(\textbf{A}^{-1} \textbf{A} \textbf{x} = \textbf{x} = \textbf{A}^{-1} \textbf{b}\)</span>. A classe <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> do SymPy possui um método <code class="docutils literal notranslate"><span class="pre">inv()</span></code> que nos permite encontrar a inversa e <code class="docutils literal notranslate"><span class="pre">*</span></code> realiza a multiplicação da matriz para nós, quando apropriado:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span><span class="n">Matrix</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,y,z&#39;</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+<span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_100_0.png" src="_images/12-computacao-simbolica_100_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">inv</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_101_0.png" src="_images/12-computacao-simbolica_101_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">((</span> <span class="mi">12</span><span class="o">*</span><span class="n">z</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="n">z</span>  <span class="p">))</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_102_0.png" src="_images/12-computacao-simbolica_102_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">inv</span><span class="p">()</span><span class="o">*</span><span class="n">b</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_103_0.png" src="_images/12-computacao-simbolica_103_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span><span class="mf">3.3</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_104_0.png" src="_images/12-computacao-simbolica_104_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sympy.matrices.dense.MutableDenseMatrix
+</pre></div>
+</div>
+</div>
+</div>
+<p>Um método alternativo para resolver o mesmo problema é construir o sistema como uma matriz aumentada. Essa é a forma obtida dispondo juntas as colunas (no nosso exemplo) de <span class="math notranslate nohighlight">\(\textbf{A}\)</span> e o vetor <span class="math notranslate nohighlight">\(\textbf{b}\)</span>. A matriz aumentada é [1]:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+(\textbf{A} \, | \, \textbf{b} ) = 
+\left( 
+\begin{array}{cc|c}
+3 &amp; 7 &amp; 12z \\
+4 &amp; -2 &amp; 5z 
+\end{array} 
+\right), 
+\end{split}\]</div>
+<p>e, como antes, construímos isto como um objeto SymPy <code class="docutils literal notranslate"><span class="pre">Matrix</span></code>, mas, neste caso, passamos para a função <code class="docutils literal notranslate"><span class="pre">solve_linear_system()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Matrix</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">solve_linear_system</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,y,z&#39;</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="o">*</span><span class="n">z</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">z</span><span class="p">]))</span>
+<span class="n">system</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_107_0.png" src="_images/12-computacao-simbolica_107_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">solve_linear_system</span><span class="p">(</span><span class="n">system</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">sol</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_108_0.png" src="_images/12-computacao-simbolica_108_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sol</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">sol</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span><span class="mf">3.3</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 5.726
+y = 3.203
+</pre></div>
+</div>
+</div>
+</div>
+<p>Uma terceira opção é o método <code class="docutils literal notranslate"><span class="pre">solve()</span></code>, cujos argumentos incluem as equações simbólicas individuais, em vez de matrizes. Como <code class="docutils literal notranslate"><span class="pre">dsolve()</span></code>, <code class="docutils literal notranslate"><span class="pre">solve()</span></code> espera ou expressões que ela assumirá como iguais a zero, ou objetos <code class="docutils literal notranslate"><span class="pre">Equality</span></code>, que podemos criar convenientemente com <code class="docutils literal notranslate"><span class="pre">Eq()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span><span class="n">solve</span><span class="p">,</span><span class="n">Eq</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,y,z&#39;</span><span class="p">)</span>
+<span class="n">solve</span><span class="p">((</span><span class="n">Eq</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">7</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="mi">12</span><span class="o">*</span><span class="n">z</span><span class="p">),</span> <span class="n">Eq</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="n">z</span><span class="p">)),</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_112_0.png" src="_images/12-computacao-simbolica_112_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">((</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">7</span><span class="o">*</span><span class="n">y</span><span class="o">-</span><span class="mi">12</span><span class="o">*</span><span class="n">z</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">z</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_113_0.png" src="_images/12-computacao-simbolica_113_0.png" />
+</div>
+</div>
+<p>Para obter mais informações, consulte <code class="docutils literal notranslate"><span class="pre">help(solve)</span></code> e <code class="docutils literal notranslate"><span class="pre">help(solve_linear_system)</span></code>.</p>
+</div>
+<div class="section" id="equacoes-nao-lineares">
+<h3><span class="section-number">12.1.9. </span>Equações não-lineares<a class="headerlink" href="#equacoes-nao-lineares" title="Permalink to this headline">¶</a></h3>
+<p>Vamos resolver uma equação simples como <span class="math notranslate nohighlight">\(x = x^2\)</span>. Existem duas soluções óbvias: <span class="math notranslate nohighlight">\(x = 0\)</span> e <span class="math notranslate nohighlight">\(x = 1\)</span>. Como podemos pedir ao SymPy para calcular isso para nós?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x, y, z&#39;</span><span class="p">)</span>        <span class="c1"># cria alguns símbolos</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>                           <span class="c1"># define a equação</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>                        <span class="c1"># resolve eq = 0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_116_0.png" src="_images/12-computacao-simbolica_116_0.png" />
+</div>
+</div>
+<p>A função <code class="docutils literal notranslate"><span class="pre">solve()</span></code> espera uma expressão que deve ser resolvida com o zero isolado. Para o nosso exemplo, reescrevemos <span class="math notranslate nohighlight">\(x = x^2\)</span> como <span class="math notranslate nohighlight">\(x - x^2 = 0\)</span> e, em seguida, a passamos para a função <code class="docutils literal notranslate"><span class="pre">solve()</span></code>.</p>
+<p>Vamos repetir o mesmo para a equação <span class="math notranslate nohighlight">\(x = x^3\)</span> e resolver</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span>                           <span class="c1"># define a equação</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>                        <span class="c1"># resolve eq = 0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_118_0.png" src="_images/12-computacao-simbolica_118_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="saida-interface-com-latex-e-impressao-elegante">
+<h3><span class="section-number">12.1.10. </span>Saída: interface com LaTeX e impressão elegante<a class="headerlink" href="#saida-interface-com-latex-e-impressao-elegante" title="Permalink to this headline">¶</a></h3>
+<p>Como é o caso de muitos sistemas algébricos computacionais, o SymPy tem a capacidade de formatar sua saída como código LaTeX para facilitar sua inclusão em documentos.</p>
+<p>No início deste capítulo, chamamos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>O SymPy detectou que estava em Jupyter e habilitou a saída em LaTeX. O Jupyter Notebook suporta (um pouco de) LaTeX e isso é o que nos proporciona a saída elegantemente formatada vista acima. Também podemos ver a saída em texto simples a partir do SymPy, e o código LaTeX puro que pode ser gerado:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">series</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y**2/x**3 - y/x**2 + 1/x + O(y**3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">latex</span><span class="p">(</span><span class="n">series</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\frac{y^{2}}{x^{3}} - \frac{y}{x^{2}} + \frac{1}{x} + \mathcal{O}\left(y^{3}\right)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">latex</span><span class="p">(</span><span class="n">series</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$\frac{y^{2}}{x^{3}} - \frac{y}{x^{2}} + 1 / x + \mathcal{O}\left(y^{3}\right)$
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esteja ciente de que em seu modo padrão, o código de saída produzido por <code class="docutils literal notranslate"><span class="pre">latex()</span></code> requer o pacote <code class="docutils literal notranslate"><span class="pre">amsmath</span></code>, a ser carregado através do comando <code class="docutils literal notranslate"><span class="pre">\usepackage</span> <span class="pre">amsmath}</span></code> no preâmbulo do documento.</p>
+<p>O SymPy também suporta uma rotina de “impressão elegante” com a função <code class="docutils literal notranslate"><span class="pre">pprint()</span></code> (abreviatura de “pretty print”), que produz saída de texto com melhor formatação do que a rotina de impressão padrão. Observe os recursos de notação, tais como subíndices para elementos de um <code class="docutils literal notranslate"><span class="pre">array</span></code> cujos nomes são da forma <code class="docutils literal notranslate"><span class="pre">T_n</span></code>, a constante italicizada <span class="math notranslate nohighlight">\(e\)</span>, pontos centralizados verticalmente para a multiplicação, bordas de matrizes e frações.</p>
+<p>Finalmente, o SymPy oferece a função <code class="docutils literal notranslate"><span class="pre">preview()</span></code>, que exibe a saída renderizada na tela (verifique <code class="docutils literal notranslate"><span class="pre">help(preview)</span></code> para obter detalhes).</p>
+</div>
+<div class="section" id="geracao-automatica-de-codigo-em-c">
+<h3><span class="section-number">12.1.11. </span>Geração automática de código em C<a class="headerlink" href="#geracao-automatica-de-codigo-em-c" title="Permalink to this headline">¶</a></h3>
+<p>Um ponto forte de muitas bibliotecas simbólicas é que elas podem converter as expressões simbólicas em código C (ou outro código), o qual, posteriormente, pode ser compilado para execução em alta velocidade. Aqui está um exemplo que demonstra isso:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>                                                                                    
+<span class="kn">from</span> <span class="nn">sympy.utilities.codegen</span> <span class="kn">import</span> <span class="n">codegen</span>                                                                            
+<span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>                                                                                                          
+<span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12-computacao-simbolica_125_0.png" src="_images/12-computacao-simbolica_125_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">codegen</span><span class="p">((</span><span class="s2">&quot;taylor_sine&quot;</span><span class="p">,</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">)),</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/******************************************************************************
+ *                       Code generated with sympy 1.0                        *
+ *                                                                            *
+ *              See http://www.sympy.org/ for more information.               *
+ *                                                                            *
+ *                       This file is part of &#39;project&#39;                       *
+ ******************************************************************************/
+#include &quot;taylor_sine.h&quot;
+#include &lt;math.h&gt;
+
+double taylor_sine(double x) {
+
+   double taylor_sine_result;
+   taylor_sine_result = x - 1.0L/6.0L*pow(x, 3) + (1.0L/120.0L)*pow(x, 5) + O(x**6);
+   return taylor_sine_result;
+
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ferramentas-relacionadas">
+<h2><span class="section-number">12.2. </span>Ferramentas relacionadas<a class="headerlink" href="#ferramentas-relacionadas" title="Permalink to this headline">¶</a></h2>
+<p>Vale a pena conferir a iniciativa SAGE (<a class="reference external" href="http://www.sagemath.org/">http://www.sagemath.org/</a>), que está tentando “criar uma alternativa de fonte aberta livre e viável para Magma, Maple, Mathematica e Matlab” e inclui a biblioteca SymPy e muitas outras. Suas capacidades simbólicas são mais poderosas do que as do SymPy e o SAGE, à exceção dos recursos do SymPy, já cobrirá muitas das necessidades emergentes nos campos das ciências e engenharias. O SAGE inclui o sistema algébrico computacional Maxima, que também está disponível de forma autônoma em <a class="reference external" href="http://maxima.sourceforge.net/">http://maxima.sourceforge.net/</a>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="11-shells-python.html" title="previous page"><span class="section-number">11. </span><em>Shells</em> para Python</a>
+    <a class='right-next' id="next-link" href="13-computacao-numerica.html" title="next page"><span class="section-number">13. </span>Computação numérica</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

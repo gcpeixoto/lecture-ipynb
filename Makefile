@@ -10,6 +10,11 @@ docker-all:
 	make docker-pdf
 	make docker-nbval
 
+jb-html:
+	jupyter-book build .
+
+jb-latex:
+	jupyter-book build . --builder pdflatex
 
 notebooks-pdf: *-*.ipynb static/latex_template.tplx
 	@echo "Attempting to create combined.pdf from notebooks"

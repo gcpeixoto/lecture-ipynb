@@ -1,0 +1,1243 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Entrada e Saída de Dados &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Fluxo de Controle" href="06-fluxo-controle.html" />
+    <link rel="prev" title="4. Introspecção" href="04-introspeccao.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-ferramentas-funcionais.html">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-tarefas-comuns.html">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-shells-python.html">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-computacao-simbolica.html">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-proximos-passos.html">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/05-entrada-saida.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?urlpath=lab/tree/05-entrada-saida.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/lecture-ipynb/blob/master/05-entrada-saida.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imprimindo-na-saida-padrao-normalmente-a-tela">
+   5.1. Imprimindo na saída padrão (normalmente a tela)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impressao-simples">
+     5.1.1. Impressão simples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impressao-formatada">
+     5.1.2. Impressão formatada
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#str-e-str">
+     5.1.3.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       str
+      </span>
+     </code>
+     e
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __str__
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repr-e-repr">
+     5.1.4.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       repr
+      </span>
+     </code>
+     e
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __repr__
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nova-formatacao">
+     5.1.5. Nova formatação
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#outras-informacoes">
+       5.1.5.1. Outras informações
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mudancas-de-python-2-para-python-3-print">
+     5.1.6. Mudanças de Python 2 para Python 3:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       print
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leitura-e-escrita-de-arquivos">
+   5.2. Leitura e escrita de arquivos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplos-de-leitura-de-arquivos">
+     5.2.1. Exemplos de leitura de arquivos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fileobject-read">
+       5.2.1.1. fileobject.read()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fileobject-readlines">
+       5.2.1.2. fileobject.readlines()
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#iterando-em-linhas-objeto-arquivo">
+       5.2.1.3. Iterando em linhas (objeto arquivo)
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#leitura-adicional">
+         5.2.1.3.1. Leitura adicional
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="entrada-e-saida-de-dados">
+<h1><span class="section-number">5. </span>Entrada e Saída de Dados<a class="headerlink" href="#entrada-e-saida-de-dados" title="Permalink to this headline">¶</a></h1>
+<p>Nesta seção, descrevemos o processo de impressão na tela, o qual inclui o uso da função <code class="docutils literal notranslate"><span class="pre">print</span></code>, o especificador de formato do estilo antigo <code class="docutils literal notranslate"><span class="pre">%</span></code> e o especificador de formato do novo estilo <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<div class="section" id="imprimindo-na-saida-padrao-normalmente-a-tela">
+<h2><span class="section-number">5.1. </span>Imprimindo na saída padrão (normalmente a tela)<a class="headerlink" href="#imprimindo-na-saida-padrao-normalmente-a-tela" title="Permalink to this headline">¶</a></h2>
+<p>A função <code class="docutils literal notranslate"><span class="pre">print</span></code> é o comando mais usado para imprimir informações para o “dispositivo de saída padrão”, que normalmente é a tela.</p>
+<p>Existem dois modos de usar a impressão.</p>
+<div class="section" id="impressao-simples">
+<h3><span class="section-number">5.1.1. </span>Impressão simples<a class="headerlink" href="#impressao-simples" title="Permalink to this headline">¶</a></h3>
+<p>A maneira mais fácil de usar o comando de impressão é listando as variáveis a serem impressas, separadas por vírgulas. Aqui estão alguns exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;texto de teste&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>texto de teste
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 texto de teste
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A resposta é&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A resposta é 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A resposta é&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;e a string contém&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A resposta é 10 e a string contém texto de teste
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A resposta é&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;e a string lida como&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A resposta é 10 e a string lida como texto de teste
+</pre></div>
+</div>
+</div>
+</div>
+<p>Em Python, um espaço é adicionado entre cada objeto que está sendo impresso. Uma nova linha é impressa após cada chamada. Para suprimir isso, use o parâmetro <code class="docutils literal notranslate"><span class="pre">end</span> <span class="pre">=</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Imprimindo na linha&quot;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... ainda imprimindo na mesma linha.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Imprimindo na linha... ainda imprimindo na mesma linha.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="impressao-formatada">
+<h3><span class="section-number">5.1.2. </span>Impressão formatada<a class="headerlink" href="#impressao-formatada" title="Permalink to this headline">¶</a></h3>
+<p>A forma mais sofisticada de formatar a saída usa uma sintaxe muito semelhante ao <code class="docutils literal notranslate"><span class="pre">fprintf</span></code> do Matlab (e, portanto, também, semelhante ao <code class="docutils literal notranslate"><span class="pre">printf</span></code> da linguagem C). A estrutura geral é a de uma <em>string</em> contendo especificadores de formato, seguida por um sinal de porcentagem e uma tupla que contém as variáveis a serem impressas no lugar dos especificadores de formato.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a = </span><span class="si">%d</span><span class="s2"> b = </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = 10 b = 20
+</pre></div>
+</div>
+</div>
+</div>
+<p>Uma <em>string</em> pode conter identificadores de formato (ex: <code class="docutils literal notranslate"><span class="pre">%f</span></code> para formatar como <code class="docutils literal notranslate"><span class="pre">float</span></code>,<code class="docutils literal notranslate"><span class="pre">%d</span></code> para formatar como número inteiro e <code class="docutils literal notranslate"><span class="pre">%s</span></code> para formatar como <em>string</em>, isto é, uma sequência de caracteres):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pi = </span><span class="si">%5.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi =  3.14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pi = </span><span class="si">%10.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi =      3.142
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pi = </span><span class="si">%10.8f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi = 3.14159265
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pi = </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi = 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>O especificador de formato do tipo <code class="docutils literal notranslate"><span class="pre">%W.Df</span></code> significa que um <code class="docutils literal notranslate"><span class="pre">float</span></code> deve ser impresso com uma largura total de <em>W</em> caracteres e <em>D</em> digitos após o ponto decimal. (Isto é idêntico ao Matlab e C, por exemplo).</p>
+<p>Para imprimir mais de um objeto, forneça vários especificadores de formato e liste vários objetos na tupla:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pi = </span><span class="si">%f</span><span class="s2">, 142*pi = </span><span class="si">%f</span><span class="s2"> e pi^2 = </span><span class="si">%f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pi</span><span class="p">,</span><span class="mi">142</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi = 3.141593, 142*pi = 446.106157 e pi^2 = 9.869604.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note que a conversão de um especificador de formato e uma tupla de variáveis para uma <em>string</em> não depende do comando <code class="docutils literal notranslate"><span class="pre">print</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="s2">&quot;pi = </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;pi = 3.141593&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Isso significa que podemos converter objetos em <em>strings</em> onde quer que precisemos, e podemos decidir imprimir as <em>strings</em> mais tarde - não há necessidade de acoplar a formatação ao código que faz a impressão.</p>
+<p>Visão geral dos especificadores de formato comumente usados (exemplo: unidade astronômica):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AU</span> <span class="o">=</span> <span class="mi">149597870700</span>  <span class="c1"># unidade astronomica [m]</span>
+<span class="s2">&quot;</span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">AU</span>          <span class="c1"># linha1 na tabela</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;149597870700.000000&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>especificador</p></th>
+<th class="text-align:center head"><p>estilo</p></th>
+<th class="text-align:right head"><p>examplo da saída para AU</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">%f</span></code></p></td>
+<td class="text-align:center"><p>ponto flutante</p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">149597870700.000000</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">%e</span></code></p></td>
+<td class="text-align:center"><p>notação exponencial</p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">1.495979e+11</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">%g</span></code></p></td>
+<td class="text-align:center"><p>mais curta entre <code class="docutils literal notranslate"><span class="pre">%e</span></code> ou <code class="docutils literal notranslate"><span class="pre">%f</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">1.49598e+11</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">%d</span></code></p></td>
+<td class="text-align:center"><p>inteiro</p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">149597870700</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">%s</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">str()</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">149597870700</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">%r</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">repr()</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">149597870700L</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="str-e-str">
+<h3><span class="section-number">5.1.3. </span><code class="docutils literal notranslate"><span class="pre">str</span></code> e <code class="docutils literal notranslate"><span class="pre">__str__</span></code><a class="headerlink" href="#str-e-str" title="Permalink to this headline">¶</a></h3>
+<p>Todos os objetos em Python devem fornecer um método <code class="docutils literal notranslate"><span class="pre">__str__</span></code> que retorne uma boa representação de <em>string</em> do objeto. Este método <code class="docutils literal notranslate"><span class="pre">a.__str__()</span></code> é chamado quando aplicamos a função <code class="docutils literal notranslate"><span class="pre">str</span></code> ao objeto <code class="docutils literal notranslate"><span class="pre">a</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">a</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;3.14&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;3.14&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>A função <code class="docutils literal notranslate"><span class="pre">str</span></code> é extremamente conveniente já que nos permite escrever objetos mais complicados, tais como</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">],</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;[3, 4.2, [&#39;maçã&#39;, &#39;banana&#39;], (0, 1)]&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>A forma como isto é impresso em Python é usando o método <code class="docutils literal notranslate"><span class="pre">__str__</span></code> do objeto da lista. O interpretador imprimirá o colchete de abertura <code class="docutils literal notranslate"><span class="pre">[</span></code> e depois chamará o método <code class="docutils literal notranslate"><span class="pre">__str__</span></code> do primeiro objeto, ou seja, o inteiro 3, produzindo <code class="docutils literal notranslate"><span class="pre">3</span></code>. Em seguida, o método <code class="docutils literal notranslate"><span class="pre">__str__</span></code> do objeto da lista imprime a vírgula <code class="docutils literal notranslate"><span class="pre">,</span></code>,  move-se para chamar o método <code class="docutils literal notranslate"><span class="pre">__str__</span></code> do próximo elemento da lista (ou seja,<code class="docutils literal notranslate"><span class="pre">4.2</span></code>) para imprimi-lo. Desta forma, qualquer objeto composto pode ser representado como uma <em>string</em>, pedindo aos objetos que ele guarda para convertê-los em <em>strings</em>.</p>
+<p>O método <em>string</em> do objeto <code class="docutils literal notranslate"><span class="pre">x</span></code> é chamado de forma implícita quando</p>
+<ul class="simple">
+<li><p>usamos o especificador de formato <code class="docutils literal notranslate"><span class="pre">%s</span></code> para imprimir <code class="docutils literal notranslate"><span class="pre">x</span></code>;</p></li>
+<li><p>passamos o objeto <code class="docutils literal notranslate"><span class="pre">x</span></code> diretamente para o comando de impressão:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 4.2, [&#39;maçã&#39;, &#39;banana&#39;], (0, 1)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 4.2, [&#39;maçã&#39;, &#39;banana&#39;], (0, 1)]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="repr-e-repr">
+<h3><span class="section-number">5.1.4. </span><code class="docutils literal notranslate"><span class="pre">repr</span></code> e <code class="docutils literal notranslate"> <span class="pre">__repr__</span></code><a class="headerlink" href="#repr-e-repr" title="Permalink to this headline">¶</a></h3>
+<p>Uma segunda função, <code class="docutils literal notranslate"><span class="pre">repr</span></code>, deve converter um determinado objeto em uma representação de string <em>para que essa sequencia de caracteres possa ser usada para recriar o objeto usando a função <code class="docutils literal notranslate"><span class="pre">eval</span></code></em>. A função <code class="docutils literal notranslate"><span class="pre">repr</span></code> geralmente fornecerá uma string mais detalhada do que <code class="docutils literal notranslate"><span class="pre">str</span></code>. A aplicação de <code class="docutils literal notranslate"><span class="pre">repr</span></code> ao objeto <code class="docutils literal notranslate"><span class="pre">x</span></code> tentará chamar <code class="docutils literal notranslate"><span class="pre">x.__repr__()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span> <span class="k">as</span> <span class="n">a1</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;3.141592653589793&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;3.141592653589793&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero_como_string</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">numero_como_string</span><span class="p">)</span>  <span class="c1"># avalia a string </span>
+<span class="n">a2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a2</span><span class="o">-</span><span class="n">a1</span>                      <span class="c1"># -&gt; repr é uma representação exata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span><span class="o">-</span><span class="nb">eval</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span><span class="o">-</span><span class="nb">eval</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>           <span class="c1"># -&gt; str perdeu alguns dígitos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos converter um objeto para a sua forma <code class="docutils literal notranslate"><span class="pre">str()</span></code> ou <code class="docutils literal notranslate"><span class="pre">repr()</span></code> usando os especificadores de formato <code class="docutils literal notranslate"><span class="pre">%s</span></code> e <code class="docutils literal notranslate"><span class="pre">%r</span></code>, respectivamente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;3.141592653589793&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;3.141592653589793&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nova-formatacao">
+<h3><span class="section-number">5.1.5. </span>Nova formatação<a class="headerlink" href="#nova-formatacao" title="Permalink to this headline">¶</a></h3>
+<p>Um novo sistema predefinido de formatação permite mais flexibilidade para casos complexos, com o custo de ser um pouco mais longo.</p>
+<p>Idéias básicas em exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> precisa de </span><span class="si">{}</span><span class="s2"> chocolates&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Pedro&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>     <span class="c1"># insere valores na ordem</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pedro precisa de 4 chocolates&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> precisa de </span><span class="si">{1}</span><span class="s2"> chocolates&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Pedro&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>   <span class="c1"># indexa elemento</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pedro precisa de 4 chocolates&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">{1}</span><span class="s2"> precisa de </span><span class="si">{0}</span><span class="s2"> chocolates&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Pedro&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;4 precisa de Pedro chocolates&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># referencia elemento para impressão por nome</span>
+<span class="s2">&quot;</span><span class="si">{nome}</span><span class="s2"> precisa de </span><span class="si">{numero}</span><span class="s2"> chocolates&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;Pedro&#39;</span><span class="p">,</span><span class="n">numero</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>               
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pedro precisa de 4 chocolates&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Pi é aproximadamente </span><span class="si">{:f}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>     <span class="c1"># podemos usar opções de formatação no estilo antigo para float</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pi é aproximadamente 3.141593.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Pi é aproximadamente </span><span class="si">{:.2f}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>   <span class="c1"># e precisao</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pi é aproximadamente 3.14.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Pi é aproximadamente </span><span class="si">{:6.2f}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>  <span class="c1"># e largura</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pi é aproximadamente   3.14.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esta é uma maneira poderosa e elegante de formatação de <em>strings</em> que está tendo seu uso crescendo gradualmente.</p>
+<div class="section" id="outras-informacoes">
+<h4><span class="section-number">5.1.5.1. </span>Outras informações<a class="headerlink" href="#outras-informacoes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.python.org/library/string.html#format-examples">Exemplos</a></p></li>
+<li><p><a class="reference external" href="http://www.python.org/dev/peps/pep-3101/">Python Enhancement Proposal 3101</a></p></li>
+<li><p><a class="reference external" href="http://docs.python.org/library/stdtypes.html#string-formatting-operations">Biblioteca Python, String Formatting Operations</a></p></li>
+<li><p><a class="reference external" href="http://docs.python.org/tutorial/inputoutput.html#old-string-formatting">Formatação antiga de <em>strings</em></a></p></li>
+<li><p><a class="reference external" href="http://docs.python.org/tutorial/inputoutput.html">Introdução à formatação de saída mais elegante, tutorial Python, seção 7.1</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="mudancas-de-python-2-para-python-3-print">
+<h3><span class="section-number">5.1.6. </span>Mudanças de Python 2 para Python 3: <code class="docutils literal notranslate"><span class="pre">print</span></code><a class="headerlink" href="#mudancas-de-python-2-para-python-3-print" title="Permalink to this headline">¶</a></h3>
+<p>Uma (talvez a mais óbvia) mudança da versão Python 2 para a 3 é perda do status especial do comando <code class="docutils literal notranslate"><span class="pre">print</span></code>. Em Python 2, poderíamos imprimir “Hello world” usando:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;Hello world&quot;</span>             <span class="c1"># válida em Python 2.x</span>
+</pre></div>
+</div>
+<p>Efetivamente, chamamos a função <code class="docutils literal notranslate"><span class="pre">print</span></code> com o argumento <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code>. Todas as outras funções em Python são chamadas com o argumento acompanhado por parênteses, i.e.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>               <span class="c1"># válida em Python 3.x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esta é a nova convenção <em>necessária</em> em Python 3 e <em>permitida</em> para a versão recente de Python 2.x.</p>
+<p>Tudo o que aprendemos sobre a formatação de <em>strings</em> usando o operador de porcentagem ainda funciona da mesma maneira:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<span class="s2">&quot;meu pi = </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">a</span>           <span class="c1"># formatação de string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;meu pi = 3.141593&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meu pi = </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">a</span><span class="p">)</span>    <span class="c1"># impressão valida em Python 2.7 e 3.x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>meu pi = 3.141593
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Curto pi = </span><span class="si">%.2f</span><span class="s2">, mais longo pi = </span><span class="si">%.12f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Curto pi = 3.14, mais longo pi = 3.141592653590.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Curto pi = </span><span class="si">%.2f</span><span class="s2">, mais longo pi = </span><span class="si">%.12f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Curto pi = 3.14, mais longo pi = 3.141592653590.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Curto pi = </span><span class="si">%.2f</span><span class="s2">, mais longo pi = </span><span class="si">%.12f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Curto pi = 3.14, mais longo pi = 3.141592653590.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="leitura-e-escrita-de-arquivos">
+<h2><span class="section-number">5.2. </span>Leitura e escrita de arquivos<a class="headerlink" href="#leitura-e-escrita-de-arquivos" title="Permalink to this headline">¶</a></h2>
+<p>Aqui está um programa que</p>
+<ol class="simple">
+<li><p>escreve algum texto para um arquivo com o nome <code class="docutils literal notranslate"><span class="pre">teste.txt</span></code>,</p></li>
+<li><p>e depois lê o texto novamente e</p></li>
+<li><p>imprime na tela.</p></li>
+</ol>
+<p>Os dados armazenados no arquivo <code class="docutils literal notranslate"><span class="pre">teste.txt</span></code> são:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Escrevendo</span> <span class="n">texto</span> <span class="n">no</span> <span class="n">arquivo</span><span class="o">.</span> <span class="n">Esta</span> <span class="n">é</span> <span class="n">a</span> <span class="n">primeira</span> <span class="n">linha</span><span class="o">.</span>
+<span class="n">E</span> <span class="n">a</span> <span class="n">segunda</span> <span class="n">linha</span><span class="o">.</span>
+</pre></div>
+</div>
+<!-- --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Escrever um arquivo </span>
+<span class="n">out_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;teste.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>         <span class="c1"># &#39;w&#39; significa Writing (modo de escrita)</span>
+<span class="n">out_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Escrevendo texto no arquivo. Esta é a primeira linha.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">+</span>\
+               <span class="s2">&quot;E a segunda linha.&quot;</span><span class="p">)</span>
+<span class="n">out_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                          <span class="c1"># fecha o arquivo</span>
+ 
+<span class="c1"># 2. Ler um arquivo</span>
+<span class="n">in_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;teste.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>          <span class="c1"># &#39;r&#39; significa Reading (modo de leitura)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">in_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                     <span class="c1"># lê todo o arquivo em na string &#39;text&#39;</span>
+                                          
+<span class="n">in_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                           <span class="c1"># fecha o arquivo</span>
+ 
+<span class="c1"># 3. Mostrar os dados</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escrevendo texto no arquivo. Esta é a primeira linha.
+E a segunda linha.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mais detalhadamente, abrimos um arquivo com o comando <code class="docutils literal notranslate"><span class="pre">open</span></code> e atribuimos este objeto de abertura de arquivo à variável <code class="docutils literal notranslate"><span class="pre">out_file</span></code>. Depois, escrevemos dados no arquivo usando o método <code class="docutils literal notranslate"><span class="pre">out_file.write</span></code>. Observe que, no exemplo acima, passamos uma <em>string</em> para o método <code class="docutils literal notranslate"><span class="pre">write</span></code>. Podemos, naturalmente, usar toda a formatação que discutimos antes. Por exemplo, para escrever este arquivo com o nome <code class="docutils literal notranslate"><span class="pre">tabela.txt</span></code>, podemos usar este programa Python. É uma boa prática fechar (<code class="docutils literal notranslate"><span class="pre">close()</span></code>) arquivos quando terminamos de operar em modo de leitura ou escrita. Se um programa Python for encerrado de forma controlada (ou seja, não por causa de um corte de energia ou de um <em>bug</em> improvável profundo na linguagem Python ou no sistema operacional), ele fechará todos os arquivos abertos assim que os objetos de manipulação de arquivo forem destruídos. No entanto, fechá-los ativamente o mais rápido possível é um estilo melhor.</p>
+<div class="section" id="exemplos-de-leitura-de-arquivos">
+<h3><span class="section-number">5.2.1. </span>Exemplos de leitura de arquivos<a class="headerlink" href="#exemplos-de-leitura-de-arquivos" title="Permalink to this headline">¶</a></h3>
+<p>Usamos um arquivo chamado <code class="docutils literal notranslate"><span class="pre">meu-arquivo.txt</span></code> contendo as seguintes 3 linhas de texto para os exemplos abaixo:</p>
+<p>Esta é a primeira linha.
+    Esta é a segunda linha.
+    Esta é uma terceira e última linha.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;meu-arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Esta e a primeira linha.</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Esta e a segunda linha.</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Esta e uma terceira e ultima linha.&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="fileobject-read">
+<h4><span class="section-number">5.2.1.1. </span>fileobject.read()<a class="headerlink" href="#fileobject-read" title="Permalink to this headline">¶</a></h4>
+<p>O método <code class="docutils literal notranslate"><span class="pre">fileobject.read()</span></code> lê o arquivo inteiro e o retorna como uma <em>string</em> (incluindo caracteres de nova linha - <code class="docutils literal notranslate"><span class="pre">\n</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;meu-arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Esta e a primeira linha.\nEsta e a segunda linha.\nEsta e uma terceira e ultima linha.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fileobject-readlines">
+<h4><span class="section-number">5.2.1.2. </span>fileobject.readlines()<a class="headerlink" href="#fileobject-readlines" title="Permalink to this headline">¶</a></h4>
+<p>O método <code class="docutils literal notranslate"><span class="pre">fileobject.readlines()</span></code> retorna uma lista de <em>strings</em>, onde cada elemento da lista corresponde a uma linha na <em>string</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;meu-arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Esta e a primeira linha.\n&#39;,
+ &#39;Esta e a segunda linha.\n&#39;,
+ &#39;Esta e uma terceira e ultima linha.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Isto é frequentemente usado para iterar nas linhas, e para fazer alguma coisa com cada linha. Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;meu-arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> caracteres&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25 caracteres
+24 caracteres
+35 caracteres
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observe que isso irá ler o arquivo completo em uma lista de <em>strings</em> quando o método <code class="docutils literal notranslate"><span class="pre">readlines</span> <span class="pre">()</span></code> for chamado. Isso não é problema se sabemos que o arquivo é pequeno e se encaixa na memória da máquina.</p>
+<p>Se assim for, também podemos fechar o arquivo antes de processarmos os dados, ou seja:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;meu-arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> caracteres&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25 caracteres
+24 caracteres
+35 caracteres
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterando-em-linhas-objeto-arquivo">
+<h4><span class="section-number">5.2.1.3. </span>Iterando em linhas (objeto arquivo)<a class="headerlink" href="#iterando-em-linhas-objeto-arquivo" title="Permalink to this headline">¶</a></h4>
+<p>Existe uma possibilidade mais legal de ler uma linha de arquivo por linha que (i) somente lerá uma linha por vez (e também é adequada para arquivos grandes) e (ii) resulta em código mais compacto:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;meu-arquivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> caracteres&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25 caracteres
+24 caracteres
+35 caracteres
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aqui, o manipulador de arquivo <code class="docutils literal notranslate"><span class="pre">f</span></code> atua como um iterador e retornará a próxima linha em cada iteração subsequente do laço <code class="docutils literal notranslate"><span class="pre">for</span></code> até o final do arquivo ser alcançado (e então o laço <code class="docutils literal notranslate"><span class="pre">for</span></code> é encerrado).</p>
+<div class="section" id="leitura-adicional">
+<h5><span class="section-number">5.2.1.3.1. </span>Leitura adicional<a class="headerlink" href="#leitura-adicional" title="Permalink to this headline">¶</a></h5>
+<p><a class="reference external" href="http://docs.python.org/tutorial/inputoutput.html#methods-of-file-objects">Métodos para arquivos, Tutorial, Seção 7.2.1</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="04-introspeccao.html" title="previous page"><span class="section-number">4. </span>Introspecção</a>
+    <a class='right-next' id="next-link" href="06-fluxo-controle.html" title="next page"><span class="section-number">6. </span>Fluxo de Controle</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
