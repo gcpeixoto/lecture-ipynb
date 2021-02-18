@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução à Linguagem Python para Ciências Computacionais e Engenharia &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-entrada-saida.html">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-ferramentas-funcionais.html">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-tarefas-comuns.html">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-shells-python.html">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-computacao-simbolica.html">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-proximos-passos.html">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apresentacao-da-edicao-em-portugues">
+   Apresentação da edição em Português
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#atualizacao">
+   Atualização
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><a class="reference external" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=indice.ipynb"><img alt="Binder" src="https://mybinder.org/badge.svg" /></a></p>
+<div class="section" id="introducao-a-linguagem-python-para-ciencias-computacionais-e-engenharia">
+<h1>Introdução à Linguagem Python para Ciências Computacionais e Engenharia<a class="headerlink" href="#introducao-a-linguagem-python-para-ciencias-computacionais-e-engenharia" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="apresentacao-da-edicao-em-portugues">
+<h2>Apresentação da edição em Português<a class="headerlink" href="#apresentacao-da-edicao-em-portugues" title="Permalink to this headline">¶</a></h2>
+<p>O texto <em>Uma introdução à Linguagem Python para Ciências Computacionais e Engenharia
+(Um guia para o iniciante em Python 3)</em>, é uma tradução do título original <em>Introduction to Python for Computational Science and Engineering
+(A beginner’s guide to Python 3)</em>, escrito pelo professor Hans Fangohr, líder do Grupo de Modelagem Computacional da <em>Universidade de Southampton</em>, Inglaterra, quem gentilmente concordou</p>
+<p>Esta apostila tem o objetivo de servir como suporte ao aprendizado da linguagem Python para estudantes das ciências exatas que desejem adquirir uma melhor
+formação computacional.</p>
+<p>A motivação para traduzir este texto decorreu de dois fatores: i) demanda de alguns
+estudantes que, frequentemente, solicitavam aulas de computação no curso de Cálculo Numérico que ministro na Universidade Federal da Paraíba, a fim
+de que aprendessem algum sistema algébrico computacional prático e gratuito; ii)
+a sólida experiência do Prof. Hans Fanghor na área de pesquisa da relação ensino-aprendizagem em computação, cujos trabalhos têm me trazido inspiração na busca por  uma metodologia de ensino de métodos numéricos mais moderna e, ativa e cativante para os estudantes.</p>
+<p>O material está disponível em arquivos <em>pdf</em>, <em>html</em> e <em>ipynb</em> (formato nativo de um <em>Jupyter Notebook</em>) na versão Python 3.0, pelos quais o estudante pode
+aprender a teoria praticando diretamente nos <em>notebooks</em> no seu navegador de preferência.</p>
+<p>A distribuição Python recomendada para iniciantes é
+<a class="reference external" href="https://www.continuum.io/downloads">Anaconda</a>. Um tutorial acompanhado de algumas razões
+para esta escolha é fornecido <a class="reference external" href="http://www.southampton.ac.uk/~fangohr/blog/installation-of-python-spyder-numpy-sympy-scipy-pytest-matplotlib-via-anaconda.html">aqui</a>.</p>
+<p>Este material estará em constante revisão e será atualizado neste <a class="reference external" href="https://github.com/gcpeixoto/lecture-ipynb">repositório</a> do Github sempre que necessário. Uma vez que os links fornecidos mudam constantemente segundo o ritmo da internet, torna-se difícil coibir eventuais falhas com redirecionamento
+e referências. Portanto, o envio de sugestões e correções será muito bem-vindo.</p>
+<p>Prof. Gustavo Oliveira, <a class="reference external" href="mailto:gustavo&#46;oliveira&#37;&#52;&#48;ci&#46;ufpb&#46;br">gustavo<span>&#46;</span>oliveira<span>&#64;</span>ci<span>&#46;</span>ufpb<span>&#46;</span>br</a></p>
+<p>Departamento de Computação Científica<br>
+Centro de Informática<br>
+Universidade Federal da Paraíba<br></p>
+</div>
+<div class="section" id="atualizacao">
+<h2>Atualização<a class="headerlink" href="#atualizacao" title="Permalink to this headline">¶</a></h2>
+<p>Acesse a versão interativa online no <a class="reference external" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?filepath=indice.ipynb"><em>mybinder</em></a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

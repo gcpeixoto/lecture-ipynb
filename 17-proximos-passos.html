@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17. Para onde ir a partir daqui? &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="16. Métodos numéricos usando Python (SciPy)" href="16-metodos-numericos-scipy.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-entrada-saida.html">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-ferramentas-funcionais.html">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-tarefas-comuns.html">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-shells-python.html">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-computacao-simbolica.html">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/17-proximos-passos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?urlpath=lab/tree/17-proximos-passos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/lecture-ipynb/blob/master/17-proximos-passos.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacao-avancada">
+   17.1. Programação avançada
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linguagem-de-programacao-compilada">
+   17.2. Linguagem de programação compilada
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teste">
+   17.3. Teste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelos-de-simulacao">
+   17.4. Modelos de simulação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#engenharia-de-software-para-codigos-de-pesquisa">
+   17.5. Engenharia de software para códigos de pesquisa
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dados-e-visualizacao">
+   17.6. Dados e visualização
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controle-de-versao">
+   17.7. Controle de versão
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execucao-paralela">
+   17.8. Execução paralela
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agradecimentos">
+     17.8.1. Agradecimentos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="para-onde-ir-a-partir-daqui">
+<h1><span class="section-number">17. </span>Para onde ir a partir daqui?<a class="headerlink" href="#para-onde-ir-a-partir-daqui" title="Permalink to this headline">¶</a></h1>
+<p>Aprender uma linguagem de programação é o primeiro passo para tornar-se um “computacionalista” que queira fazer avançar a ciência e a engenharia através de modelagem computacional e simulação.</p>
+<p>Enumeramos algumas habilidades adicionais que podem ser muito benéficas para o trabalho diário do cientista computacional, mas é claro que elas não são exaustivas.</p>
+<div class="section" id="programacao-avancada">
+<h2><span class="section-number">17.1. </span>Programação avançada<a class="headerlink" href="#programacao-avancada" title="Permalink to this headline">¶</a></h2>
+<p>Este texto enfatizou a formação de uma base sólida em termos de programação, abrangendo fluxo de controle, estruturas de dados e elementos da programação procedural e funcional. Não falamos de Orientação a Objetos em grande detalhe, nem discutimos alguns dos recursos mais avançados do Python, como iteradores e decoradores, por exemplo.</p>
+</div>
+<div class="section" id="linguagem-de-programacao-compilada">
+<h2><span class="section-number">17.2. </span>Linguagem de programação compilada<a class="headerlink" href="#linguagem-de-programacao-compilada" title="Permalink to this headline">¶</a></h2>
+<p>Quando o desempenho começa a ser a prioridade máxima, talvez seja necessário usar código compilado, e provavelmente incorporá-lo em um código Python para realizar os cálculo nas partes onde há deficiência de desempenho (<em>bottlenecks</em>).</p>
+<p>Fortran, C e C++ são escolhas sensíveis por enquanto. Talvez Julia num futuro próximo.</p>
+<p>Também precisamos aprender a integrar código compilado com Python usando ferramentas como Cython, Boost, Ctypes e Swig.</p>
+</div>
+<div class="section" id="teste">
+<h2><span class="section-number">17.3. </span>Teste<a class="headerlink" href="#teste" title="Permalink to this headline">¶</a></h2>
+<p>Uma boa codificação é suportada por uma série de testes de unidades e sistemas que podem ser executados rotineiramente para verificar se o código funciona corretamente. Ferramentas como <code class="docutils literal notranslate"><span class="pre">doctest</span></code>, <code class="docutils literal notranslate"><span class="pre">nose</span></code> e <code class="docutils literal notranslate"><span class="pre">pytest</span></code> são inestimáveis, e devemos aprender, pelo menos, como usar o <code class="docutils literal notranslate"><span class="pre">pytest</span></code> (ou o <code class="docutils literal notranslate"><span class="pre">nose</span></code>).</p>
+</div>
+<div class="section" id="modelos-de-simulacao">
+<h2><span class="section-number">17.4. </span>Modelos de simulação<a class="headerlink" href="#modelos-de-simulacao" title="Permalink to this headline">¶</a></h2>
+<p>Uma série de ferramentas-padrão para simulações, como Monte Carlo, Dinâmica Molecular, modelos baseados em <em>lattice</em>, diferenças finitas e elementos finitos, são comumente usados para resolver desafios específicos de simulação - é útil ter pelo menos uma visão geral deles.</p>
+</div>
+<div class="section" id="engenharia-de-software-para-codigos-de-pesquisa">
+<h2><span class="section-number">17.5. </span>Engenharia de software para códigos de pesquisa<a class="headerlink" href="#engenharia-de-software-para-codigos-de-pesquisa" title="Permalink to this headline">¶</a></h2>
+<p>Os códigos de pesquisa trazem desafios particulares: os requisitos podem mudar durante o tempo de execução do projeto. Precisamos de grande flexibilidade e reprodutibilidade. Uma série de técnicas estão disponíveis para dar suporte de forma eficaz.</p>
+</div>
+<div class="section" id="dados-e-visualizacao">
+<h2><span class="section-number">17.6. </span>Dados e visualização<a class="headerlink" href="#dados-e-visualizacao" title="Permalink to this headline">¶</a></h2>
+<p>Lidar com grandes quantidades de dados, processá-los e visualizá-los pode ser um desafio. Conhecimento fundamental de projeto de banco de dados, visualização 3D e ferramentas modernas de processamento de dados, como o pacote Pandas do Python, ajudam com isso.</p>
+</div>
+<div class="section" id="controle-de-versao">
+<h2><span class="section-number">17.7. </span>Controle de versão<a class="headerlink" href="#controle-de-versao" title="Permalink to this headline">¶</a></h2>
+<p>O uso de uma ferramenta de controle de versão, como git ou mercurial, deve ser uma abordagem padrão e melhora significativamente a eficácia da escrita de código, ajuda com o trabalho em equipe e - talvez o mais importante - suporta a reprodutibilidade de resultados computacionais.</p>
+</div>
+<div class="section" id="execucao-paralela">
+<h2><span class="section-number">17.8. </span>Execução paralela<a class="headerlink" href="#execucao-paralela" title="Permalink to this headline">¶</a></h2>
+<p>A execução paralela de códigos é uma maneira de tornar códigos em grande escala mais ágeis. Isso pode ser pelo uso de MPI para a comunicação <em>inter-node</em> ou OpenMP para a paralelização <em>intra-node</em>, ou um modo híbrido que integre ambos.</p>
+<p>O recente aumento da computação GPU fornece ainda outra via de paralelização, e também os processadores multinúcleo, como o Intel Phi.</p>
+<div class="section" id="agradecimentos">
+<h3><span class="section-number">17.8.1. </span>Agradecimentos<a class="headerlink" href="#agradecimentos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Marc Molinari, por revisar este manuscrito em 2007.</p></li>
+<li><p>Neil O’Brien, por contribuir para a seção SymPy.</p></li>
+<li><p>Jacek Generowicz, por me apresentar o Python no último milênio, e por gentilmente compartilhar inúmeras idéias de seu curso de Python.</p></li>
+<li><p>EPSRC, pelo suporte parcial deste trabalho (GR/T09156/01 e EP/G03690X/1).</p></li>
+<li><p>Estudantes e outros leitores que comentaram e/ou apontaram erros de digitação,  etc.</p></li>
+</ul>
+<p>[1] a linha vertical é mostrar apenas a divisão entre os componentes originais apenas; matematicamente, a matriz aumentada comporta-se como qualquer outra matriz 2 × 3, e nós a codificamos no SymPy como faríamos com qualquer outra.</p>
+<p>[2] a partir da documentação <span><code class="docutils literal notranslate"><span class="pre">help(preview)</span></code></span>: “Atualmente isso depende do pexpect, que não está disponível para Windows”.</p>
+<p>[3] O valor exato para o limite superior está disponível em <code class="docutils literal notranslate"><span class="pre">sys.maxint</span></code>.</p>
+<p>[4] Adicionamos, por completeza, que um programa C (ou C++/Fortran) que execute o mesmo laço será cerca de 100 vezes mais rápido do que o laço <code class="docutils literal notranslate"><span class="pre">float</span></code> do Python e, portanto, cerca de 100*200 = 20000 vezes mais rápido que o laço simbólico.</p>
+<p>[5] Neste texto, geralmente fazemos a importação do <code class="docutils literal notranslate"><span class="pre">numpy</span></code> com o nome <code class="docutils literal notranslate"><span class="pre">N</span></code> assim: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">N</span></code>. Se você não tiver <code class="docutils literal notranslate"><span class="pre">numpy</span></code> na sua máquina, você pode substituir esta linha por <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">Numeric</span> <span class="pre">as</span> <span class="pre">N</span></code>, ou <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numarray</span> <span class="pre">as</span> <span class="pre">N</span></code>.</p>
+<p>[6] Nota histórica: isso mudou da versão Scipy 0.7 para 0.8. Antes da 0,8, o valor de retorno era um <code class="docutils literal notranslate"><span class="pre">float</span></code> se um problema unidimensional fosse resolvido.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="16-metodos-numericos-scipy.html" title="previous page"><span class="section-number">16. </span>Métodos numéricos usando Python (SciPy)</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

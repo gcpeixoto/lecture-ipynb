@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11. Shells para Python &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="12. Computação simbólica" href="12-computacao-simbolica.html" />
+    <link rel="prev" title="10. Do Matlab para Python" href="10-matlab-para-python.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-entrada-saida.html">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-ferramentas-funcionais.html">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-tarefas-comuns.html">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-computacao-simbolica.html">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-proximos-passos.html">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/11-shells-python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?urlpath=lab/tree/11-shells-python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/lecture-ipynb/blob/master/11-shells-python.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#idle">
+   11.1. IDLE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-linha-de-comando">
+   11.2. Python (linha de comando)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-interativo-ipython">
+   11.3. Python Interativo (IPython)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#console-ipython">
+     11.3.1. Console IPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebook">
+     11.3.2. Jupyter Notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spyder">
+   11.4. Spyder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#editores">
+   11.5. Editores
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="shells-para-python">
+<h1><span class="section-number">11. </span><em>Shells</em> para Python<a class="headerlink" href="#shells-para-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="idle">
+<h2><span class="section-number">11.1. </span>IDLE<a class="headerlink" href="#idle" title="Permalink to this headline">¶</a></h2>
+<p>O <strong>IDLE</strong> vem com toda distribuição Python e é uma ferramenta útil para a programação diária. Seu editor fornece destaque de sintaxe.</p>
+<p>Existem duas razões pelas quais você poderia optar por outro <em>shell</em> para Python, por exemplo:</p>
+<ul class="simple">
+<li><p>Ao trabalhar com o <em>prompt</em> do Python, se você desejar preenchimento automático de nomes de variáveis, nomes de arquivos e comandos. Nesse caso, <em>IPython</em> é a sua ferramenta de escolha (veja abaixo). O IPython não fornece um editor, mas você pode continuar usando o editor IDLE ou qualquer outro que você quiser para editar seus arquivos.</p></li>
+</ul>
+<p>O IPython fornece uma série de recursos agradáveis para o programador Python mais experiente, incluindo um perfil conveniente de código (veja <a class="reference external" href="http://ipython.scipy.org">http://ipython.scipy.org</a>).</p>
+<p>Recentemente, algumas características interessantes foram adicionadas ao IDLE também (e.g. pressionar a tecla <code class="docutils literal notranslate"><span class="pre">tab</span></code> depois de ter digitado as primeiras letras de nomes de objetos e palavras-chave para preenchimento automático).</p>
+</div>
+<div class="section" id="python-linha-de-comando">
+<h2><span class="section-number">11.2. </span>Python (linha de comando)<a class="headerlink" href="#python-linha-de-comando" title="Permalink to this headline">¶</a></h2>
+<p>Esta é a face mais básica de um <em>shell</em> para Python. É muito semelhante ao <em>prompt</em> do Python no IDLE, mas não há menus para clicar e nenhuma instalação para editar arquivos.</p>
+</div>
+<div class="section" id="python-interativo-ipython">
+<h2><span class="section-number">11.3. </span>Python Interativo (IPython)<a class="headerlink" href="#python-interativo-ipython" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="console-ipython">
+<h3><span class="section-number">11.3.1. </span>Console IPython<a class="headerlink" href="#console-ipython" title="Permalink to this headline">¶</a></h3>
+<p>O IPython é uma versão melhorada da linha de comando do Python. É uma ferramenta valiosa e vale a pena explorar suas capacidades (veja <a class="reference external" href="http://ipython.org/ipython-doc/stable/interactive/qtconsole.html">http://ipython.org/ipython-doc/stable/interactive/qtconsole.html</a>)</p>
+<p>Você encontrará os seguintes recursos muito úteis:</p>
+<ul class="simple">
+<li><p>Preenchimento automático: Suponha que você digite <span><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">range(10)</span></code></span>. Em vez de digitar todas as letras, basta digitar <span><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">ra</span></code></span> e pressionar a tecla <code class="docutils literal notranslate"><span class="pre">tab</span></code>. O IPython mostrará todos os comandos possíveis (e nomes de variáveis) que começam com <span><code class="docutils literal notranslate"><span class="pre">ra</span></code></span>. Se você digitar uma terceira letra, aqui <span><code class="docutils literal notranslate"><span class="pre">n</span></code></span> e pressionar <code class="docutils literal notranslate"><span class="pre">Tab</span></code> novamente, o IPython completará e adicionará <span><code class="docutils literal notranslate"><span class="pre">ge</span></code></span> automaticamente. Isso também funciona para nomes de variáveis e de módulos.</p></li>
+<li><p>Para obter ajuda sobre um comando, podemos usar o comando de ajuda do Python. Por exemplo: <span><code class="docutils literal notranslate"><span class="pre">help(range)</span></code></span>. O IPython fornece um atalho. Para alcançar o mesmo, basta digitar o comando seguido de um ponto de interrogação: <span><code class="docutils literal notranslate"><span class="pre">range?</span></code></span></p></li>
+<li><p>Você pode navegar facilmente por diretórios no seu computador. Por exemplo,</p></li>
+</ul>
+<p>- <span><code class="docutils literal notranslate"><span class="pre">!dir</span></code></span> lista o conteúdo do diretório atual (mesmo que <span><code class="docutils literal notranslate"><span class="pre">ls</span></code></span>)</p>
+<p>- <span><code class="docutils literal notranslate"><span class="pre">pwd</span></code></span> mostra o diretório de trabalho atual</p>
+<p>- <span><code class="docutils literal notranslate"><span class="pre">cd</span></code></span> permite alterar diretórios</p>
+<ul class="simple">
+<li><p>Em geral, ao usar um ponto de exclamação antes do comando, você passa o comando para o <code class="docutils literal notranslate"><span class="pre">shell</span></code> (e não para o interpretador do Python).</p></li>
+<li><p>Você pode executar programas Python a partir do IPython usando <code class="docutils literal notranslate"><span class="pre">%run</span></code>. Suponha que você tenha um arquivo <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> no diretório atual. Você pode então executá-lo digitando: <code class="docutils literal notranslate"><span class="pre">%run</span> <span class="pre">hello</span></code>. Observe que isto difere da execução de um programa Python no IDLE: o IDLE reinicia a sessão do interpretador do Python e, assim, deleta todos os objetos existentes antes de a execução começar. Este não é o caso com o comando <span><code class="docutils literal notranslate"><span class="pre">run</span></code></span> no IPython (nem ao executar partes de código Python no Emacs usando o modo Python). Em particular, isso pode ser muito útil se for necessário configurar alguns objetos para testar o código em que se está trabalhando. Usar o comando <span><code class="docutils literal notranslate"><span class="pre">run</span></code></span> do IPython, ou o Emacs em vez do IDLE permite-nos manter esses objetos na sessão do interpretador e atualizar apenas a função, classe, etc. que está sendo desenvolvida.</p></li>
+<li><p>permite a edição de várias linhas do histórico de comandos</p></li>
+<li><p>fornece destaque de sintaxe <em>on-the-fly</em></p></li>
+<li><p>exibe <em>docstrings</em> <em>on-the-fly</em></p></li>
+<li><p>pode incluir figuras via Matplotlib (ativar modo <code class="docutils literal notranslate"><span class="pre">inline</span></code> com o comando <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">load</span></code> carrega o arquivo do disco ou de alguma URL para edição</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">timeit</span></code> mede o tempo de execução para uma determinada declaração</p></li>
+<li><p>…e muito mais.</p></li>
+<li><p>Leia mais em <a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/qtconsole.html">http://ipython.org/ipython-doc/dev/interactive/qtconsole.html</a></p></li>
+</ul>
+<p>Se você tiver acesso a esse <em>shell</em>, você talvez o considerará como seu <em>prompt</em> padrão do Python.</p>
+</div>
+<div class="section" id="jupyter-notebook">
+<h3><span class="section-number">11.3.2. </span>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<p>O Jupyter Notebook (anteriormente IPython Notebook) permite que você execute, armazene, carregue e reexecute uma sequencia de comandos Python, além de incluir texto explicativo, imagens e outras mídias. É um desenvolvimento recente e excitante que tem o potencial de se desdobrar em uma ferramenta de grande significado, por exemplo, para</p>
+<ul class="simple">
+<li><p>documentar cálculos e processamento de dados</p></li>
+<li><p>dar suporte ao ensino e aprendizagem</p>
+<ul>
+<li><p>do Python em si</p></li>
+<li><p>de métodos estatísticos</p></li>
+<li><p>do pós-processamento geral de dados</p></li>
+<li><p>…</p></li>
+</ul>
+</li>
+<li><p>documentação de novos códigos</p></li>
+<li><p>testes de regressão automática pela reexecucação de <em>IPython notebooks</em> para fins de comparação entre dados de saída e dados armazenados.</p></li>
+</ul>
+<p><strong>Leitura complementar</strong></p>
+<ul class="simple">
+<li><p>Jupyter Notebook (<a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/latest/">http://jupyter-notebook.readthedocs.io/en/latest/</a>).</p></li>
+<li><p>IPython (<a class="reference external" href="http://ipython.org">http://ipython.org</a>).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="spyder">
+<h2><span class="section-number">11.4. </span>Spyder<a class="headerlink" href="#spyder" title="Permalink to this headline">¶</a></h2>
+<p>Spyder é o <em>Scientific PYthon Development EnviRonment</em>: um ambiente de desenvolvimento interativo poderoso para a linguagem Python com recursos avançados de edição, teste interativo, depuração, introspecção e computação numérica, graças ao suporte do IPython e bibliotecas populares, tais como NumPy (linear algebra), SciPy (signal and image processing) ou Matplotlib (plotagem interativa 2D/3D). Veja mais em <a class="reference external" href="http://pythonhosted.org/spyder/">http://pythonhosted.org/spyder/</a>.</p>
+<p>Algumas características do Spyder:</p>
+<ul class="simple">
+<li><p>Dentro do Spyder, o console IPython é o interpretador Python padrão, e</p></li>
+<li><p>o código no editor pode ser executado total ou parcialmente neste buffer.</p></li>
+<li><p>O editor suporta a verificação automática de erros usando <code class="docutils literal notranslate"><span class="pre">pyflakes</span></code> e</p></li>
+<li><p>o editor avisa (se desejado) se a formatação do código se desviar do guia de estilo PEP8.</p></li>
+<li><p>O Depurador Ipython pode ser ativado e</p></li>
+<li><p>um analisador de desempenho (<em>profiler</em>) é fornecido.</p></li>
+<li><p>Um explorador de objetos mostra documentação para funções, métodos, etc, <em>on-the-fly</em> e um</p></li>
+<li><p>explorador de variáveis exibe nomes, tamanho e valores para variáveis numéricas.</p></li>
+</ul>
+<p>O Spyder está atualmente (a partir de 2014) no caminho para se tornar um ambiente integrado multi-plataforma poderoso e robusto para desenvolvimento em Python, com especial ênfase em computação científica e engenharia.</p>
+</div>
+<div class="section" id="editores">
+<h2><span class="section-number">11.5. </span>Editores<a class="headerlink" href="#editores" title="Permalink to this headline">¶</a></h2>
+<p>Todos os principais editores que são usados para programação fornecem suporte a Python (e.g. Emacs, Vim, Sublime Text), alguns <em>Integrated Development Enviroments</em> (IDEs) vêm com seu próprio editor (Spyder, Eclipse). Qual é o melhor é, em parte, uma questão de escolha.</p>
+<p>Para iniciantes, o Spyder parece uma escolha sensata, pois fornece um IDE, permite a execução de porções de código em uma sessão de interpretação e é fácil de aprender.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="10-matlab-para-python.html" title="previous page"><span class="section-number">10. </span>Do Matlab para Python</a>
+    <a class='right-next' id="next-link" href="12-computacao-simbolica.html" title="next page"><span class="section-number">12. </span>Computação simbólica</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

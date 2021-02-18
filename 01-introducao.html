@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Introdução &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Uma calculadora poderosa" href="02-calculadora-poderosa.html" />
+    <link rel="prev" title="Python para Ciências Computacionais e Engenharia" href="indice.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-entrada-saida.html">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-ferramentas-funcionais.html">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-tarefas-comuns.html">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-shells-python.html">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-computacao-simbolica.html">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-proximos-passos.html">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/01-introducao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?urlpath=lab/tree/01-introducao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/lecture-ipynb/blob/master/01-introducao.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelagem-computacional">
+   1.1. Modelagem Computacional
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1.1.1. Introdução
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     1.1.2. Modelagem Computacional
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#programacao-como-suporte-a-modelagem-computacional">
+     1.1.3. Programação como suporte à modelagem computacional
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#por-que-python-para-computacao-cientifica">
+   1.2. Por que Python para Computação Científica?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estrategias-de-otimizacao">
+     1.2.1. Estratégias de otimização
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#primeiro-faca-certo-depois-otimize">
+     1.2.2. Primeiro faça certo, depois otimize
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prototipagem-em-python">
+     1.2.3. Prototipagem em Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#literatura">
+   1.3. Literatura
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video-aulas-sobre-python-para-iniciantes">
+     1.3.1. Vídeo-aulas sobre Python para iniciantes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listas-de-discussao-sobre-python">
+     1.3.2. Listas de discussão sobre Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versoes-do-python">
+   1.4. Versões do Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estes-documentos">
+   1.5. Estes documentos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seu-feedback">
+   1.6. Seu
+   <em>
+    feedback
+   </em>
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introducao">
+<h1><span class="section-number">1. </span>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h1>
+<p>Este texto resume algumas ideias centrais relevantes para a Engenharia Computacional e Computação Científica usando Python. A ênfase está em apresentar alguns conceitos de programação em Python que são importantes para algoritmos numéricos. Os capítulos posteriores versam sobre bibliotecas numéricas, tais como <span><code class="docutils literal notranslate"><span class="pre">NumPy</span></code></span> e <span><code class="docutils literal notranslate"><span class="pre">SciPy</span></code></span>, as quais, individualmente, merecem muito mais espaço para serem abordadas do que o fornecido aqui. Temos o objetivo de capacitar o leitor para aprender de maneira independente a como usar as funcionalidades dessas bibliotecas através da documentação disponível tanto <em>online</em> quanto nos próprios pacotes.</p>
+<div class="section" id="modelagem-computacional">
+<h2><span class="section-number">1.1. </span>Modelagem Computacional<a class="headerlink" href="#modelagem-computacional" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3><span class="section-number">1.1.1. </span>Introdução<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Cada vez mais, processos e sistemas são pesquisados ou desenvolvidos através de simulações computacionais: novos protótipos de aeronaves, como o recente A380, são primeiramente projetados e testados virtualmente através de simulações computacionais. Com o crescente poder computacional disponível através de supercomputadores, clusters de computadores e até mesmo de máquinas <em>desktop</em> e <em>laptops</em>, essa tendência provavelmente permanecerá.</p>
+<p>Simulações computacionais são rotineiramente utilizadas na pesquisa básica para ajudar a entender medições experimentais e para substituir - por exemplo - o crescimento e a fabricação de amostras/experiências custosas, sempre que possível. Em um contexto industrial, o projeto de produtos e dispositivos geralmente pode ser feito muito mais eficazmente de modo virtual através de simulações do que através da construção e teste de protótipos. Isto ocorre, em particular, em áreas onde as amostras são custosas, como é o caso da nanociência (onde é custoso criar coisas pequenas) e da indústria aeroespacial (onde é custoso construir coisas grandes). Existem também situações em que certas experiências só podem ser realizadas virtualmente (variando da astrofísica ao estudo de efeitos de acidentes nucleares ou químicos de grande escala). A Modelagem Computacional, incluindo o uso de ferramentas computacionais para pós-processamento, análise e visualização de dados, tem sido utilizada na engenharia, física e química por muitas décadas, mas está se tornando mais importante devido à disponibilidade barata de recursos computacionais. A Modelagem Computacional também está começando a desempenhar um papel mais importante nos estudos de sistemas biológicos, economia, arqueologia, medicina, saúde e muitos outros domínios.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">oct</span><span class="p">(</span><span class="mi">234</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0o352&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">1.1.2. </span>Modelagem Computacional<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Para estudar um processo com simulação computacional, distinguimos duas etapas: a primeira é desenvolver um <em>modelo</em> do sistema real; a segunda, resolver as equações envolvidas numericamente. Ao estudar o movimento de um pequeno objeto, como uma moeda, digamos, sob a influência da gravidade, podemos ignorar seu atrito com o ar: nosso modelo - que só pode considerar a força gravitacional e a inércia da moeda, ou seja, <span class="math notranslate nohighlight">\(a(t) = F/m = -9.81 \, m/s^2\)</span> - é uma aproximação do sistema real. O modelo normalmente permitir-nos-á expressar o comportamento do sistema (em alguma forma aproximada) através de equações matemáticas, que geralmente envolvem equações diferenciais ordinárias (EDOs) ou equações diferenciais parciais (EDPs).</p>
+<p>Nas ciências naturais, como física, química e engenharia, muitas vezes não é tão difícil encontrar um modelo adequado, embora as equações resultantes tendam a ser muito difíceis de resolver e, na maioria dos casos, impossíveis de serem resolvidas analiticamente.</p>
+<p>Por outro lado, em assuntos que não são tão bem descritos através de uma estrutura matemática e dependem do comportamento de objetos cujas ações são impossíveis de serem previstas de forma determinística (como os seres humanos), é muito mais difícil encontrar um modelo adequado para descrever a realidade. Como uma regra geral, nestas disciplinas, as equações resultantes são mais fáceis de serem resolvidas, mas difíceis de serem encontradas e a validade de um modelo precisa ser questionada muito mais. Exemplos típicos são as tentativas de simular a economia, o uso de recursos globais, o comportamento de uma multidão em pânico, etc.</p>
+<p>Até agora, apenas discutimos o desenvolvimento de <em>modelos</em> para descrever a realidade. O uso desses modelos não envolve necessariamente computadores ou algum trabalho numérico. Na verdade, se a equação de um modelo puder ser resolvida de forma analítica, então deve-se fazer isso e registrar a solução para a equação.</p>
+<p>Na prática, dificilmente uma equação-modelo de sistemas de interesse pode ser resolvida analiticamente, e é aí que o computador entra: usando métodos numéricos, podemos, pelo menos, estudar o modelo <em>para um determinado conjunto de condições de contorno</em>. Para o exemplo considerado acima, talvez não possamos ver facilmente a partir de uma solução numérica que a velocidade da moeda sob a influência da gravidade mudará linearmente com o tempo (o que podemos constatar facilmente a partir da solução analítica disponível para este sistema simples:
+<span class="math notranslate nohighlight">\(v(t) = 9.81t + v_0 \, m/s\)</span>).</p>
+<p>A solução numérica que pode ser calculada usando um computador consistiria de dados que mostram como a velocidade muda ao longo do tempo para uma velocidade inicial particular <span class="math notranslate nohighlight">\(v_0\)</span> (<span class="math notranslate nohighlight">\(v_0\)</span> é uma condição de contorno aqui). O programa computacional reportaria uma longa lista de dois números mantendo o valor do tempo <span class="math notranslate nohighlight">\(t_i\)</span> para o qual um determinado valor da velocidade <span class="math notranslate nohighlight">\(v_i\)</span> foi calculado. Ao plotarmos <span class="math notranslate nohighlight">\(v_i\)</span> <em>versus</em> <span class="math notranslate nohighlight">\(t _i\)</span>, ou ajustarmos uma curva a partir dos dados, poderemos entender a tendência do comportamento da moeda (que pode ser vista a partir da solução analítica, é claro).</p>
+<p>Claramente, é desejável encontrar soluções analíticas sempre que possível, mas o número de problemas onde isso é possível é pequeno. Geralmente, a obtenção do resultado numérico de uma simulação computacional é bastante útil (apesar das deficiências dos resultados numéricos em comparação com uma expressão analítica), porque é a única maneira possível de estudar o sistema.</p>
+<p>Em suma, o nome <em>modelagem computacional</em> deriva das duas etapas: (i) <em>modelagem</em>, em que se busca um modelo que descreva o sistema real, e (ii) a resolução das equações do modelo usando <em>métodos computacionais</em>.</p>
+</div>
+<div class="section" id="programacao-como-suporte-a-modelagem-computacional">
+<h3><span class="section-number">1.1.3. </span>Programação como suporte à modelagem computacional<a class="headerlink" href="#programacao-como-suporte-a-modelagem-computacional" title="Permalink to this headline">¶</a></h3>
+<p>Existe uma grande quantidade de pacotes que fornecem recursos para modelagem computacional. Se estes satisfizerem as necessidades de pesquisa ou de projeto, e o processamento e a visualização de dados sejam adequadamente suportados através de ferramentas existentes, pode-se realizar estudos de modelagem computacional sem nenhum conhecimento de programação mais aprofundado.</p>
+<p>Em um ambiente de pesquisa - tanto na academia quanto na pesquisa por novos produtos e idéias na indústria -, muitas vezes se atinge um ponto em que os pacotes existentes não são capazes de realizar uma determinada tarefa de simulação que surge, ou onde se faz necessário o aprendizado de novas maneiras de analisar os dados existentes.</p>
+<p>Nesse ponto, habilidades de programação tornam-se um requisito. Em geral, também é útil ter um entendimento amplo dos blocos de construção de software e idéias básicas de engenharia de software à medida que usamos mais e mais dispositivos que são controlados por software.</p>
+<p>Esquecemos, com frequencia, que não há nada que o computador faça que nós, como seres humanos, não possamos fazer. O computador pode fazê-lo muito mais rápido, mas o fará com muitos erros. Portanto, não há mágica nos cálculos que um computador executa: os cálculos poderiam ter sido feitos por seres humanos - na verdade o foram durante muitos anos. Veja, por exemplo, o tópico <a class="reference external" href="https://pt.wikipedia.org/wiki/Computador_humano"><em>Computador Humano</em></a> da Wikipedia.</p>
+<p>Compreender como construir uma simulação computacional reduz-se, grosso modo, a: (i) encontrar o modelo (muitas vezes, isto significa encontrar as equações corretas), (ii) saber como resolver estas equações numericamente, (iii) implementar os métodos para calcular essas soluções (este é o ponto na programação).</p>
+</div>
+</div>
+<div class="section" id="por-que-python-para-computacao-cientifica">
+<h2><span class="section-number">1.2. </span>Por que Python para Computação Científica?<a class="headerlink" href="#por-que-python-para-computacao-cientifica" title="Permalink to this headline">¶</a></h2>
+<p>O foco do projeto da linguagem Python está na produtividade e legibilidade de código. Por exemplo, através de:</p>
+<ul class="simple">
+<li><p>console Python interativo;</p></li>
+<li><p>sintaxe muito clara e legível através de indentação;</p></li>
+<li><p>fortes capacidades de introspecção;</p></li>
+<li><p>plena modularidade e pacotes hierárquicos de suporte;</p></li>
+<li><p>manipulação de erros com base em exceções;</p></li>
+<li><p>tipos de dados dinâmicos e gerenciamento de memória automático.</p></li>
+</ul>
+<p><em>Como Python é uma linguagem interpretada e, muitas vezes, executada mais lentamente do que código compilado, pode-se perguntar por que alguém deveria considerar essa linguagem “lenta” para simulações computacionais?</em></p>
+<p>Há duas respostas para esta crítica:</p>
+<ol class="simple">
+<li><p><em>Tempo de implementação versus tempo de execução</em>: não é apenas o tempo de execução que contribui para o custo de um projeto computacional: também é necessário considerar o custo do trabalho de desenvolvimento e manutenção.</p></li>
+</ol>
+<p>Nos primórdios da computação científica (digamos, nas decádas de 1960/70/80), o tempo de computação era tão proibitivo que fazia sentido investir muitos meses do tempo de um programador para melhorar o desempenho de um cálculo em qualquer ínfima porcentagem.</p>
+<p>Hoje em dia, no entanto, os ciclos de uma unidade de processamento (CPU) tornaram-se muito mais baratos do que o tempo do programador. Para os códigos de pesquisa, os quais são executados, via de regra, apenas um pequeno número de vezes (antes que os pesquisadores passem para o próximo problema), pode ser econômico aceitar que o código seja executado apenas com 25% da velocidade esperada possível se isto economiza, digamos, um mês do tempo de um pesquisador (ou programador). Por exemplo: se o tempo de execução de parte do código for de 10 horas, com uma previsão de que ele seja executado cerca de 100 vezes, então o tempo total de execução é de aproximadamente 1000 horas. Seria ótimo se  isto pudesse ser reduzido para 25%. Seria uma economia de 750 horas de processamento. Por outro lado, uma espera extra (cerca de um mês) e o custo de 750 horas de CPU valeria o investimento de um mês do tempo de uma pessoa.</p>
+<p><em>Legibilidade e manutenção do código - código curto, menos erros</em>: uma questão relacionada é que um código de pesquisa não é usado apenas para um projeto, mas continua sendo usado repetidas vezes, evolui, cresce, bifurca-se etc. Neste caso, o investimento em mais tempo para tornar o código mais rápido é uma justificativa frequente. Ao mesmo tempo, uma quantidade significativa de tempo do programador concentrar-se-á em (i) introduzir as mudanças necessárias, (ii) testá-las mesmo antes de o trabalho de otimização da velocidade de execução da versão alterada começar. Para manter, estender e modificar um código de modos ainda imprevistos, o uso de uma linguagem que seja fácil de ler e que possua grande poder expressivo é recomendado.</p>
+<ol class="simple">
+<li><p><em>Código Python bem escrito pode ser muito rápido</em> se partes críticas e demoradas do código forem executadas através de linguagens compiladas: normalmente, menos de 5% do código de um projeto de simulação precisam de mais de 95% do tempo de execução. Desde que esses cálculos sejam feitos de forma muito eficiente, não é necessário se preocupar com todas as outras partes do código, já que o tempo total de sua execução é insignificante.</p></li>
+</ol>
+<p>A parte do programa onde há intensa computação deve ser ajustada para alcançar o melhor desempenho. Várias opções são oferecidas em Python:</p>
+<p>- Por exemplo, a extensão NumPy fornece uma interface Python para as eficientes bibliotecas compiladas LAPACK, que são quase o padrão em álgebra linear numérica. Se os problemas em estudo puderem ser formulados de forma que, eventualmente, grandes sistemas de equações algébricas tenham que ser resolvidos, ou autovalores computados, etc., o código compilado na biblioteca LAPACK pode ser usado (através do pacote NumPy). Nesta etapa, os cálculos são realizados com o mesmo desempenho do Fortran/C, haja vista que o código usado é essencialmente escrito em Fortran/C. O Matlab, a propósito, explora exatamente isto: a linguagem de <em>script</em> Matlab é muito lenta (cerca de 10 vezes mais lenta do que Python), mas o Matlab ganha seu poder ao delegar operações matriciais às bibliotecas compiladas LAPACK.</p>
+<p>- As bibliotecas numéricas C/Fortran existentes podem ser “interfaceadas” (para serem chamadas a partir do programa Python) através de, por exemplo, Swig, Boost.Python e Cython.</p>
+<p>- O Python pode ser estendido através de linguagens compiladas se a parte do problema com grande demanda computacional não for algoritmicamente padronizada e não houver biblioteca existente que possa ser usada. As linguagens comumente utilizadas para implementar extensões rápidas são C, C++ e Fortran.</p>
+<p>- Listamos algumas ferramentas que são usadas para usar código compilado a partir do Python:</p>
+<p>- A extensão <span><code class="docutils literal notranslate"><span class="pre">scipy.weave</span></code></span> é útil se apenas uma expressão curta precisar ser expressa em C.
+       - A interface Cython está crescendo em popularidade para declarar semi-automaticamente os tipos de variáveis no código Python, para traduzir esse código para C (automaticamente) e depois usar o código C compilado a partir do Python. O Cython também é usado para encapsular rapidamente uma biblioteca C existente com uma interface para que a biblioteca C possa ser usada a partir do Python.</p>
+<p>- Boost.Python é especializado para encapsular código C++ no Python.</p>
+<p>A conclusão é que <em>Python é “rápida o suficiente” para a maioria das tarefas computacionais e sua linguagem de alto nível amigável ao usuário frequentemente é compensada em velocidade reduzida quando comparada a linguagens compiladas de baixo nível. A combinação de Python com códigos compilados escritos sob medida para desempenho de partes críticas do código resulta em velocidades virtualmente ótimas na maioria dos casos.</em></p>
+<div class="section" id="estrategias-de-otimizacao">
+<h3><span class="section-number">1.2.1. </span>Estratégias de otimização<a class="headerlink" href="#estrategias-de-otimizacao" title="Permalink to this headline">¶</a></h3>
+<p>Em geral, entendemos a redução do tempo de execução quando discutimos “otimização de código” no contexto da modelagem computacional e, essencialmente, realizamos os cálculos necessários o mais rápido possível. (Às vezes, precisamos reduzir a quantidade de memória RAM, bem como a quantidade de entrada e saída de dados para o disco ou para a rede). Ao mesmo tempo, precisamos ter certeza de que não investimos quantidades inapropriadas de tempo de programação para acelerar o código. Como sempre, deve haver um equilíbrio entre o tempo dos programadores e a melhoria que podemos obter com isso.</p>
+</div>
+<div class="section" id="primeiro-faca-certo-depois-otimize">
+<h3><span class="section-number">1.2.2. </span>Primeiro faça certo, depois otimize<a class="headerlink" href="#primeiro-faca-certo-depois-otimize" title="Permalink to this headline">¶</a></h3>
+<p>Para escrever códigos rápidos de forma eficaz, observamos que a ordem correta é: (i) escrever um programa que realize o cálculo correto. Para isso, escolha uma linguagem/abordagem que lhe permita <em>escrever o código rapidamente e fazê-lo funcionar rapidamente</em> - independentemente da velocidade de execução. Então (ii) altere o programa ou reescreva-o do zero na mesma linguagem para tornar a execução mais rápida. Durante o processo, continue comparando os resultados com a versão lenta primeiramente escrita para garantir que a otimização não introduza erros. Uma vez que estivermos familiarizados com o conceito de testes de regressão, eles devem ser usados para comparar o código novo (e esperançosamente mais rápido) com o original.</p>
+<p>Um padrão comum em Python é começar a escrever o código Python puro e, em seguida, começar a usar bibliotecas Python que usam código compilado internamente (como os <em>arrays</em> rápidos fornecidas pelo NumPy e as rotinas do SciPy, que voltam-se para códigos numéricos já estabelecidos, tais como ODEPACK, LAPACK e outros). Se necessário, pode-se - depois de uma análise de desempenho (<em>profiling</em>) cuidadosa - começar a substituir partes do código Python por uma linguagem compilada, como C ou Fortran, a fim de melhorar a velocidade de execução ainda mais (conforme discutido acima).</p>
+</div>
+<div class="section" id="prototipagem-em-python">
+<h3><span class="section-number">1.2.3. </span>Prototipagem em Python<a class="headerlink" href="#prototipagem-em-python" title="Permalink to this headline">¶</a></h3>
+<p>Verifica-se que - mesmo se um código específico tiver que ser escrito em, digamos, C++ - é (frequentemente) mais eficiente prototipar o código em Python, e uma vez que um projeto apropriado (estrutura de classes) for encontrado, transferir o código para C++.</p>
+</div>
+</div>
+<div class="section" id="literatura">
+<h2><span class="section-number">1.3. </span>Literatura<a class="headerlink" href="#literatura" title="Permalink to this headline">¶</a></h2>
+<p>Enquanto este texto inicia-se com uma introdução de alguns aspectos básicos da linguagem de programação Python, você pode achar necessário - dependenddo de sua experiência prévia - buscar fontes secundárias para entender algumas ideias completamante. Nesse caso, os seguintes documentos são indicados:</p>
+<ul class="simple">
+<li><p>Allen Downey, <em>Pense em Python</em>. Disponível online em html e pdf em <a class="reference external" href="https://penseallen.github.io/PensePython2e/">https://penseallen.github.io/PensePython2e/</a>.</p></li>
+<li><p>A documentação oficial Python: <a class="reference external" href="http://www.python.org/doc/">http://www.python.org/doc/</a> e</p></li>
+<li><p>O tutorial Python (<a class="reference external" href="http://docs.python.org/tutorial/">http://docs.python.org/tutorial/</a>)</p></li>
+</ul>
+<p>Os seguintes links também podem ser úteis para você:</p>
+<ul class="simple">
+<li><p>Homepage do <span><code class="docutils literal notranslate"><span class="pre">numpy</span></code></span> (<a class="reference external" href="http://numpy.scipy.org/">http://numpy.scipy.org/</a>)</p></li>
+<li><p>Homepage do <span><code class="docutils literal notranslate"><span class="pre">scipy</span></code></span> (<a class="reference external" href="http://scipy.org/">http://scipy.org/</a>)</p></li>
+<li><p>Homepage do <span><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></span> (<a class="reference external" href="http://matplotlib.sourceforge.net/">http://matplotlib.sourceforge.net/</a>).</p></li>
+<li><p>Guia de estilos Python (<a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">http://www.python.org/dev/peps/pep-0008/</a></p></li>
+</ul>
+<div class="section" id="video-aulas-sobre-python-para-iniciantes">
+<h3><span class="section-number">1.3.1. </span>Vídeo-aulas sobre Python para iniciantes<a class="headerlink" href="#video-aulas-sobre-python-para-iniciantes" title="Permalink to this headline">¶</a></h3>
+<p>Você gosta de ouvir/seguir vídeo-aulas? Há uma série de 24 vídeo-aulas intituladas <em>Introduction to Computer Science and Programming</em> dadas por Eric Grimsom e John Guttag do MIT disponíveis em <a class="reference external" href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/">http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/</a>. Estas vídeo-aulas são destinadas a estudantes com pouca ou nenhuma experiência em programação. Elas proporcionam aos alunos uma compreensão do papel que a computação pode desempenhar na resolução de problemas. Elas também têm o objetivo de ajudar os alunos, independentemente de sua formação, a se sentirem confiantes em sua capacidade de escrever pequenos programas que lhes permitam atingir objetivos úteis.</p>
+</div>
+<div class="section" id="listas-de-discussao-sobre-python">
+<h3><span class="section-number">1.3.2. </span>Listas de discussão sobre Python<a class="headerlink" href="#listas-de-discussao-sobre-python" title="Permalink to this headline">¶</a></h3>
+<p>Existe também uma lista de discussão (<a class="reference external" href="http://mail.python.org/mailman/listinfo/tutor">http://mail.python.org/mailman/listinfo/tutor</a>) onde iniciantes são bem-vindos para fazer perguntas sobre Python. Tanto usar os arquivos quanto postar suas próprias questões (o que, de fato, ajuda outros também) podem ajudar você a entender a linguagem. Use a etiqueta padrão da lista de discussão (por exemplo, seja educado, conciso, etc.). Você pode ter interesse em ler <a class="reference external" href="http://www.catb.org/esr/faqs/smart-questions.html">http://www.catb.org/esr/faqs/smart-questions.html</a> para obter algumas orientações sobre como fazer perguntas em listas de discussão.</p>
+</div>
+</div>
+<div class="section" id="versoes-do-python">
+<h2><span class="section-number">1.4. </span>Versões do Python<a class="headerlink" href="#versoes-do-python" title="Permalink to this headline">¶</a></h2>
+<p>Existem duas versões de Python por aí: Python 2.x and Python 3.x. Elas são levemente diferentes — as mudanças na Python 3.x foram introduzidas para corrigir algumas deficiências no projeto da linguagem identificados desde o seu início. Uma decisão que foi tomada assumiu que alguma incompatibilidade deveria ser aceita para se atingir o objetivo maior de uma linguagem melhor para o futuro.</p>
+<p>Para computação científica, é crucial fazer uso de bibliotecas numéricas tais como <a class="reference external" href="http://numpy.scipy.org/">NumPy</a>, <a class="reference external" href="http://www.scipy.org">SciPy</a> e o pacote de plotagem <a class="reference external" href="http://matplotlib.sourceforge.net/">Matplotlib</a>.</p>
+<p>Todos eles estão disponíveis para Python 3, versão que usaremos aqui. No entanto, há muito código ainda em uso que foi escrito para Python 2. Para tanto, é útil saber das diferenças. O exemplo mais proeminente é que em Python 2.x, o comando <code class="docutils literal notranslate"><span class="pre">print</span></code> é especial, ao passo que em Python 3 é uma função ordinária. Por exemplo, em Python 2.7, podemos escrever:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;Hello World&quot;</span>
+</pre></div>
+</div>
+<p>ao passo que, em Python 3, isto causaria um erro de sintaxe. A maneira correta de usar <code class="docutils literal notranslate"><span class="pre">print</span></code> em Python 3 seria como uma função, i.e.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World
+</pre></div>
+</div>
+</div>
+</div>
+<p>Felizmente, a notação de função (i.e. com os parênteses) também é permitida em Python 2.7. Assim, nossos exemplos devem funcionar tanto em Python 2.x, quanto em Python 3.x. (Existem outras diferenças não mencionadas aqui.)</p>
+</div>
+<div class="section" id="estes-documentos">
+<h2><span class="section-number">1.5. </span>Estes documentos<a class="headerlink" href="#estes-documentos" title="Permalink to this headline">¶</a></h2>
+<p>Este material foi convertido do <code class="docutils literal notranslate"><span class="pre">LaTex</span></code> para um conjunto de <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebooks</span></code>, tornando os exemplos nele contidos interativos. Você pode executar qualquer bloco de código iniciado por <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[</span> <span class="pre">]:</span></code> clicando na respectiva célula e pressionando <code class="docutils literal notranslate"><span class="pre">shift-enter</span></code>, ou clicando no botão <i class="fa fa-step-forward"></i> da barra de ferramentas.</p>
+</div>
+<div class="section" id="seu-feedback">
+<h2><span class="section-number">1.6. </span>Seu <em>feedback</em><a class="headerlink" href="#seu-feedback" title="Permalink to this headline">¶</a></h2>
+<p>Seu <em>feedback</em> é desejado. Caso você encontre algum erro neste texto, ou tiver sugestões sobre como alterá-lo ou estendê-lo, fique à vontade para entrar em contato com o Hans pelo e-mail <code class="docutils literal notranslate"><span class="pre">fangohr&#64;soton.ac.uk</span></code>.</p>
+<p>Se você encontrar uma URL que não está funcionando (ou apontando para o material errado), informe ao Hans também. Como o conteúdo da internet muda rapidamente, é difícil acompanhar essas mudanças sem um <em>feedback</em>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="indice.html" title="previous page">Python para Ciências Computacionais e Engenharia</a>
+    <a class='right-next' id="next-link" href="02-calculadora-poderosa.html" title="next page"><span class="section-number">2. </span>Uma calculadora poderosa</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

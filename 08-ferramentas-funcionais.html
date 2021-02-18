@@ -1,0 +1,1119 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8. Ferramentas funcionais &#8212; Introdução à Linguagem Python para Ciências Computacionais e Engenharia</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Tarefas comuns" href="09-tarefas-comuns.html" />
+    <link rel="prev" title="7. Funções e módulos" href="07-funcoes-modulos.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/mayavi-samp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdução à Linguagem Python para Ciências Computacionais e Engenharia</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indice.html">
+   Python para Ciências Computacionais e Engenharia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Conteúdo
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-calculadora-poderosa.html">
+   2. Uma calculadora poderosa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-tipos-estruturas-dados.html">
+   3. Tipos de Dados e Estruturas de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-introspeccao.html">
+   4. Introspecção
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-entrada-saida.html">
+   5. Entrada e Saída de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-fluxo-controle.html">
+   6. Fluxo de Controle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-funcoes-modulos.html">
+   7. Funções e módulos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Ferramentas funcionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-tarefas-comuns.html">
+   9. Tarefas comuns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-matlab-para-python.html">
+   10. Do Matlab para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-shells-python.html">
+   11.
+   <em>
+    Shells
+   </em>
+   para Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-computacao-simbolica.html">
+   12. Computação simbólica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-computacao-numerica.html">
+   13. Computação numérica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-python-numerico-numpy.html">
+   14. Python Numérico (numpy):
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-visualizando-dados.html">
+   15. Visualização de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-metodos-numericos-scipy.html">
+   16. Métodos numéricos usando Python (SciPy)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-proximos-passos.html">
+   17. Para onde ir a partir daqui?
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/08-ferramentas-funcionais.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/lecture-ipynb/master?urlpath=lab/tree/08-ferramentas-funcionais.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/lecture-ipynb/blob/master/08-ferramentas-funcionais.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funcoes-anonimas">
+   8.1. Funções anônimas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#map">
+   8.2.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     map
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filter">
+   8.3.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     filter
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compreensoes-de-lista">
+   8.4. Compreensões de lista
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduce">
+   8.5.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     reduce
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#por-que-nao-usar-apenas-lacos-for">
+   8.6. Por que não usar apenas laços
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rapidez">
+   8.7. Rapidez
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ferramentas-funcionais">
+<h1><span class="section-number">8. </span>Ferramentas funcionais<a class="headerlink" href="#ferramentas-funcionais" title="Permalink to this headline">¶</a></h1>
+<p>A linguagem Python fornece alguns comandos predefinidos, tais como <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, <code class="docutils literal notranslate"><span class="pre">reduce</span></code>, bem como <code class="docutils literal notranslate"><span class="pre">lambda</span></code> (para criar funções anônimas) e compreensões de lista. Tais comandos são típicos de linguagens funcionais, das quais LISP provavelmente é a mais conhecida.</p>
+<p>A programação funcional pode ser extremamente poderosa e um dos pontos fortes da linguagem Python é que ela permite programar usando (i) o estilo de programação procedural (ou imperativa), (ii) o estilo orientado a objetos e (iii) o estilo funcional. São os programadores quem escolhem quais ferramentas selecionar, qual estilo e como misturá-los para resolver melhor um determinado problema.</p>
+<p>Neste capítulo, fornecemos alguns exemplos para o uso dos comandos listados acima.</p>
+<div class="section" id="funcoes-anonimas">
+<h2><span class="section-number">8.1. </span>Funções anônimas<a class="headerlink" href="#funcoes-anonimas" title="Permalink to this headline">¶</a></h2>
+<p>Todas as funções que vimos em Python até agora foram definidas através da palavra-chave <code class="docutils literal notranslate"><span class="pre">def</span></code>. Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+     <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esta função tem o nome <code class="docutils literal notranslate"><span class="pre">f</span></code>. Uma vez que a função está definida (ou seja, o interpretador Python encontrou a linha <code class="docutils literal notranslate"><span class="pre">def</span></code>), podemos chamar a função usando seu nome. Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Às vezes, precisamos definir uma função que só é usada uma vez, ou queremos criar uma função, mas não precisamos de um nome para ela (como para criar fechamentos). Neste caso, isso é chamado de <em>função anônima</em>, pois não possui um nome. Em Python, a palavra-chave <code class="docutils literal notranslate"><span class="pre">lambda</span></code> pode criar uma função anônima.</p>
+<p>Criamos uma função (nomeada) primeiro, verificamos seu tipo e comportamento:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.f&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>function
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+</div>
+</div>
+<p>Agora fazemos o mesmo com uma função anônima:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.&lt;lambda&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>function
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+</div>
+</div>
+<p>Isto funciona exatamente da mesma maneira, mas - como a função anônima não tem um nome - precisamos definir a função (através da expressão <code class="docutils literal notranslate"><span class="pre">lambda</span></code>) - toda vez que precisamos dela.</p>
+<p>Funções anônimas podem levar mais de um argumento:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">z</span> <span class="p">)(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60
+</pre></div>
+</div>
+</div>
+</div>
+<p>Veremos alguns exemplos usando <code class="docutils literal notranslate"><span class="pre">lambda</span></code> que esclarecerão os casos típicos de uso.</p>
+</div>
+<div class="section" id="map">
+<h2><span class="section-number">8.2. </span><code class="docutils literal notranslate"><span class="pre">map</span></code><a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
+<p>A função <code class="docutils literal notranslate"><span class="pre">lst2</span> <span class="pre">=</span> <span class="pre">map(f,</span> <span class="pre">s)</span></code> aplica uma função <code class="docutils literal notranslate"><span class="pre">f</span></code> a todos os elementos em uma seqüência <code class="docutils literal notranslate"><span class="pre">s</span></code>. O resultado de <code class="docutils literal notranslate"><span class="pre">map</span></code> pode ser convertido em uma lista com o mesmo comprimento que <code class="docutils literal notranslate"><span class="pre">s</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">lst2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+<span class="n">lst2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;laranja&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Banana&#39;, &#39;Maçã&#39;, &#39;Laranja&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Frequentemente, isto é combinado com a função anônima<code class="docutils literal notranslate"><span class="pre">lambda</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(),</span> <span class="p">[</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;laranja&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Banana&#39;, &#39;Maçã&#39;, &#39;Laranja&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="filter">
+<h2><span class="section-number">8.3. </span><code class="docutils literal notranslate"><span class="pre">filter</span></code><a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+<p>A função <code class="docutils literal notranslate"><span class="pre">lst2</span> <span class="pre">=</span> <span class="pre">filter(f,</span> <span class="pre">lst)</span></code> aplica a função <code class="docutils literal notranslate"><span class="pre">f</span></code> a todos os elementos em uma sequencia <code class="docutils literal notranslate"><span class="pre">s</span></code>. A função <code class="docutils literal notranslate"><span class="pre">f</span></code> deve retornar <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>. Isto faz com que uma lista contenha somente aqueles elementos <em>s</em><sub><em>i</em></sub> da sequencia <code class="docutils literal notranslate"><span class="pre">s</span></code> para os quais <code class="docutils literal notranslate"><span class="pre">f</span></code>(<em>s</em><sub><em>i</em></sub>) tem valor de retorno <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maior_que_5</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">maior_que_5</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 7, 8, 9, 10]
+</pre></div>
+</div>
+</div>
+</div>
+<p>O uso de <code class="docutils literal notranslate"><span class="pre">lambda</span></code> pode simplificar isto significativamente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 7, 8, 9, 10]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nomes_conhecidos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;smith&#39;</span><span class="p">,</span> <span class="s1">&#39;miller&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">nome</span> <span class="p">:</span> <span class="n">nome</span> <span class="ow">in</span> <span class="n">nomes_conhecidos</span><span class="p">,</span> \
+     <span class="p">[</span><span class="s1">&#39;ago&#39;</span><span class="p">,</span> <span class="s1">&#39;smith&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;carl&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;smith&#39;, &#39;bob&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compreensoes-de-lista">
+<h2><span class="section-number">8.4. </span>Compreensões de lista<a class="headerlink" href="#compreensoes-de-lista" title="Permalink to this headline">¶</a></h2>
+<p>Compreensões de lista fornecem uma maneira concisa de criar e modificar listas sem recorrer ao uso de <code class="docutils literal notranslate"><span class="pre">map()</span></code>, <code class="docutils literal notranslate"><span class="pre">filter()</span></code> e/ou <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. A definição da lista resultante tende a ser mais clara do que as listas criadas usando essas construções. Cada compreensão de lista consiste de uma expressão seguida por uma cláusula <code class="docutils literal notranslate"><span class="pre">for</span></code>, zero ou mais cláusulas <code class="docutils literal notranslate"> <span class="pre">for</span></code> ou <code class="docutils literal notranslate"><span class="pre">if</span></code>. O resultado será uma lista resultante da avaliação da expressão no contexto das cláusulas <code class="docutils literal notranslate"><span class="pre">for</span></code> e <code class="docutils literal notranslate"><span class="pre">if</span></code> que a seguem. Se a expressão for avaliada para uma tupla, ela deverá estar entre parênteses.</p>
+<p>Alguns exemplos tornarão isso mais claro:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frutas_frescas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;  banana&#39;</span><span class="p">,</span> <span class="s1">&#39;  framboesa &#39;</span><span class="p">,</span> <span class="s1">&#39;maracujá  &#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="n">weapon</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">weapon</span> <span class="ow">in</span> <span class="n">frutas_frescas</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana&#39;, &#39;framboesa&#39;, &#39;maracujá&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vec</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 12, 18]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12, 18]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2, 4], [4, 16], [6, 36]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos também usar compreensões de lista para modificar a lista de inteiros retornada pelo comando <code class="docutils literal notranslate"><span class="pre">range</span></code>, de modo que nossos elementos subsequentes na lista aumentem por frações não-inteiras.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="mf">0.5</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vamos agora revisitar os exemplos da seção <code class="docutils literal notranslate"><span class="pre">filter</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">5</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 7, 8, 9, 10]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nome</span> <span class="k">for</span> <span class="n">nome</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ago&#39;</span><span class="p">,</span><span class="s1">&#39;smith&#39;</span><span class="p">,</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span><span class="s1">&#39;carl&#39;</span><span class="p">]</span> \
+      <span class="k">if</span> <span class="n">nome</span> <span class="ow">in</span> <span class="n">nomes_conhecidos</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;smith&#39;, &#39;bob&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>e os exemplos da seção <code class="docutils literal notranslate"><span class="pre">map</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">fruta</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">fruta</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;laranja&#39;</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Banana&#39;, &#39;Maçã&#39;, &#39;Laranja&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>todas podem ser expressas através de compreensões de lista.</p>
+<p>Mais detalhes</p>
+<ul class="simple">
+<li><p>Tutorial Python <a class="reference external" href="http://docs.python.org/tutorial/datastructures.html#list-comprehensions">5.1.4 Compreensões de lista</a></p></li>
+</ul>
+</div>
+<div class="section" id="reduce">
+<h2><span class="section-number">8.5. </span><code class="docutils literal notranslate"><span class="pre">reduce</span></code><a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
+<p>A função <code class="docutils literal notranslate"><span class="pre">reduce</span></code> assume uma função binária <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code>, uma sequência <code class="docutils literal notranslate"><span class="pre">s</span></code> e um valor de início <code class="docutils literal notranslate"><span class="pre">a0</span></code>. Em seguida, aplica a função <code class="docutils literal notranslate"><span class="pre">f</span></code> ao valor de início<code class="docutils literal notranslate"> <span class="pre">a0</span></code> e o primeiro elemento na seqüência: <code class="docutils literal notranslate"><span class="pre">a1</span> <span class="pre">=</span> <span class="pre">f(a,</span> <span class="pre">s[0])</span></code>. O segundo elemento (<code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">[1]</span></code>) da sequência é processado da seguinte forma: a função <code class="docutils literal notranslate"><span class="pre">f</span></code> é chamada com argumentos <code class="docutils literal notranslate"><span class="pre">a1</span></code> e <code class="docutils literal notranslate"><span class="pre">s[1]</span></code>, ou seja, <code class="docutils literal notranslate"><span class="pre">a2</span> <span class="pre">=</span> <span class="pre">f</span> <span class="pre">(a1,</span> <span class="pre">s[1])</span></code>. Desta forma, toda a sequência é processada. <code class="docutils literal notranslate"><span class="pre">reduce</span></code> retorna um único número.</p>
+<p>Isso pode ser usado, por exemplo, para calcular uma soma de números em uma seqüência se a função <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> retornar <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+
+<span class="n">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>155
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos modificar a função <code class="docutils literal notranslate"><span class="pre">add</span></code> para fornecer algum detalhe a mais sobre o processo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_verbose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;add(x=</span><span class="si">%s</span><span class="s2">, y=</span><span class="si">%s</span><span class="s2">) -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+
+<span class="n">reduce</span><span class="p">(</span><span class="n">add_verbose</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>add(x=0, y=1) -&gt; 1
+add(x=1, y=2) -&gt; 3
+add(x=3, y=3) -&gt; 6
+add(x=6, y=4) -&gt; 10
+add(x=10, y=5) -&gt; 15
+add(x=15, y=6) -&gt; 21
+add(x=21, y=7) -&gt; 28
+add(x=28, y=8) -&gt; 36
+add(x=36, y=9) -&gt; 45
+add(x=45, y=10) -&gt; 55
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pode ser instrutivo usar uma função assimétrica <code class="docutils literal notranslate"><span class="pre">f</span></code>, tal como <code class="docutils literal notranslate"><span class="pre">add_len(n,s)</span></code>, onde <code class="docutils literal notranslate"><span class="pre">s</span></code> é uma sequencia e a função retorna <code class="docutils literal notranslate"><span class="pre">n+len(s)</span></code> (sugestão de Thomas Fischbacher):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_len</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="n">reduce</span><span class="p">(</span><span class="n">add_len</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Este&quot;</span><span class="p">,</span><span class="s2">&quot;é&quot;</span><span class="p">,</span><span class="s2">&quot;um&quot;</span><span class="p">,</span><span class="s2">&quot;teste.&quot;</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como antes, usaremos uma versão mais prolixa (verbosa) da função binária para vermos o que está acontecendo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_len_verbose</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;add_len(n=</span><span class="si">%d</span><span class="s2">, s=</span><span class="si">%s</span><span class="s2">) -&gt; </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="n">reduce</span><span class="p">(</span><span class="n">add_len_verbose</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Este&quot;</span><span class="p">,</span><span class="s2">&quot;é&quot;</span><span class="p">,</span><span class="s2">&quot;um&quot;</span><span class="p">,</span><span class="s2">&quot;teste.&quot;</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>add_len(n=0, s=Este) -&gt; 4
+add_len(n=4, s=é) -&gt; 5
+add_len(n=5, s=um) -&gt; 7
+add_len(n=7, s=teste.) -&gt; 13
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+</div>
+</div>
+<p>Outra maneira de entender o que a função <code class="docutils literal notranslate"><span class="pre">reduce</span></code> faz é examinar a seguinte função (gentilmente fornecida por Thomas Fischbacher), que se comporta como <code class="docutils literal notranslate"><span class="pre">reduce</span></code>, mas explica o que ela faz:</p>
+<p>Aqui está um exemplo usando a função <code class="docutils literal notranslate"><span class="pre">explain_reduce</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">code</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/fangohr/hg/teaching-python/book/text/code
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">explain_reduce</span> <span class="kn">import</span> <span class="n">explain_reduce</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="n">reduce</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">explain_reduce</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Step 0: value-so-far=0 next-list-element=1
+Step 1: value-so-far=1 next-list-element=2
+Step 2: value-so-far=3 next-list-element=3
+Step 3: value-so-far=6 next-list-element=4
+Step 4: value-so-far=10 next-list-element=5
+Done. Final result=15
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">reduce</span></code> é frequentemente combinado com <code class="docutils literal notranslate"><span class="pre">lambda</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existe também o módulo <code class="docutils literal notranslate"><span class="pre">operator</span></code> que fornece operadores Python padrão como funções. Por exemplo, a função <code class="docutils literal notranslate"><span class="pre">operator.__add__(a,</span> <span class="pre">b)</span></code> é executada quando o Python avalia o código como <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>. Estes geralmente são mais rápidos do que as expressões <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. Poderíamos escrever o exemplo acima como</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span>
+<span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">help(’operator’)</span></code> para ver a lista completa de funções <code class="docutils literal notranslate"><span class="pre">operator</span></code>.</p>
+</div>
+<div class="section" id="por-que-nao-usar-apenas-lacos-for">
+<h2><span class="section-number">8.6. </span>Por que não usar apenas laços <code class="docutils literal notranslate"><span class="pre">for</span></code>?<a class="headerlink" href="#por-que-nao-usar-apenas-lacos-for" title="Permalink to this headline">¶</a></h2>
+<p>Vamos comparar o exemplo apresentado no início do capítulo escrito (i) usando um laço <code class="docutils literal notranslate"><span class="pre">for</span></code> e (ii) compreensão de lista. Mais uma vez, queremos calcular os números 0<sup>2</sup>, 1<sup>2</sup>, 2<sup>2 </sup>, 3<sup>2</sup>,… até (<em>n</em> - 1)<sup>2</sup> para um dado <em>n</em>.</p>
+<p>Implementação (i) usando um laço <code class="docutils literal notranslate"><span class="pre">for</span></code> com <em>n</em> = 10:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Implementação (ii) usando compreensão de lista:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou usando <code class="docutils literal notranslate"><span class="pre">map</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As versões que utilizam compreensão de lista e <code class="docutils literal notranslate"><span class="pre">map</span></code> encaixam-se em uma linha de código, enquanto um laço <code class="docutils literal notranslate"><span class="pre">for</span></code> precisa de três linhas. Este exemplo mostra que o código funcional resulta em expressões <em>concisas</em>. Normalmente, o número de erros que um programador comete é por linha de código escrita, de modo que quanto menos linhas de código tivermos, menos <em>bugs</em> teremos de encontrar.</p>
+<p>Muitas vezes, os programadores descobrem que, inicialmente, as ferramentas de processamento de lista apresentadas neste capítulo parecem menos intuitivas do que o uso de laços <code class="docutils literal notranslate"><span class="pre">for</span></code> para processar cada elemento em uma lista individualmente, mas isso - ao longo do tempo - tende a ser valorizado por eles como um estilo de programação mais funcional.</p>
+</div>
+<div class="section" id="rapidez">
+<h2><span class="section-number">8.7. </span>Rapidez<a class="headerlink" href="#rapidez" title="Permalink to this headline">¶</a></h2>
+<p>As ferramentas funcionais descritas neste capítulo também podem ser mais rápidas do que laços explícitos (<code class="docutils literal notranslate"><span class="pre">for</span></code> ou <code class="docutils literal notranslate"><span class="pre">while</span></code>) sobre os elementos da lista.</p>
+<p>O programa <code class="docutils literal notranslate"><span class="pre">rapidez_compreensao_lista.py</span></code> abaixo calcula <span class="math notranslate nohighlight">\(\sum_{i=0}^{N-1} i^2\)</span> para um grande valor de <em>N</em> usando 4 métodos diferentes e registra o tempo de execução:</p>
+<ul class="simple">
+<li><p>Método 1: laço <code class="docutils literal notranslate"><span class="pre">for</span></code> (com lista pré-alocada, armazenamento de <em>i</em><sup>2</sup> na lista, em seguida, usando a função predefinida <code class="docutils literal notranslate"><span class="pre">sum</span></code>)</p></li>
+<li><p>Método 2: laço <code class="docutils literal notranslate"><span class="pre">for</span></code> sem lista (atualizando <code class="docutils literal notranslate"><span class="pre">sum</span></code> à medida que o laço <code class="docutils literal notranslate"><span class="pre">for</span></code> progride)</p></li>
+<li><p>Método 3: usando compreensão de lista</p></li>
+<li><p>Método 4: usando <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+</ul>
+<p>O programa produz a seguinte saída:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python static/data/rapidez_compreensao_lista.py
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;N =&#39;, 10000000)
+(&#39;for-loop1&#39;, 5.317609071731567)
+(&#39;for-loop2&#39;, 4.719789981842041)
+(&#39;listcomp&#39;, 3.4225449562072754)
+(&#39;numpy&#39;, 0.04654884338378906)
+O metodo mais lento eh 114.2 vezes mais lento do que o metodo mais rapido.
+</pre></div>
+</div>
+</div>
+</div>
+<p>O desempenho de execução real depende do computador. O desempenho relativo pode depender de versões do Python e suas bibliotecas de suporte (como <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) que usamos.</p>
+<p>Com a versão atual (python 3.4, numpy 1.10, em uma máquina x64 que executa o OSX), vemos que os métodos 1 e 2 (para laço sem lista e com lista pré-alocada) são mais lentos, seguidos um tanto mais próximos de uma compreensão de lista levemente mais rápida. O método mais rápido é o número 4 (usando numpy).</p>
+<p>Para referência, aqui está o código-fonte do programa:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat static/data/rapidez_compreensao_lista.py
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># -*- coding: utf-8 -*-
+&quot;&quot;&quot;Compara cálculos de \sum_i x_i^2 for i = 0,...N-1
+
+Usamos (i) laços for e list, (ii) laço for, (iii) compreensão de lista
+e (iv) numpy.
+
+Usamos números em ponto flutuante para evitar usar os longos inteiros do
+Python (que provavelmente fariam a medição do tempo menos representativa)
+&quot;&quot;&quot;
+
+import time
+import numpy
+N = 10000000
+
+
+def timeit(f, args):
+    &quot;&quot;&quot; Dada uma função f e uma tupla contendo argumentos para f, 
+    esta funcao chama f(*args), e mede e retorna o tempo de 
+    execucao em segundos.
+    
+    O valor de retorno é uma tupla: a entrada 0 é o tempo, 
+    a entrada 1 é o valor de retorno de f.&quot;&quot;&quot;
+
+    starttime = time.time()
+    y = f(*args)    # usa tupla de argumentos como entrada
+    endtime = time.time()
+    return endtime - starttime, y
+
+
+def forloop1(N):
+    s = 0
+    for i in range(N):
+        s += float(i) * float(i)
+    return s
+
+
+def forloop2(N):
+    y = [0] * N
+    for i in range(N):
+        y[i] = float(i) ** 2
+    return sum(y)
+
+
+def listcomp(N):
+    return sum([float(x) * x for x in range(N)])
+
+
+def numpy_(N):
+    return numpy.sum(numpy.arange(0, N, dtype=&#39;d&#39;) ** 2)
+
+# inicio do programa principal
+timings = []
+print(&quot;N =&quot;, N)
+forloop1_time, f1_res = timeit(forloop1, (N,))
+timings.append(forloop1_time)
+print(&quot;for-loop1&quot;, forloop1_time)
+forloop2_time, f2_res = timeit(forloop2, (N,))
+timings.append(forloop2_time)
+print(&quot;for-loop2&quot;, forloop2_time)
+listcomp_time, lc_res = timeit(listcomp, (N,))
+timings.append(listcomp_time)
+print(&quot;listcomp&quot;, listcomp_time)
+numpy_time, n_res = timeit(numpy_, (N,))
+timings.append(numpy_time)
+print(&quot;numpy&quot;, numpy_time)
+
+#assegura que metodos diferentes forneçam resultados idênticos
+assert f1_res == f2_res
+assert f1_res == lc_res
+
+# Permite um pouco de diferença para o cálculo via numpy
+numpy.testing.assert_approx_equal(f1_res, n_res)
+
+print(&quot;O metodo mais lento eh {:.1f} vezes mais lento do que o metodo mais rapido.&quot;.format(
+    max(timings)/min(timings)))
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/lecture-ipynb",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="07-funcoes-modulos.html" title="previous page"><span class="section-number">7. </span>Funções e módulos</a>
+    <a class='right-next' id="next-link" href="09-tarefas-comuns.html" title="next page"><span class="section-number">9. </span>Tarefas comuns</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira e Hans Fanghor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
